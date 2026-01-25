@@ -19,3 +19,7 @@ When making changes to the codebase, ensure that all relevant documentation is u
 
 - Do not pollute the repo root with unnecessary files.
 - Use appropriate directories for different types of files (e.g., `docs/`, `src/`, `tests/`).
+
+## Verify HTML Changes
+
+- When editing HTML files or doing web design work, you must preview the result using the Playwright MCP tool and capture a screenshot to verify the output.

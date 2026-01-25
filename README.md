@@ -22,3 +22,5 @@ In other words: update the design, layout, and content presentation while preser
 - Legacy site AS-IS notes: [docs/legacywebsite/LEGACY_SITE_NOTES.md](docs/legacywebsite/LEGACY_SITE_NOTES.md)
 - Offline snapshot start page (recommended to serve via local HTTP server):
   - [docs/legacywebsite/archive/2026-01-24/offline/www.urbanahighlandshoa.com/index.html](docs/legacywebsite/archive/2026-01-24/offline/www.urbanahighlandshoa.com/index.html)
+- Mockup homepage (open via local HTTP server):
+  - [mockup/index.html](mockup/index.html)
