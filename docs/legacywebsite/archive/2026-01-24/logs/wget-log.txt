@@ -1,0 +1,49 @@
+404 Not Found
+2026-01-24 21:41:07 ERROR 404: Not Found.
+
+--2026-01-24 21:41:07--  https://www.urbanahighlandshoa.com/wp-content/themes/specular/js/jquery.appear.js%3Fver=5.8.12
+Reusing existing connection to www.urbanahighlandshoa.com:443.
+HTTP request sent, awaiting response... 404 Not Found
+2026-01-24 21:41:08 ERROR 404: Not Found.
+
+--2026-01-24 21:41:08--  https://www.urbanahighlandshoa.com/wp-content/themes/specular/js/animations.js%3Fver=5.8.12
+Reusing existing connection to www.urbanahighlandshoa.com:443.
+HTTP request sent, awaiting response... 404 Not Found
+2026-01-24 21:41:10 ERROR 404: Not Found.
+
+--2026-01-24 21:41:10--  https://www.urbanahighlandshoa.com/wp-content/themes/specular/js/codeless-main.js%3Fver=5.8.12
+Reusing existing connection to www.urbanahighlandshoa.com:443.
+HTTP request sent, awaiting response... 404 Not Found
+2026-01-24 21:41:11 ERROR 404: Not Found.
+
+--2026-01-24 21:41:11--  https://www.urbanahighlandshoa.com/wp-content/themes/specular/js/waypoints.min.js%3Fver=5.8.12
+Reusing existing connection to www.urbanahighlandshoa.com:443.
+HTTP request sent, awaiting response... 404 Not Found
+2026-01-24 21:41:12 ERROR 404: Not Found.
+
+--2026-01-24 21:41:12--  https://www.urbanahighlandshoa.com/wp-content/themes/specular/js/background-check.min.js%3Fver=5.8.12
+Reusing existing connection to www.urbanahighlandshoa.com:443.
+HTTP request sent, awaiting response... 404 Not Found
+2026-01-24 21:41:13 ERROR 404: Not Found.
+
+--2026-01-24 21:41:13--  https://www.urbanahighlandshoa.com/wp-includes/js/imagesloaded.min.js%3Fver=4.1.4
+Reusing existing connection to www.urbanahighlandshoa.com:443.
+HTTP request sent, awaiting response... 404 Not Found
+2026-01-24 21:41:14 ERROR 404: Not Found.
+
+--2026-01-24 21:41:14--  https://www.urbanahighlandshoa.com/wp-includes/js/wp-embed.min.js%3Fver=5.8.12
+Reusing existing connection to www.urbanahighlandshoa.com:443.
+HTTP request sent, awaiting response... 404 Not Found
+2026-01-24 21:41:15 ERROR 404: Not Found.
+
+--2026-01-24 21:41:15--  https://www.urbanahighlandshoa.com/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js%3Fver=6.7.0
+Reusing existing connection to www.urbanahighlandshoa.com:443.
+HTTP request sent, awaiting response... 404 Not Found
+2026-01-24 21:41:16 ERROR 404: Not Found.
+
+FINISHED --2026-01-24 21:41:16--
+Total wall clock time: 1m 13s
+Downloaded: 2 files, 89K in 0.5s (186 KB/s)
+Converting links in docs/legacywebsite/archive/events/full/www.urbanahighlandshoa.com/event-details/index.html... 56.
+1-55
+Converted links in 1 files in 0.005 seconds.

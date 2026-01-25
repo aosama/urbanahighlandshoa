@@ -2,7 +2,44 @@
 
 This directory documents what the legacy Urbana Highlands HOA website currently does.
 
-Primary URL: https://www.urbanahighlandshoa.com/
+Primary URL: [https://www.urbanahighlandshoa.com/](https://www.urbanahighlandshoa.com/)
+
+## Archived copy (offline mirror)
+
+This repo includes a dated offline snapshot of the public site so we can reference the legacy HTML/CSS/JS/assets during redesign work.
+
+### Start here
+
+Recommended entry point:
+
+- Offline start page: [archive/2026-01-24/offline/www.urbanahighlandshoa.com/index.html](archive/2026-01-24/offline/www.urbanahighlandshoa.com/index.html)
+
+Related page:
+
+- Event details: [archive/2026-01-24/offline/www.urbanahighlandshoa.com/event-details/index.html](archive/2026-01-24/offline/www.urbanahighlandshoa.com/event-details/index.html)
+
+Archive contents:
+
+- Canonical offline mirror (HTML + assets + fonts): [archive/2026-01-24/offline/](archive/2026-01-24/offline/)
+- Raw HTML source snapshots (for diffing / archaeology): [archive/2026-01-24/raw/](archive/2026-01-24/raw/)
+- Mirror logs (non-fatal 404s, etc.): [archive/2026-01-24/logs/](archive/2026-01-24/logs/)
+- Snapshot notes (what was captured and how to preview): [archive/2026-01-24/SNAPSHOT.md](archive/2026-01-24/SNAPSHOT.md)
+
+### Preview locally
+
+Because browser security policies often block loading complex sites directly from `file://`, preview the snapshot via a local HTTP server.
+
+From the repo root:
+
+1. Run: `python3 -m http.server 8021`
+2. Open:
+   - `http://localhost:8021/docs/legacywebsite/archive/2026-01-24/offline/www.urbanahighlandshoa.com/index.html`
+   - `http://localhost:8021/docs/legacywebsite/archive/2026-01-24/offline/www.urbanahighlandshoa.com/event-details/index.html`
+
+### Verification notes
+
+- The offline mirror was validated via Playwright network capture to ensure page requisites (images/CSS/JS/fonts) resolve locally.
+- Some console warnings/errors may still appear due to the legacy theme/plugins (these are present on the live site as well).
 
 ## High-level purpose
 
@@ -30,8 +67,8 @@ The site presents a callout with these bullet items:
 
 Links observed:
 
-- CiraNet resident portal: https://www.ciranet.com/ResidentPortal
-- eSoftPlanner login (access token in URL): https://www.esoftplanner.com/v3/planner/login.php?access=0dG81LSVxNmo65a9uWR8vp6LpQ==
+- CiraNet resident portal: [https://www.ciranet.com/ResidentPortal](https://www.ciranet.com/ResidentPortal)
+- eSoftPlanner login (access token in URL): [https://www.esoftplanner.com/v3/planner/login.php?access=0dG81LSVxNmo65a9uWR8vp6LpQ==](https://www.esoftplanner.com/v3/planner/login.php?access=0dG81LSVxNmo65a9uWR8vp6LpQ==)
 
 Note: the legacy page copy references “CiraConnect” while the link is `ciranet.com/ResidentPortal`.
 
@@ -45,13 +82,13 @@ The site includes pool location/phone number text:
 
 ### Social Network
 
-- Facebook page: https://www.facebook.com/UrbanaHighlandsHOA/
+- Facebook page: [https://www.facebook.com/UrbanaHighlandsHOA/](https://www.facebook.com/UrbanaHighlandsHOA/)
 - Copy: “Join Us On Facebook for Community Updates, the Latest News and Events.”
 
 ### Upcoming Events
 
 - Displays: “No event found!”
-- Includes link: https://www.urbanahighlandshoa.com/event-details/
+- Includes link: [https://www.urbanahighlandshoa.com/event-details/](https://www.urbanahighlandshoa.com/event-details/)
 
 ### Announcements
 
@@ -67,7 +104,7 @@ The homepage includes three announcement items (paraphrased):
 
 ## Event Details page
 
-URL: https://www.urbanahighlandshoa.com/event-details/
+URL: [https://www.urbanahighlandshoa.com/event-details/](https://www.urbanahighlandshoa.com/event-details/)
 
 Observed behavior:
 
