@@ -44,10 +44,16 @@ The development server will start at: **http://127.0.0.1:4321/urbanahighlandshoa
 - `npm run dev` - Start development server with hot reload
 - `npm run build` - Build production site to `site/dist/`
 - `npm run preview` - Preview the production build locally
+- `npm test` - Run Playwright regression tests
+- `npm run test:ui` - Run Playwright tests with the UI runner
 
 ## Deployment (GitHub Pages)
 
 The site automatically deploys to GitHub Pages when changes are pushed to the `main` branch.
+
+## Testing
+
+Regression tests run with **Playwright** (`cd site && npm test`) and are executed in CI via `.github/workflows/regression-tests.yml` on pushes and PRs to `main`.
 
 ### Deployment workflow
 
@@ -94,10 +100,11 @@ The site uses **Astro pages** with inline content. Each page is a self-contained
   - `site/src/pages/announcements/index.astro`
   - `site/src/pages/events/index.astro`
   - `site/src/pages/documents/index.astro`
+  - `site/src/pages/resources/index.astro`
   - `site/src/pages/contact/index.astro`
 - **Shared layouts:**
   - `site/src/layouts/BaseLayout.astro` - Base HTML structure, head tags
-  - `site/src/layouts/PageLayout.astro` - Standard page wrapper with navigation
+  - `site/src/layouts/PageLayout.astro` - Standard page wrapper (includes Header/Footer)
 - **Site configuration:** `site/src/lib/siteConfig.ts` - Central config for site name, external links, contact info
 
 ### Editing existing content
@@ -127,7 +134,7 @@ import PageLayout from '../../layouts/PageLayout.astro';
 To create a new page:
 1. Create a new `.astro` file in `site/src/pages/` (e.g., `site/src/pages/faq/index.astro`)
 2. Import and use `PageLayout` for consistent styling
-3. Add navigation link in `site/src/layouts/PageLayout.astro` if needed
+3. Add a navigation link in `site/src/components/Header.astro` (the `navLinks` array) if needed
 4. Build and test locally before deploying
 
 ### Adding documents (PDFs)
