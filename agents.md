@@ -18,7 +18,9 @@
 
 ## Branch policy
 
-- **Do not push directly to `main`**. All changes must go through a pull request.
+- **Default:** Do not push directly to `main`. All changes should go through a pull request.
+- **Exception:** If the user explicitly instructs “commit and push to `main` (no PR)”, you may push directly to `main`.
+  - If branch protections block the push, fall back to pushing a branch and open a PR.
 - Create a feature branch for your work (e.g., `feature/add-events-page`, `fix/header-nav`).
 - Open a PR, wait for the PR preview to deploy, verify your changes, then request review.
 - Only merge after approval (or self-merge if you're the sole maintainer and the build passes).
