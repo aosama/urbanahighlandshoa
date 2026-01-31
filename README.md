@@ -52,6 +52,10 @@ Pushing to `main` triggers the workflow and publishes to Pages.
   - `site/src/layouts/PageLayout.astro`
 - Central config (links/contact): `site/src/lib/siteConfig.ts`
 
+## Developer notes
+
+- Quick Copilot guide: [docs/hello-copilot.md](docs/hello-copilot.md)
+
 ## Legacy reference
 
 - Legacy site: https://www.urbanahighlandshoa.com/
