@@ -39,6 +39,13 @@ Build output goes to `site/dist/`.
 
 Pushing to `main` triggers the workflow and publishes to Pages.
 
+### PR previews (without merging)
+PR previews are published to a predictable URL:
+
+- `https://aosama.github.io/urbanahighlandshoa/__pr-preview__/pr-<PR_NUMBER>/`
+
+The preview is deployed by `.github/workflows/pr-preview.yml` and (when permissions allow) the workflow will also comment the URL on the PR.
+
 ## Editing content
 
 - Homepage: `site/src/pages/index.astro`
