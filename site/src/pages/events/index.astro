@@ -4,16 +4,49 @@ import { siteConfig } from '../../lib/siteConfig';
 ---
 
 <PageLayout title="Events">
-  <h1 class="text-3xl font-semibold text-[#12212b]">Events</h1>
-  <p class="mt-3 text-[#3c4b57]">Upcoming events will be listed here.</p>
+  <Fragment slot="title">
+    <span class="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Events</span>
+  </Fragment>
 
-  <div class="mt-6 rounded-2xl border border-black/10 bg-white p-6 shadow-[0_16px_36px_rgba(15,23,42,0.08)]">
-    <h2 class="text-xl font-semibold">Legacy Event Details</h2>
-    <p class="mt-2 text-[#3c4b57]">
-      For now, full event details are still hosted on the legacy site.
-    </p>
-    <a class="mt-4 inline-flex items-center gap-2 font-semibold text-[#2b5f47]" href={siteConfig.links.legacyEventDetails} target="_blank" rel="noopener noreferrer">
-      Open event details on legacy site →
-    </a>
+  <div class="space-y-6">
+    <div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
+      <div class="flex items-start gap-4">
+        <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-violet-100 text-2xl">
+          📅
+        </div>
+        <div class="flex-1">
+          <h2 class="text-xl font-semibold text-slate-900">Upcoming Events</h2>
+          <p class="mt-2 text-slate-600">
+            Community events and gatherings will be listed here. Stay tuned for pool parties, 
+            neighborhood meetups, and seasonal celebrations.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="rounded-2xl border border-amber-200 bg-amber-50 p-8">
+      <div class="flex items-start gap-4">
+        <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-amber-100 text-2xl">
+          🔗
+        </div>
+        <div>
+          <h2 class="text-xl font-semibold text-slate-900">Legacy Event Details</h2>
+          <p class="mt-2 text-slate-600">
+            For now, full event details are still hosted on the legacy site.
+          </p>
+          <a 
+            class="mt-4 inline-flex items-center gap-2 rounded-full bg-amber-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-amber-700" 
+            href={siteConfig.links.legacyEventDetails} 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            Open Legacy Site
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </PageLayout>

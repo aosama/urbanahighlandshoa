@@ -2,23 +2,58 @@
 import { siteConfig } from '../lib/siteConfig';
 ---
 
-<footer class="mt-auto bg-[#12212b] px-5 py-8 text-white/80">
-  <div class="mx-auto grid max-w-[1100px] gap-6 md:grid-cols-2">
-    <div class="flex flex-col gap-3">
-      <strong class="text-white">Management Company Contact</strong>
-      <div class="flex flex-wrap gap-4">
-        <span>
-          To reach the management company, please call <strong class="text-white">{siteConfig.contact.managementPhone}</strong>.
-        </span>
+<footer class="mt-auto border-t border-slate-200 bg-white">
+  <div class="mx-auto max-w-6xl px-6 py-12">
+    <div class="grid gap-8 md:grid-cols-3">
+      <!-- Brand -->
+      <div class="flex flex-col gap-4">
+        <div class="flex items-center gap-3">
+          <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-400 to-teal-500 text-lg font-extrabold text-white">
+            UH
+          </div>
+          <span class="text-lg font-bold text-slate-900">Urbana Highlands</span>
+        </div>
+        <p class="text-sm text-slate-500">
+          A serene community nestled in the rolling hills of Southern Frederick County, Maryland.
+        </p>
       </div>
-      <div class="text-white/60">Urbana Highlands HOA · Resident Hub</div>
+
+      <!-- Quick Links -->
+      <div class="flex flex-col gap-4">
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-400">Quick Links</h3>
+        <div class="flex flex-col gap-2">
+          <a class="text-sm text-slate-600 transition hover:text-emerald-600" href={siteConfig.links.residentPortal} target="_blank" rel="noopener noreferrer">Resident Portal</a>
+          <a class="text-sm text-slate-600 transition hover:text-emerald-600" href={siteConfig.links.poolPass} target="_blank" rel="noopener noreferrer">Pool Pass Registration</a>
+          <a class="text-sm text-slate-600 transition hover:text-emerald-600" href={siteConfig.links.facebook} target="_blank" rel="noopener noreferrer">Facebook Community</a>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="flex flex-col gap-4">
+        <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-400">Contact</h3>
+        <div class="flex flex-col gap-2 text-sm text-slate-600">
+          <p>Management Company</p>
+          <p class="font-semibold text-slate-900">{siteConfig.contact.managementPhone}</p>
+        </div>
+      </div>
     </div>
 
-    <div class="flex flex-col gap-3 md:items-end">
-      <strong class="text-white">Resident Links</strong>
-      <div class="flex flex-wrap gap-3 md:justify-end">
-        <a class="rounded-full border border-white/15 bg-white/10 px-3 py-2 text-sm font-semibold text-white/90 transition hover:bg-white/15 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[rgba(207,168,79,0.55)]" href={siteConfig.links.poolPass} target="_blank" rel="noopener noreferrer">Pool Pass</a>
-        <a class="rounded-full border border-white/15 bg-white/10 px-3 py-2 text-sm font-semibold text-white/90 transition hover:bg-white/15 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[rgba(207,168,79,0.55)]" href={siteConfig.links.facebook} target="_blank" rel="noopener noreferrer">Facebook</a>
+    <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-slate-100 pt-8 md:flex-row">
+      <p class="text-sm text-slate-400">
+        © {new Date().getFullYear()} Urbana Highlands HOA. All rights reserved.
+      </p>
+      <div class="flex gap-4">
+        <a 
+          class="flex h-10 w-10 items-center justify-center rounded-full bg-slate-100 text-slate-500 transition hover:bg-emerald-100 hover:text-emerald-600"
+          href={siteConfig.links.facebook} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          aria-label="Facebook"
+        >
+          <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </a>
       </div>
     </div>
   </div>

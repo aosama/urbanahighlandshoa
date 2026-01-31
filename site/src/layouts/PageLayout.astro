@@ -8,11 +8,25 @@ const { title = siteConfig.orgName } = Astro.props;
 ---
 
 <BaseLayout title={title}>
-  <Header variant="simple" />
+  <Header />
 
-  <main id="main-content" class="flex-1 px-5 py-10">
-    <div class="mx-auto max-w-[1100px]">
-      <slot />
+  <main id="main-content" class="flex-1">
+    <!-- Page Header -->
+    <div class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 px-6 py-16 text-center">
+      <div class="mx-auto max-w-4xl">
+        <slot name="header">
+          <h1 class="text-4xl font-bold tracking-tight text-white md:text-5xl">
+            <slot name="title">{title}</slot>
+          </h1>
+        </slot>
+      </div>
+    </div>
+
+    <!-- Page Content -->
+    <div class="px-6 py-12">
+      <div class="mx-auto max-w-4xl">
+        <slot />
+      </div>
     </div>
   </main>
 
