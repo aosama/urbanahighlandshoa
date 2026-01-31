@@ -49,6 +49,19 @@ When a PR changes the website, you must verify the deployed PR preview (not just
 - Navigate to the specific page(s) affected (example: `/documents/`), and confirm the change is visible and correct.
 - Include the PR preview URL(s) in your final response so the work is reviewable and referencable.
 
+## Delegating GitHub Issues to cloud agents (good practices)
+
+When delegating an issue to a cloud agent (Copilot):
+
+- **Make the task small and bounded**: one issue → one PR; avoid multi-issue “mega PRs”.
+- **Write explicit scope**: list exactly which files/areas are in-scope and what is out-of-scope.
+- **Define acceptance criteria**: include concrete, checkable outcomes (routes, UI behavior, URLs, etc.).
+- **Require verification steps**:
+  - run the standard build (`cd site && npm ci && npm run build`)
+  - if UI changes: verify on PR Preview and post the preview URL(s)
+- **Prefer minimal changes**: avoid refactors unless required to meet acceptance.
+- **Ask for clarification when needed**: if requirements are ambiguous, stop and ask rather than guessing.
+
 ## Repo lessons / gotchas
 
 - GitHub Pages is **Project Pages**, so the site is served from `/urbanahighlandshoa/`.
