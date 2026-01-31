@@ -1,26 +1,59 @@
 # Urbana Highlands Home Owners Association
 
-This repository tracks the work to modernize the Urbana Highlands HOA website.
+This repository contains the new **front-end-only** HOA website (Astro + Tailwind) and supporting docs.
 
-## Job scope (facelift)
+- Live (GitHub Pages): https://aosama.github.io/urbanahighlandshoa/
+- Site source code: `site/` (note: repo root is **not** the Astro app root)
 
-The current expectation is a **facelift of the existing site**, keeping it hosted and managed in **WordPress**.
+## Tech stack
 
-In other words: update the design, layout, and content presentation while preserving the site’s current purpose as a resident hub (links out to the resident portal, pool pass system, events, and announcements).
+- [Astro](https://astro.build/) (static site)
+- [Tailwind CSS](https://tailwindcss.com/)
+- GitHub Pages (Project Pages) + GitHub Actions deploy
 
-## Hosting / platform
+## Local development
 
-- Current hosting/platform: **WordPress** (legacy site)
+```bash
+cd site
+npm install
+npm run dev
+```
 
-## Legacy website
+Then open: http://127.0.0.1:4321/urbanahighlandshoa/
 
-- The legacy web site can be found at [https://www.urbanahighlandshoa.com/](https://www.urbanahighlandshoa.com/)
-- A dated offline snapshot (HTML + assets) is archived under [docs/legacywebsite/archive/](docs/legacywebsite/archive/)
+## Build
 
-## Documentation
+```bash
+cd site
+npm run build
+```
 
-- Legacy site AS-IS notes: [docs/legacywebsite/LEGACY_SITE_NOTES.md](docs/legacywebsite/LEGACY_SITE_NOTES.md)
-- Offline snapshot start page (recommended to serve via local HTTP server):
-  - [docs/legacywebsite/archive/2026-01-24/offline/www.urbanahighlandshoa.com/index.html](docs/legacywebsite/archive/2026-01-24/offline/www.urbanahighlandshoa.com/index.html)
-- Mockup homepage (open via local HTTP server):
-  - [mockup/index.html](mockup/index.html)
+Build output goes to `site/dist/`.
+
+## Deployment (GitHub Pages)
+
+- Deploy workflow: `.github/workflows/deploy.yml`
+- Astro is configured for Project Pages subpath via `site/astro.config.mjs`:
+  - `site: "https://aosama.github.io"`
+  - `base: "/urbanahighlandshoa"`
+
+Pushing to `main` triggers the workflow and publishes to Pages.
+
+## Editing content
+
+- Homepage: `site/src/pages/index.astro`
+- Basic pages:
+  - `site/src/pages/announcements/index.astro`
+  - `site/src/pages/events/index.astro`
+  - `site/src/pages/documents/index.astro`
+  - `site/src/pages/contact/index.astro`
+- Shared layouts:
+  - `site/src/layouts/BaseLayout.astro`
+  - `site/src/layouts/PageLayout.astro`
+- Central config (links/contact): `site/src/lib/siteConfig.ts`
+
+## Legacy reference
+
+- Legacy site: https://www.urbanahighlandshoa.com/
+- Legacy notes: [docs/legacywebsite/LEGACY_SITE_NOTES.md](docs/legacywebsite/LEGACY_SITE_NOTES.md)
+- Mockup HTML: [mockup/index.html](mockup/index.html)

@@ -12,3 +12,8 @@ Desktop.ini
 # macOS volume metadata
 .Spotlight-V100
 .Trashes
+
+# Astro (site/)
+site/node_modules/
+site/dist/
+site/.astro/

@@ -1,0 +1,23 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { siteConfig } from '../../lib/siteConfig';
+---
+
+<PageLayout title="Contact">
+  <h1 class="text-3xl font-semibold text-[#12212b]">Contact</h1>
+
+  <div class="mt-6 grid gap-6 md:grid-cols-2">
+    <div class="rounded-2xl border border-black/10 bg-white p-6 shadow-[0_16px_36px_rgba(15,23,42,0.08)]">
+      <h2 class="text-xl font-semibold">Management Company</h2>
+      <p class="mt-2 text-[#3c4b57]">Phone: <strong class="text-[#12212b]">{siteConfig.contact.managementPhone}</strong></p>
+    </div>
+
+    <div class="rounded-2xl border border-black/10 bg-white p-6 shadow-[0_16px_36px_rgba(15,23,42,0.08)]">
+      <h2 class="text-xl font-semibold">Pool</h2>
+      <p class="mt-2 text-[#3c4b57]">
+        {siteConfig.contact.poolAddress}<br />
+        Phone: <strong class="text-[#12212b]">{siteConfig.contact.poolPhone}</strong>
+      </p>
+    </div>
+  </div>
+</PageLayout>

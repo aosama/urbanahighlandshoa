@@ -1,0 +1,151 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../lib/siteConfig';
+
+const basePath = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+---
+
+<BaseLayout title={siteConfig.orgName}>
+  <main class="min-h-screen">
+    <header class="bg-[radial-gradient(circle_at_top_left,rgba(43,95,71,0.15),transparent_55%),linear-gradient(120deg,rgba(207,168,79,0.22),rgba(255,255,255,0.3))] px-5 pt-10 pb-20">
+      <div class="mx-auto mb-10 flex max-w-[1100px] flex-wrap items-center justify-between gap-5">
+        <div class="flex items-center gap-4 font-bold tracking-[0.4px]">
+          <img
+            src={`${basePath}assets/UH-logo.jpg`}
+            alt="Urbana Highlands HOA logo"
+            class="h-16 w-16 rounded-2xl shadow-[0_8px_18px_rgba(18,33,43,0.12)]"
+          />
+          <div>
+            <div class="text-[0.95rem] text-[#6c7a86]">{siteConfig.siteName}</div>
+            <div class="text-[1.1rem]">Home Owners Association</div>
+          </div>
+        </div>
+
+        <nav class="flex flex-wrap gap-3">
+          <a class="rounded-full border border-black/10 bg-white/70 px-4 py-2.5 text-[0.95rem] font-semibold backdrop-blur transition hover:-translate-y-0.5 hover:shadow-[0_8px_18px_rgba(18,33,43,0.12)]" href={siteConfig.links.facebook} target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a class="rounded-full border border-black/10 bg-white/70 px-4 py-2.5 text-[0.95rem] font-semibold backdrop-blur transition hover:-translate-y-0.5 hover:shadow-[0_8px_18px_rgba(18,33,43,0.12)]" href={siteConfig.links.poolPass} target="_blank" rel="noopener noreferrer">Pool Pass</a>
+          <a class="rounded-full border border-[#2b5f47] bg-[#2b5f47] px-4 py-2.5 text-[0.95rem] font-semibold text-white transition hover:-translate-y-0.5 hover:shadow-[0_8px_18px_rgba(18,33,43,0.12)]" href={siteConfig.links.residentPortal} target="_blank" rel="noopener noreferrer">Resident Portal</a>
+        </nav>
+      </div>
+
+      <div class="mx-auto grid max-w-[1100px] grid-cols-1 items-center gap-8 md:grid-cols-2">
+        <div>
+          <span class="inline-flex rounded-full bg-[rgba(207,168,79,0.18)] px-3 py-1.5 text-[0.85rem] font-semibold text-[#cfa84f]">Established in 1999</span>
+          <h1 class="mt-3 text-[clamp(2rem,3vw,3rem)] font-semibold">{siteConfig.orgName}</h1>
+          <p class="mt-3 text-[1.05rem] text-[#3c4b57]">
+            Urbana Highlands is a quiet community located in Southern Frederick County, Maryland.
+            Residents can use this hub to reach the Resident Portal (CiraConnect), the pool pass system (eSoft), and community updates on Facebook.
+          </p>
+        </div>
+
+        <div class="grid gap-4 rounded-[28px] bg-white p-6 shadow-[0_24px_60px_rgba(15,23,42,0.12)]">
+          <img
+            src={`${basePath}assets/urbana-highlands-pic.jpg`}
+            alt="Urbana Highlands community"
+            class="h-[220px] w-full rounded-[18px] object-cover"
+          />
+          <div class="font-semibold text-[#214738]">A welcoming neighborhood with thoughtful, well-kept spaces.</div>
+          <div class="text-[0.95rem] text-[#6c7a86]">Stay connected with HOA resources, architectural requests, and community notices.</div>
+        </div>
+      </div>
+    </header>
+
+    <section class="px-5 py-[70px]">
+      <div class="mx-auto max-w-[1100px]">
+        <div class="mb-8 flex flex-wrap items-end justify-between gap-5">
+          <div>
+            <h2 class="text-[clamp(1.6rem,2.4vw,2.2rem)] font-semibold">Resident Services</h2>
+            <p class="text-[#6c7a86]">Quick access to the services residents use most.</p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+          <div class="grid min-h-[320px] gap-3 rounded-[18px] border border-black/10 bg-[linear-gradient(160deg,rgba(255,255,255,0.98),rgba(253,251,247,0.9))] p-6 shadow-[0_18px_40px_rgba(15,23,42,0.08)] transition hover:-translate-y-1 hover:shadow-[0_26px_48px_rgba(15,23,42,0.14)]">
+            <div class="flex flex-wrap items-center gap-3">
+              <img src={`${basePath}assets/ciraconnect-button.jpg`} alt="CiraConnect button" class="h-auto w-[84px] rounded-[14px] bg-[#eef2f4] px-2.5 py-1.5 shadow-[0_10px_24px_rgba(15,23,42,0.12)]" />
+              <span class="inline-flex items-center gap-2 rounded-full bg-[rgba(43,95,71,0.12)] px-3 py-1.5 text-[0.85rem] font-semibold text-[#214738]">Owner / Resident Portal</span>
+            </div>
+            <h3 class="text-[1.2rem] font-semibold">CiraConnect Access</h3>
+            <ul class="grid list-disc gap-2 pl-5 text-[#3c4b57]">
+              <li>Pay HOA dues</li>
+              <li>Update account information</li>
+              <li>Submit architectural change requests</li>
+            </ul>
+            <a class="mt-auto inline-flex items-center gap-2 font-semibold text-[#2b5f47]" href={siteConfig.links.residentPortal} target="_blank" rel="noopener noreferrer">Open Resident Portal →</a>
+          </div>
+
+          <div class="grid min-h-[320px] gap-3 rounded-[18px] border border-black/10 bg-[linear-gradient(160deg,rgba(255,255,255,0.98),rgba(253,251,247,0.9))] p-6 shadow-[0_18px_40px_rgba(15,23,42,0.08)] transition hover:-translate-y-1 hover:shadow-[0_26px_48px_rgba(15,23,42,0.14)]">
+            <div class="flex flex-wrap items-center gap-3">
+              <img src={`${basePath}assets/pool-button.jpg`} alt="Pool pass button" class="h-auto w-[84px] rounded-[14px] bg-[#eef2f4] px-2.5 py-1.5 shadow-[0_10px_24px_rgba(15,23,42,0.12)]" />
+              <span class="inline-flex items-center gap-2 rounded-full bg-[rgba(43,95,71,0.12)] px-3 py-1.5 text-[0.85rem] font-semibold text-[#214738]">eSoft Pool Pass</span>
+            </div>
+            <h3 class="text-[1.2rem] font-semibold">Pool Location & Phone</h3>
+            <p class="m-0 text-[#3c4b57]">
+              {siteConfig.contact.poolAddress}<br />
+              (Residents Only) – {siteConfig.contact.poolPhone}
+            </p>
+            <a class="mt-auto inline-flex items-center gap-2 font-semibold text-[#2b5f47]" href={siteConfig.links.poolPass} target="_blank" rel="noopener noreferrer">Log into Pool Pass →</a>
+          </div>
+
+          <div class="grid min-h-[320px] gap-3 rounded-[18px] border border-black/10 bg-[linear-gradient(160deg,rgba(255,255,255,0.98),rgba(253,251,247,0.9))] p-6 shadow-[0_18px_40px_rgba(15,23,42,0.08)] transition hover:-translate-y-1 hover:shadow-[0_26px_48px_rgba(15,23,42,0.14)]">
+            <div class="flex flex-wrap items-center gap-3">
+              <img src={`${basePath}assets/facebook-button.jpg`} alt="Facebook button" class="h-auto w-[84px] rounded-[14px] bg-[#eef2f4] px-2.5 py-1.5 shadow-[0_10px_24px_rgba(15,23,42,0.12)]" />
+              <span class="inline-flex items-center gap-2 rounded-full bg-[rgba(43,95,71,0.12)] px-3 py-1.5 text-[0.85rem] font-semibold text-[#214738]">Social Network</span>
+            </div>
+            <h3 class="text-[1.2rem] font-semibold">Community Updates</h3>
+            <p class="m-0 text-[#3c4b57]">Join us on Facebook for community updates, the latest news, and events.</p>
+            <a class="mt-auto inline-flex items-center gap-2 font-semibold text-[#2b5f47]" href={siteConfig.links.facebook} target="_blank" rel="noopener noreferrer">Visit Facebook →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[radial-gradient(circle_at_top_right,rgba(43,95,71,0.12),transparent_55%),linear-gradient(180deg,rgba(238,242,244,0.9),rgba(246,242,234,0.95))] px-5 py-[70px]">
+      <div class="mx-auto max-w-[1100px]">
+        <div class="mb-8 flex flex-wrap items-end justify-between gap-5">
+          <div>
+            <h2 class="text-[clamp(1.6rem,2.4vw,2.2rem)] font-semibold">Updates & Notices</h2>
+            <p class="text-[#6c7a86]">Latest announcements and upcoming events.</p>
+          </div>
+          <a class="rounded-full border border-black/10 bg-white/70 px-4 py-2.5 text-[0.95rem] font-semibold backdrop-blur transition hover:-translate-y-0.5 hover:shadow-[0_8px_18px_rgba(18,33,43,0.12)]" href={`${basePath}events/`}>View Full Event Details</a>
+        </div>
+
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2">
+          <div class="relative overflow-hidden rounded-[18px] border border-black/10 bg-white p-7 shadow-[0_16px_36px_rgba(15,23,42,0.08)]">
+            <div class="absolute left-0 top-0 h-1 w-full bg-[#406082]"></div>
+            <div class="mb-4 flex items-center gap-3">
+              <span class="inline-flex h-11 w-11 items-center justify-center rounded-[14px] bg-[rgba(64,96,130,0.12)] text-[0.85rem] font-bold uppercase tracking-[0.5px] text-[#406082]">EV</span>
+              <h3 class="m-0 text-[1.2rem] font-semibold">Upcoming Events</h3>
+            </div>
+            <p class="m-0 rounded-xl border border-dashed border-black/20 bg-[#f7f9fb] px-4 py-4 text-[#3c4b57]">No event found!</p>
+          </div>
+
+          <div class="relative overflow-hidden rounded-[18px] border border-black/10 bg-white p-7 shadow-[0_16px_36px_rgba(15,23,42,0.08)]">
+            <div class="absolute left-0 top-0 h-1 w-full bg-[#2b5f47]"></div>
+            <div class="mb-4 flex items-center gap-3">
+              <span class="inline-flex h-11 w-11 items-center justify-center rounded-[14px] bg-[rgba(43,95,71,0.12)] text-[0.85rem] font-bold uppercase tracking-[0.5px] text-[#2b5f47]">AN</span>
+              <h3 class="m-0 text-[1.2rem] font-semibold">Announcements</h3>
+            </div>
+            <ul class="grid list-disc gap-3 pl-5 text-[#3c4b57]">
+              <li><strong class="text-[#214738]">Missing a street tree?</strong> Did you take down your tree and not replace it? All tree removal and reinstall requires an Architectural Change Request in advance. If you are still missing a tree from years ago, it is time to replace it with one of the approved trees in the Design Guidelines.</li>
+              <li><strong class="text-[#214738]">Replacing your roof?</strong> Unless it is the <em>exact</em> same color and design as the original it must be approved by the HOA in advance.</li>
+              <li><strong class="text-[#214738]">Adding a deck?</strong> Please log into the Resident Portal (CiraConnect) and complete an Architectural Change Request prior to beginning work.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mt-auto bg-[#12212b] px-5 py-8 text-white/80">
+      <div class="mx-auto flex max-w-[1100px] flex-col gap-3">
+        <strong class="text-white">Management Company Contact</strong>
+        <div class="flex flex-wrap gap-4">
+          <span>To reach the management company, please call <strong class="text-white">{siteConfig.contact.managementPhone}</strong>.</span>
+        </div>
+        <div class="text-white/60">Urbana Highlands HOA · Resident Hub</div>
+      </div>
+    </footer>
+  </main>
+</BaseLayout>
