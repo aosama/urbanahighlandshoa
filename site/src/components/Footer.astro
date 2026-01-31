@@ -1,5 +1,9 @@
 ---
 import { siteConfig } from '../lib/siteConfig';
+
+const basePath = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
 ---
 
 <footer class="mt-auto border-t border-slate-200 bg-white">
@@ -8,9 +12,11 @@ import { siteConfig } from '../lib/siteConfig';
       <!-- Brand -->
       <div class="flex flex-col gap-4">
         <div class="flex items-center gap-3">
-          <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-400 to-teal-500 text-lg font-extrabold text-white">
-            UH
-          </div>
+          <img 
+            src={`${basePath}assets/UH-logo.jpg`}
+            alt="Urbana Highlands logo"
+            class="h-10 w-10 rounded-xl shadow"
+          />
           <span class="text-lg font-bold text-slate-900">Urbana Highlands</span>
         </div>
         <p class="text-sm text-slate-500">
