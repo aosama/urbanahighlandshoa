@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import Footer from '../components/Footer.astro';
 import { siteConfig } from '../lib/siteConfig';
 
 const { title = siteConfig.orgName } = Astro.props;
@@ -43,13 +44,5 @@ const basePath = import.meta.env.BASE_URL.endsWith('/')
     </div>
   </main>
 
-  <footer class="mt-auto bg-[#12212b] px-5 py-8 text-white/80">
-    <div class="mx-auto flex max-w-[1100px] flex-col gap-3">
-      <strong class="text-white">Management Company Contact</strong>
-      <div class="flex flex-wrap gap-4">
-        <span>To reach the management company, please call <strong class="text-white">{siteConfig.contact.managementPhone}</strong>.</span>
-      </div>
-      <div class="text-white/60">Urbana Highlands HOA · Resident Hub</div>
-    </div>
-  </footer>
+  <Footer />
 </BaseLayout>

@@ -5,6 +5,7 @@
 - Main project overview: [README.md](README.md)
 - Legacy website (AS-IS documentation): [docs/legacywebsite/LEGACY_SITE_NOTES.md](docs/legacywebsite/LEGACY_SITE_NOTES.md)
 - Future website stack (WordPress replacement): [docs/future-website-stack.md](docs/future-website-stack.md)
+- Cloud Copilot setup (coding agent + MCP): [docs/copilot-cloud-setup.md](docs/copilot-cloud-setup.md)
 
 ## Repo structure
 
