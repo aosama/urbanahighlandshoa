@@ -22,46 +22,78 @@ const externalButtons = [
 
 const headerClass = variant === 'hero'
   ? 'bg-[radial-gradient(circle_at_top_left,rgba(43,95,71,0.15),transparent_55%),linear-gradient(120deg,rgba(207,168,79,0.22),rgba(255,255,255,0.3))]'
-  : 'bg-white/70 backdrop-blur border-b border-black/10';
+  : 'sticky top-0 z-50 bg-white/70 backdrop-blur border-b border-black/10';
 
 const topBarClass = variant === 'hero'
-  ? 'bg-white/70 backdrop-blur border-b border-black/10'
+  ? 'sticky top-0 z-50 bg-white/70 backdrop-blur border-b border-black/10'
   : '';
 ---
 
 <header class={headerClass}>
   <div class={topBarClass}>
-    <div class="mx-auto flex max-w-[1100px] flex-col gap-3 px-5 py-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-4 sm:py-4">
-      <a class="flex items-center gap-3 font-bold tracking-[0.4px] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[rgba(207,168,79,0.45)] rounded-xl" href={basePath}>
+    <div class="mx-auto flex max-w-[1100px] items-center justify-between gap-3 px-4 py-2.5 sm:flex-wrap sm:gap-4 sm:py-4">
+      <a class="flex items-center gap-2.5 font-bold tracking-[0.3px] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[rgba(207,168,79,0.45)] rounded-xl" href={basePath}>
         <img
           src={`${basePath}assets/UH-logo.jpg`}
           alt="Urbana Highlands HOA logo"
-          class="h-11 w-11 rounded-xl shadow-[0_8px_18px_rgba(18,33,43,0.12)]"
+          class="h-9 w-9 rounded-xl shadow-[0_8px_18px_rgba(18,33,43,0.12)]"
           loading="eager"
         />
-        <span>{siteConfig.siteName}</span>
+        <span class="text-[15px] leading-none">{siteConfig.siteName}</span>
       </a>
 
-      <nav class="flex w-full flex-wrap items-center gap-x-6 gap-y-1.5 text-sm font-semibold text-[#214738] sm:w-auto">
-        {navLinks.map((link) => (
-          <a class="hover:underline focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[rgba(207,168,79,0.45)] rounded-md px-1 py-0.5" href={link.href}>{link.label}</a>
-        ))}
-      </nav>
+      <div class="flex items-center gap-2">
+        <nav class="hidden flex-wrap items-center gap-x-6 gap-y-1.5 text-sm font-semibold text-[#214738] sm:flex">
+          {navLinks.map((link) => (
+            <a class="hover:underline focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[rgba(207,168,79,0.45)] rounded-md px-1 py-0.5" href={link.href}>{link.label}</a>
+          ))}
+        </nav>
 
-      <div class="flex w-full flex-wrap gap-2.5 sm:w-auto">
-        {externalButtons.map((button) => (
-          <a
-            class={button.variant === 'primary'
-              ? "rounded-full border border-[#2b5f47] bg-[#2b5f47] px-3 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:shadow-[0_8px_18px_rgba(18,33,43,0.12)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[rgba(207,168,79,0.55)]"
-              : "rounded-full border border-black/10 bg-white/70 px-3 py-2 text-sm font-semibold backdrop-blur transition hover:-translate-y-0.5 hover:shadow-[0_8px_18px_rgba(18,33,43,0.12)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[rgba(207,168,79,0.45)]"
-            }
-            href={button.href}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {button.label}
-          </a>
-        ))}
+        <div class="hidden flex-wrap gap-2.5 sm:flex">
+          {externalButtons.map((button) => (
+            <a
+              class={button.variant === 'primary'
+                ? "rounded-full border border-[#2b5f47] bg-[#2b5f47] px-3 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:shadow-[0_8px_18px_rgba(18,33,43,0.12)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[rgba(207,168,79,0.55)]"
+                : "rounded-full border border-black/10 bg-white/70 px-3 py-2 text-sm font-semibold backdrop-blur transition hover:-translate-y-0.5 hover:shadow-[0_8px_18px_rgba(18,33,43,0.12)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[rgba(207,168,79,0.45)]"
+              }
+              href={button.href}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {button.label}
+            </a>
+          ))}
+        </div>
+
+        <details class="relative sm:hidden">
+          <summary class="list-none rounded-full border border-black/10 bg-white/70 px-3 py-2 text-sm font-semibold backdrop-blur transition hover:shadow-[0_8px_18px_rgba(18,33,43,0.12)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[rgba(207,168,79,0.45)] cursor-pointer select-none">
+            Menu
+          </summary>
+
+          <div class="absolute right-0 mt-2 w-[min(92vw,360px)] overflow-hidden rounded-2xl border border-black/10 bg-white shadow-[0_24px_60px_rgba(15,23,42,0.16)]">
+            <nav class="grid gap-1 p-3 text-sm font-semibold text-[#214738]">
+              {navLinks.map((link) => (
+                <a class="rounded-xl px-3 py-2 hover:bg-black/5 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[rgba(207,168,79,0.45)]" href={link.href}>{link.label}</a>
+              ))}
+            </nav>
+
+            <div class="flex flex-wrap gap-2 border-t border-black/10 p-3">
+              {externalButtons.map((button) => (
+                <a
+                  class={button.variant === 'primary'
+                    ? "rounded-full border border-[#2b5f47] bg-[#2b5f47] px-3 py-2 text-sm font-semibold text-white focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[rgba(207,168,79,0.55)]"
+                    : "rounded-full border border-black/10 bg-white/70 px-3 py-2 text-sm font-semibold backdrop-blur focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[rgba(207,168,79,0.45)]"
+                  }
+                  href={button.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {button.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        </details>
       </div>
     </div>
   </div>
