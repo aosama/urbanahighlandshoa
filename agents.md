@@ -6,6 +6,12 @@
 - Legacy website (AS-IS documentation): [docs/legacywebsite/LEGACY_SITE_NOTES.md](docs/legacywebsite/LEGACY_SITE_NOTES.md)
 - Future website stack (WordPress replacement): [docs/future-website-stack.md](docs/future-website-stack.md)
 
+## Local tooling
+
+- This macOS machine has the GitHub CLI (`gh`) installed and already authenticated.
+- This macOS machine has Homebrew (`brew`), Node.js (`node`), and npm installed.
+- If the coding assistant/agent needs additional CLI tools for productivity, it should ask the user for permission to install them (no pushback/limitations on installing dev tools).
+
 ## Always Keep Documnentation Updated
 
 When making changes to the codebase, ensure that all relevant documentation is updated accordingly. This includes:
