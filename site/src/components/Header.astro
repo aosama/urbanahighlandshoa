@@ -1,7 +1,11 @@
 ---
 import { siteConfig } from '../lib/siteConfig';
 
-const { variant = 'simple' } = Astro.props;
+interface Props {
+  variant?: 'default' | 'hero';
+}
+
+const { variant = 'default' } = Astro.props;
 const basePath = import.meta.env.BASE_URL.endsWith('/')
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
@@ -11,69 +15,112 @@ const navLinks = [
   { href: `${basePath}announcements/`, label: 'News' },
   { href: `${basePath}events/`, label: 'Events' },
   { href: `${basePath}documents/`, label: 'Docs' },
+  { href: `${basePath}resources/`, label: 'Resources' },
   { href: `${basePath}contact/`, label: 'Contact' },
 ];
+
+const isHero = variant === 'hero';
 ---
 
-<header class="sticky top-0 z-50 border-b border-white/10 bg-slate-900/95 backdrop-blur-xl">
-  <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-    <a class="flex items-center gap-3 font-bold text-white transition hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded-lg" href={basePath}>
+{isHero ? (
+  <!-- Hero variant: transparent floating nav for homepage -->
+  <nav class="relative z-20 mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
+    <a href={basePath} class="flex items-center gap-3 text-white">
       <img 
         src={`${basePath}assets/UH-logo.jpg`}
         alt="Urbana Highlands logo"
-        class="h-10 w-10 rounded-xl shadow-lg"
+        class="h-11 w-11 rounded-xl shadow-lg"
       />
-      <span class="text-lg tracking-tight">Urbana Highlands</span>
+      <span class="hidden text-lg font-semibold tracking-tight sm:block">Urbana Highlands</span>
     </a>
-
-    <div class="flex items-center gap-6">
-      <nav class="hidden items-center gap-1 md:flex">
-        {navLinks.map((link) => (
+    
+    <div class="flex items-center gap-2">
+      <div class="hidden items-center gap-1 rounded-full bg-slate-900/60 p-1.5 sm:flex">
+        {navLinks.map((link, index) => (
           <a 
-            class="rounded-lg px-3 py-2 text-sm font-medium text-slate-300 transition hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400" 
-            href={link.href}
+            href={link.href} 
+            class={`rounded-full px-4 py-2 text-sm font-medium transition ${
+              index === 0 
+                ? 'bg-white/20 text-white' 
+                : 'text-white/80 hover:bg-white/10 hover:text-white'
+            }`}
           >
             {link.label}
           </a>
         ))}
-      </nav>
-
-      <a
-        class="hidden rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-emerald-500/25 transition hover:shadow-emerald-500/40 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 md:inline-flex"
-        href={siteConfig.links.residentPortal}
-        target="_blank"
+      </div>
+      <a 
+        href={siteConfig.links.residentPortal} 
+        target="_blank" 
         rel="noopener noreferrer"
+        class="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 shadow-lg transition hover:bg-white/90 hover:shadow-xl"
       >
         Resident Portal
       </a>
-
-      <details class="relative md:hidden">
-        <summary class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg text-slate-300 transition hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 list-none">
-          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </summary>
-
-        <div class="absolute right-0 mt-2 w-64 overflow-hidden rounded-2xl border border-white/10 bg-slate-800 shadow-2xl">
-          <nav class="grid gap-1 p-3">
-            {navLinks.map((link) => (
-              <a class="rounded-xl px-4 py-3 text-sm font-medium text-slate-200 transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400" href={link.href}>
-                {link.label}
-              </a>
-            ))}
-          </nav>
-          <div class="border-t border-white/10 p-3">
-            <a
-              class="flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 px-4 py-3 text-sm font-semibold text-white"
-              href={siteConfig.links.residentPortal}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Resident Portal
-            </a>
-          </div>
-        </div>
-      </details>
     </div>
-  </div>
-</header>
+  </nav>
+) : (
+  <!-- Default variant: sticky header for inner pages -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-900/95 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <a class="flex items-center gap-3 font-bold text-white transition hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded-lg" href={basePath}>
+        <img 
+          src={`${basePath}assets/UH-logo.jpg`}
+          alt="Urbana Highlands logo"
+          class="h-10 w-10 rounded-xl shadow-lg"
+        />
+        <span class="text-lg tracking-tight">Urbana Highlands</span>
+      </a>
+
+      <div class="flex items-center gap-6">
+        <nav class="hidden items-center gap-1 md:flex">
+          {navLinks.map((link) => (
+            <a 
+              class="rounded-lg px-3 py-2 text-sm font-medium text-slate-300 transition hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400" 
+              href={link.href}
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+
+        <a
+          class="hidden rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-emerald-500/25 transition hover:shadow-emerald-500/40 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 md:inline-flex"
+          href={siteConfig.links.residentPortal}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Resident Portal
+        </a>
+
+        <details class="relative md:hidden">
+          <summary class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg text-slate-300 transition hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 list-none">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </summary>
+
+          <div class="absolute right-0 mt-2 w-64 overflow-hidden rounded-2xl border border-white/10 bg-slate-800 shadow-2xl">
+            <nav class="grid gap-1 p-3">
+              {navLinks.map((link) => (
+                <a class="rounded-xl px-4 py-3 text-sm font-medium text-slate-200 transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400" href={link.href}>
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+            <div class="border-t border-white/10 p-3">
+              <a
+                class="flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 px-4 py-3 text-sm font-semibold text-white"
+                href={siteConfig.links.residentPortal}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Resident Portal
+              </a>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </header>
+)}

@@ -8,6 +8,7 @@ const pages = [
   { path: `${BASE}/announcements/`, title: 'Announcements' },
   { path: `${BASE}/events/`, title: 'Events' },
   { path: `${BASE}/documents/`, title: 'Documents' },
+  { path: `${BASE}/resources/`, title: 'Community Resources' },
   { path: `${BASE}/contact/`, title: 'Contact' },
 ];
 
@@ -150,8 +151,8 @@ test.describe('All Links Verification', () => {
 test.describe('Essential Content', () => {
   test('homepage has hero section', async ({ page }) => {
     await page.goto(`${BASE}/`);
-    await expect(page.locator('h1')).toBeVisible();
-    await expect(page.locator('h1')).toContainText(/Urbana Highlands/i);
+    const heroHeading = page.getByRole('heading', { name: /Urbana Highlands/i, level: 1 });
+    await expect(heroHeading).toBeVisible();
   });
 
   test('homepage has resident portal link', async ({ page }) => {

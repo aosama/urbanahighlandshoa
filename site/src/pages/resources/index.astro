@@ -1,0 +1,110 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+
+const basePath = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+
+const resourceCategories = [
+  {
+    title: 'Education & Schools',
+    icon: '🏫',
+    resources: [
+      { name: 'Frederick County Public Schools (FCPS)', url: 'https://www.fcps.org' },
+      { name: 'FCPS School Locator', url: 'https://www.fcps.org/schools/find_your_school_feeder_area' },
+      { name: 'Frederick County Public Libraries', url: 'https://www.fcpl.org' },
+    ],
+  },
+  {
+    title: 'Emergency & Safety',
+    icon: '🚒',
+    resources: [
+      { name: 'Frederick County Fire & Rescue', url: 'https://frederickcountymd.gov/24/Division-of-Fire-Rescue-Services-DFRS' },
+      { name: 'Frederick County Sheriff (non-emergency)', url: 'https://frederickcountymd.gov/677/Sheriff-Adult-Detention' },
+      { name: 'Poison Control (1-800-222-1222)', url: 'https://poisonhelp.hrsa.gov' },
+      { name: 'Frederick County Emergency Management', url: 'https://frederickcountymd.gov/2001/Emergency-Management' },
+    ],
+  },
+  {
+    title: 'Government & Utilities',
+    icon: '🏛️',
+    resources: [
+      { name: 'Frederick County Government Portal', url: 'https://frederickcountymd.gov' },
+      { name: 'Trash & Recycling (County Solid Waste)', url: 'https://frederickcountymd.gov/solidwaste' },
+      { name: 'City of Frederick Water/Sewer', url: 'https://www.cityoffrederickmd.gov/69/Water-Sewer' },
+      { name: 'Potomac Edison Outages', url: 'https://www.firstenergycorp.com/outages' },
+      { name: 'BGE Outages', url: 'https://outagemap.bge.com' },
+    ],
+  },
+  {
+    title: 'Transportation',
+    icon: '🚗',
+    resources: [
+      { name: 'MD 511 Road Conditions', url: 'https://chart.maryland.gov' },
+      { name: 'MARC Train (commuter rail)', url: 'https://www.mta.maryland.gov/marc-train' },
+      { name: 'Frederick County TransIT', url: 'https://frederickcountymd.gov/transit' },
+    ],
+  },
+  {
+    title: 'Parks & Recreation',
+    icon: '🌳',
+    resources: [
+      { name: 'Frederick County Parks & Rec', url: 'https://www.recreater.com' },
+      { name: 'Urbana District Park', url: 'https://www.recreater.com/272/Urbana-District-Park' },
+      { name: 'Maryland State Parks', url: 'https://dnr.maryland.gov/publiclands' },
+    ],
+  },
+  {
+    title: 'Pet Owners',
+    icon: '🐾',
+    resources: [
+      { name: 'Frederick County Animal Control', url: 'https://frederickcountymd.gov/15/Animal-Control' },
+      { name: 'Dog/Cat License & Rabies', url: 'https://frederickcountymd.gov/124/Rabies-Licensing' },
+    ],
+  },
+];
+---
+
+<PageLayout title="Community Resources">
+  <Fragment slot="title">
+    <span class="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Community Resources</span>
+  </Fragment>
+
+  <p class="mb-8 text-center text-slate-600">
+    Helpful links to local government services, schools, emergency contacts, and public amenities.
+  </p>
+
+  <div class="grid gap-6 md:grid-cols-2">
+    {resourceCategories.map((category) => (
+      <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md">
+        <div class="mb-4 flex items-center gap-3">
+          <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-emerald-100 text-2xl">
+            {category.icon}
+          </div>
+          <h2 class="text-xl font-semibold text-slate-900">{category.title}</h2>
+        </div>
+        <ul class="space-y-2">
+          {category.resources.map((resource) => (
+            <li>
+              <a
+                href={resource.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group flex items-center gap-2 rounded-lg px-3 py-2 text-slate-700 transition hover:bg-slate-50"
+              >
+                <svg class="h-4 w-4 shrink-0 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+                <span class="group-hover:text-emerald-600">{resource.name}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+
+  <p class="mt-8 text-center text-sm text-slate-500">
+    Links provided for convenience. Urbana Highlands HOA is not affiliated with these organizations.
+  </p>
+</PageLayout>
