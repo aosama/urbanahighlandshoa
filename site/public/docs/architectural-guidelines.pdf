@@ -1,60 +1,74 @@
-%PDF-1.4
+%PDF-1.3
+%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
 <<
-/Type /Catalog
-/Pages 2 0 R
+/F1 2 0 R /F2 3 0 R
 >>
 endobj
 2 0 obj
 <<
-/Type /Pages
-/Kids [3 0 R]
-/Count 1
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
 >>
 endobj
 3 0 obj
 <<
-/Type /Page
-/Parent 2 0 R
-/MediaBox [0 0 612 792]
-/Contents 4 0 R
-/Resources <<
-/Font <<
-/F1 <<
-/Type /Font
-/Subtype /Type1
-/BaseFont /Helvetica
->>
->>
->>
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
 >>
 endobj
 4 0 obj
 <<
-/Length 105
+/Contents 8 0 R /MediaBox [ 0 0 612 792 ] /Parent 7 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+5 0 obj
+<<
+/PageMode /UseNone /Pages 7 0 R /Type /Catalog
+>>
+endobj
+6 0 obj
+<<
+/Author (anonymous) /CreationDate (D:20260131044250+00'00') /Creator (anonymous) /Keywords () /ModDate (D:20260131044250+00'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (unspecified) /Title (untitled) /Trapped /False
+>>
+endobj
+7 0 obj
+<<
+/Count 1 /Kids [ 4 0 R ] /Type /Pages
+>>
+endobj
+8 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 259
 >>
 stream
-BT
-/F1 12 Tf
-50 750 Td
-(Architectural Guidelines) Tj
-0 -20 Td
-(Urbana Highlands HOA - Placeholder) Tj
-ET
-endstream
+Garp%c)SW7&-_"*:N;]cU*c_G=-j9n/-Ip%!RbLn7a`c#Mm%%j`G=GT%'qoI+%JZi,NCWrYYeNh,\.6^6=rdnFi7<T@\,pK0jc6k?S5]='EZ$6!ij-0*"#te*;JO+Y&/g/Bg%*[6I"Cks,f`%:R5@pFO8UT3,ZjF?-jYiN\,OZWVK$u;>eip?OiZJgn8#6]@Vemc!(OZ2q(c+\&k!X!Vl_cb*!5.?1b)KjkU=Up)XCrhA)V$7i%*dIF=KF!RHF0#Q~>endstream
 endobj
 xref
-0 5
+0 9
 0000000000 65535 f 
-0000000009 00000 n 
-0000000058 00000 n 
-0000000115 00000 n 
-0000000317 00000 n 
+0000000061 00000 n 
+0000000102 00000 n 
+0000000209 00000 n 
+0000000321 00000 n 
+0000000514 00000 n 
+0000000582 00000 n 
+0000000843 00000 n 
+0000000902 00000 n 
 trailer
 <<
-/Size 5
-/Root 1 0 R
+/ID 
+[<081bdf5c762172044ca226ac5c601620><081bdf5c762172044ca226ac5c601620>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 6 0 R
+/Root 5 0 R
+/Size 9
 >>
 startxref
-467
+1251
 %%EOF
