@@ -14,12 +14,25 @@ const basePath = import.meta.env.BASE_URL.endsWith('/')
   <div class="relative min-h-[100svh] overflow-hidden">
     <!-- Background image with overlay -->
     <div class="absolute inset-0">
-      <img
-        src={`${basePath}assets/community/hero-welcome.jpg`}
-        alt="Urbana Highlands community entrance, playground, and scenic mountain views"
-        class="h-full w-full object-cover"
-        loading="eager"
-      />
+      <picture>
+        <source
+          type="image/webp"
+          srcset={`${basePath}assets/community/hero-welcome-640.webp 640w, ${basePath}assets/community/hero-welcome-960.webp 960w, ${basePath}assets/community/hero-welcome-1280.webp 1280w, ${basePath}assets/community/hero-welcome-1920.webp 1920w`}
+          sizes="100vw"
+        />
+        <img
+          src={`${basePath}assets/community/hero-welcome.jpg`}
+          srcset={`${basePath}assets/community/hero-welcome.jpg 1920w`}
+          sizes="100vw"
+          alt="Urbana Highlands community entrance, playground, and scenic mountain views"
+          class="h-full w-full object-cover"
+          width="1920"
+          height="1288"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+        />
+      </picture>
       <div class="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-slate-900/20 to-slate-900/70"></div>
     </div>
 
@@ -108,11 +121,25 @@ const basePath = import.meta.env.BASE_URL.endsWith('/')
         <div class="grid auto-rows-[280px] grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <!-- Large feature card -->
           <div class="group relative col-span-1 row-span-2 overflow-hidden rounded-3xl sm:col-span-2 lg:col-span-2">
-            <img 
-              src={`${basePath}assets/community/playground.jpg`}
-              alt="Community playground with slides and swings"
-              class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcset={`${basePath}assets/community/playground-480.webp 480w, ${basePath}assets/community/playground.webp 960w`}
+                sizes="(min-width: 1024px) 720px, (min-width: 640px) 50vw, 100vw"
+              />
+              <img 
+                src={`${basePath}assets/community/playground.jpg`}
+                srcset={`${basePath}assets/community/playground-480.jpg 480w, ${basePath}assets/community/playground.jpg 960w`}
+                sizes="(min-width: 1024px) 720px, (min-width: 640px) 50vw, 100vw"
+                alt="Community playground with slides and swings"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                width="960"
+                height="720"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
+              />
+            </picture>
             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent"></div>
             <div class="absolute bottom-0 left-0 p-8">
               <span class="mb-2 inline-block rounded-full bg-sky-500 px-3 py-1 text-xs font-semibold text-white">Family Friendly</span>
@@ -123,11 +150,25 @@ const basePath = import.meta.env.BASE_URL.endsWith('/')
 
           <!-- Walking paths -->
           <div class="group relative overflow-hidden rounded-3xl">
-            <img 
-              src={`${basePath}assets/community/walking-path.jpg`}
-              alt="Scenic walking path through the community"
-              class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcset={`${basePath}assets/community/walking-path-480.webp 480w, ${basePath}assets/community/walking-path.webp 960w`}
+                sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw"
+              />
+              <img 
+                src={`${basePath}assets/community/walking-path.jpg`}
+                srcset={`${basePath}assets/community/walking-path-480.jpg 480w, ${basePath}assets/community/walking-path.jpg 960w`}
+                sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw"
+                alt="Scenic walking path through the community"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                width="960"
+                height="698"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
+              />
+            </picture>
             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"></div>
             <div class="absolute bottom-0 left-0 p-6">
               <span class="mb-2 inline-block rounded-full bg-emerald-500 px-3 py-1 text-xs font-semibold text-white">Nature</span>
@@ -137,11 +178,25 @@ const basePath = import.meta.env.BASE_URL.endsWith('/')
 
           <!-- Neighborhood -->
           <div class="group relative overflow-hidden rounded-3xl">
-            <img 
-              src={`${basePath}assets/community/neighborhood-road.jpg`}
-              alt="Well-maintained neighborhood streets"
-              class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcset={`${basePath}assets/community/neighborhood-road-480.webp 480w, ${basePath}assets/community/neighborhood-road.webp 960w`}
+                sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw"
+              />
+              <img 
+                src={`${basePath}assets/community/neighborhood-road.jpg`}
+                srcset={`${basePath}assets/community/neighborhood-road-480.jpg 480w, ${basePath}assets/community/neighborhood-road.jpg 960w`}
+                sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw"
+                alt="Well-maintained neighborhood streets"
+                class="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                width="960"
+                height="720"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
+              />
+            </picture>
             <div class="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent"></div>
             <div class="absolute bottom-0 left-0 p-6">
               <span class="mb-2 inline-block rounded-full bg-amber-500 px-3 py-1 text-xs font-semibold text-white">Community</span>

@@ -30,6 +30,10 @@ const isHero = variant === 'hero';
         src={`${basePath}assets/UH-logo.jpg`}
         alt="Urbana Highlands logo"
         class="h-11 w-11 rounded-xl shadow-lg"
+        width="44"
+        height="44"
+        loading="eager"
+        decoding="async"
       />
       <span class="hidden text-lg font-semibold tracking-tight sm:block">Urbana Highlands</span>
     </a>
@@ -49,14 +53,43 @@ const isHero = variant === 'hero';
           </a>
         ))}
       </div>
+
       <a 
         href={siteConfig.links.residentPortal} 
         target="_blank" 
         rel="noopener noreferrer"
-        class="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 shadow-lg transition hover:bg-white/90 hover:shadow-xl"
+        class="hidden rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 shadow-lg transition hover:bg-white/90 hover:shadow-xl sm:inline-flex"
       >
         Resident Portal
       </a>
+
+      <details class="relative sm:hidden">
+        <summary class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg text-white/90 transition hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 list-none">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </summary>
+
+        <div class="absolute right-0 mt-2 w-64 overflow-hidden rounded-2xl border border-white/10 bg-slate-900/95 shadow-2xl backdrop-blur-xl">
+          <nav class="grid gap-1 p-3">
+            {navLinks.map((link) => (
+              <a class="rounded-xl px-4 py-3 text-sm font-medium text-white/90 transition hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300" href={link.href}>
+                {link.label}
+              </a>
+            ))}
+          </nav>
+          <div class="border-t border-white/10 p-3">
+            <a
+              class="flex w-full items-center justify-center rounded-xl bg-white px-4 py-3 text-sm font-semibold text-slate-900"
+              href={siteConfig.links.residentPortal}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Resident Portal
+            </a>
+          </div>
+        </div>
+      </details>
     </div>
   </nav>
 ) : (
@@ -68,6 +101,10 @@ const isHero = variant === 'hero';
           src={`${basePath}assets/UH-logo.jpg`}
           alt="Urbana Highlands logo"
           class="h-10 w-10 rounded-xl shadow-lg"
+          width="40"
+          height="40"
+          loading="eager"
+          decoding="async"
         />
         <span class="text-lg tracking-tight">Urbana Highlands</span>
       </a>
