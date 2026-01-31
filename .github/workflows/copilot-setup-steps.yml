@@ -29,4 +29,6 @@ jobs:
 
       - name: Install site dependencies
         working-directory: site
+        env:
+          ASTRO_TELEMETRY_DISABLED: "1"
         run: npm ci
