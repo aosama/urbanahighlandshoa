@@ -4,6 +4,7 @@
 
 - Main project overview: [README.md](README.md)
 - Legacy website (AS-IS documentation): [docs/legacywebsite/LEGACY_SITE_NOTES.md](docs/legacywebsite/LEGACY_SITE_NOTES.md)
+- Future website stack (WordPress replacement): [docs/future-website-stack.md](docs/future-website-stack.md)
 
 ## Always Keep Documnentation Updated
 
