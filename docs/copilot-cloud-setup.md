@@ -10,6 +10,8 @@ This repo includes:
 
 Copilot coding agent will run this workflow before it starts work (it installs Node and runs `npm ci` in `site/`).
 
+Note: Astro CLI may attempt to send telemetry during builds; the repo disables it in CI to avoid Copilot firewall blocks.
+
 ## 2) MCP (Model Context Protocol) capabilities
 
 ### What you get by default
