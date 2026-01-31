@@ -51,7 +51,8 @@ When making changes to the codebase, ensure that all relevant documentation is u
 ### Screenshot evidence (required for UI changes)
 
 - For any UI-visible change (layout, CSS, images, content), attach **at least one screenshot** as evidence in the **Pull Request conversation**.
-- **Do NOT commit screenshots** into the repository. Screenshots must be uploaded to GitHub as PR comment attachments (drag/drop) so they are visible in the PR, but don’t pollute the repo.
+- **Preference:** screenshots should be attached to the PR (e.g., in PR comments) and treated as transient review artifacts.
+- **Do NOT commit screenshots** into the repository (no new image files in git). Upload/attach them to GitHub in the PR conversation instead.
 - Prefer capturing the screenshot from the **PR Preview URL** (not only local dev), and mention the exact URL/path in the PR comment.
 
 ## Verify work in PR Preview (GitHub Pages)
