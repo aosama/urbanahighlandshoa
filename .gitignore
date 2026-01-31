@@ -22,5 +22,6 @@ site/.astro/
 link-check-results.json
 check-links.js
 
-# Local verification screenshots (keep committed screenshots explicit)
-docs/screenshots/prod-*.png
+# Local verification screenshots
+# (Keep screenshots out of the repo; allow local, uncommitted captures.)
+docs/screenshots/

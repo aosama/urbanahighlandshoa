@@ -40,7 +40,8 @@ When making changes to the codebase, ensure that all relevant documentation is u
 
 ## Verify HTML changes (local)
 
-- When editing HTML files or doing web design work, you must preview the result using the Playwright MCP tool and capture a screenshot to verify the output.
+- When editing HTML files or doing web design work, you must preview the result (Playwright preferred).
+- Do not commit screenshots as repo artifacts. Screenshots are allowed only as temporary, uncommitted evidence during a PR review cycle.
 
 ## Verify work in PR Preview (GitHub Pages)
 

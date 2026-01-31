@@ -45,4 +45,4 @@ Build:
 ## Key repo guidance
 
 - Read `README.md` and `agents.md` first.
-- For UI changes: verify using Playwright and save screenshots under `docs/screenshots/`.
+- For UI changes: verify using Playwright; do not commit screenshots as repo artifacts.
