@@ -12,6 +12,13 @@
 - Repo root is `/Users/ahmedhamdy/IdeaProjects/urbanahighlandshoa`.
 - The Astro website source lives under `site/` (it is **not** the repo root).
 
+## Branch policy
+
+- **Do not push directly to `main`**. All changes must go through a pull request.
+- Create a feature branch for your work (e.g., `feature/add-events-page`, `fix/header-nav`).
+- Open a PR, wait for the PR preview to deploy, verify your changes, then request review.
+- Only merge after approval (or self-merge if you're the sole maintainer and the build passes).
+
 ## Session start
 
 - Always read [README.md](README.md) at the start of each chat/session to confirm the current stack, run commands, and deployment workflow.
