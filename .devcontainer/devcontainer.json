@@ -1,6 +1,6 @@
 {
   "name": "Urbana Highlands HOA",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-bookworm",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:24-bookworm",
   "features": {
     "ghcr.io/devcontainers/features/git:1": {},
     "ghcr.io/devcontainers/features/github-cli:1": {},

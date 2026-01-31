@@ -68,6 +68,8 @@ When a PR changes the website, you must verify the deployed PR preview (not just
 
 **NEVER provide a URL or link to the user without first verifying it works.**
 
+**Never guess.** Do not make assumptions about versions, image tags, URLs, or environment behavior. Verify using authoritative sources (e.g., official registries/docs) or ask for clarification.
+
 Before sharing any URL (local dev server, PR preview, production site, external links):
 
 1. **Verify accessibility**: Use `curl -I <url>` to confirm HTTP 200, or open in Playwright/browser.
