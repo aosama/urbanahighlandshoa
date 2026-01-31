@@ -37,9 +37,17 @@ When making changes to the codebase, ensure that all relevant documentation is u
 - Do not pollute the repo root with unnecessary files.
 - Use appropriate directories for different types of files (e.g., `docs/`, `src/`, `tests/`).
 
-## Verify HTML Changes
+## Verify HTML changes (local)
 
 - When editing HTML files or doing web design work, you must preview the result using the Playwright MCP tool and capture a screenshot to verify the output.
+
+## Verify work in PR Preview (GitHub Pages)
+
+When a PR changes the website, you must verify the deployed PR preview (not just local build output):
+
+- Use the PR preview URL convention: `https://aosama.github.io/urbanahighlandshoa/__pr-preview__/pr-<PR_NUMBER>/`
+- Navigate to the specific page(s) affected (example: `/documents/`), and confirm the change is visible and correct.
+- Include the PR preview URL(s) in your final response so the work is reviewable and referencable.
 
 ## Repo lessons / gotchas
 
