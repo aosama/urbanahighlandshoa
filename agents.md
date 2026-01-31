@@ -47,7 +47,12 @@ When making changes to the codebase, ensure that all relevant documentation is u
 ## Verify HTML changes (local)
 
 - When editing HTML files or doing web design work, you must preview the result (Playwright preferred).
-- Do not commit screenshots as repo artifacts. Screenshots are allowed only as temporary, uncommitted evidence during a PR review cycle.
+
+### Screenshot evidence (required for UI changes)
+
+- For any UI-visible change (layout, CSS, images, content), attach **at least one screenshot** as evidence in the **Pull Request conversation**.
+- **Do NOT commit screenshots** into the repository. Screenshots must be uploaded to GitHub as PR comment attachments (drag/drop) so they are visible in the PR, but don’t pollute the repo.
+- Prefer capturing the screenshot from the **PR Preview URL** (not only local dev), and mention the exact URL/path in the PR comment.
 
 ## Verify work in PR Preview (GitHub Pages)
 
