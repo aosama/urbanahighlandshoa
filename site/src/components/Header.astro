@@ -7,66 +7,30 @@ const basePath = import.meta.env.BASE_URL.endsWith('/')
   : `${import.meta.env.BASE_URL}/`;
 
 const navLinks = [
-  { href: basePath, label: 'Home', showInHero: false },
-  { href: `${basePath}announcements/`, label: 'Announcements', showInHero: true },
-  { href: `${basePath}events/`, label: 'Events', showInHero: true },
-  { href: `${basePath}documents/`, label: 'Documents', showInHero: true },
-  { href: `${basePath}contact/`, label: 'Contact', showInHero: true },
+  { href: basePath, label: 'Home' },
+  { href: `${basePath}announcements/`, label: 'Announcements' },
+  { href: `${basePath}events/`, label: 'Events' },
+  { href: `${basePath}documents/`, label: 'Documents' },
+  { href: `${basePath}contact/`, label: 'Contact' },
 ];
-
-const heroNavLinks = navLinks.filter(link => link.showInHero);
 
 const externalButtons = [
   { href: siteConfig.links.facebook, label: 'Facebook', variant: 'default' },
   { href: siteConfig.links.poolPass, label: 'Pool Pass', variant: 'default' },
   { href: siteConfig.links.residentPortal, label: 'Resident Portal', variant: 'primary' },
 ];
+
+const headerClass = variant === 'hero'
+  ? 'bg-[radial-gradient(circle_at_top_left,rgba(43,95,71,0.15),transparent_55%),linear-gradient(120deg,rgba(207,168,79,0.22),rgba(255,255,255,0.3))]'
+  : 'bg-white/70 backdrop-blur border-b border-black/10';
+
+const topBarClass = variant === 'hero'
+  ? 'bg-white/70 backdrop-blur border-b border-black/10'
+  : '';
 ---
 
-{variant === 'hero' ? (
-  <header class="bg-[radial-gradient(circle_at_top_left,rgba(43,95,71,0.15),transparent_55%),linear-gradient(120deg,rgba(207,168,79,0.22),rgba(255,255,255,0.3))] px-5 pt-10 pb-20">
-    <div class="mx-auto mb-10 flex max-w-[1100px] flex-wrap items-center justify-between gap-5">
-      <div class="flex items-center gap-4 font-bold tracking-[0.4px]">
-        <img
-          src={`${basePath}assets/UH-logo.jpg`}
-          alt="Urbana Highlands HOA logo"
-          class="h-16 w-16 rounded-2xl shadow-[0_8px_18px_rgba(18,33,43,0.12)]"
-        />
-        <div>
-          <div class="text-[0.95rem] text-[#6c7a86]">{siteConfig.siteName}</div>
-          <div class="text-[1.1rem]">Home Owners Association</div>
-        </div>
-      </div>
-
-      <nav class="flex flex-wrap gap-3">
-        {heroNavLinks.map((link) => (
-          <a
-            class="rounded-full border border-black/10 bg-white/70 px-4 py-2.5 text-[0.95rem] font-semibold backdrop-blur transition hover:-translate-y-0.5 hover:shadow-[0_8px_18px_rgba(18,33,43,0.12)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[rgba(207,168,79,0.45)]"
-            href={link.href}
-          >
-            {link.label}
-          </a>
-        ))}
-        {externalButtons.map((button) => (
-          <a
-            class={button.variant === 'primary' 
-              ? "rounded-full border border-[#2b5f47] bg-[#2b5f47] px-4 py-2.5 text-[0.95rem] font-semibold text-white transition hover:-translate-y-0.5 hover:shadow-[0_8px_18px_rgba(18,33,43,0.12)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[rgba(207,168,79,0.55)]"
-              : "rounded-full border border-black/10 bg-white/70 px-4 py-2.5 text-[0.95rem] font-semibold backdrop-blur transition hover:-translate-y-0.5 hover:shadow-[0_8px_18px_rgba(18,33,43,0.12)] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[rgba(207,168,79,0.45)]"
-            }
-            href={button.href}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {button.label}
-          </a>
-        ))}
-      </nav>
-    </div>
-
-    <slot />
-  </header>
-) : (
-  <header class="bg-white/70 backdrop-blur border-b border-black/10">
+<header class={headerClass}>
+  <div class={topBarClass}>
     <div class="mx-auto flex max-w-[1100px] flex-col gap-3 px-5 py-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-4 sm:py-4">
       <a class="flex items-center gap-3 font-bold tracking-[0.4px] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[rgba(207,168,79,0.45)] rounded-xl" href={basePath}>
         <img
@@ -100,5 +64,11 @@ const externalButtons = [
         ))}
       </div>
     </div>
-  </header>
-)}
+  </div>
+
+  {variant === 'hero' && (
+    <div class="px-5 pt-10 pb-20">
+      <slot />
+    </div>
+  )}
+</header>
