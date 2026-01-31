@@ -59,6 +59,19 @@ When a PR changes the website, you must verify the deployed PR preview (not just
 - Before providing any web link (PR preview or production) to the user, verify it is actually accessible (e.g., open it in Playwright or `curl -I` and confirm it returns 200).
 - Include the PR preview URL(s) in your final response so the work is reviewable and referencable.
 
+## URL Verification (Critical)
+
+**NEVER provide a URL or link to the user without first verifying it works.**
+
+Before sharing any URL (local dev server, PR preview, production site, external links):
+
+1. **Verify accessibility**: Use `curl -I <url>` to confirm HTTP 200, or open in Playwright/browser.
+2. **Verify the specific path**: Don't assume a page exists—check the exact URL you're about to share.
+3. **For local dev servers**: Confirm the server is running and responding before sharing the localhost URL.
+4. **For deployed sites**: Wait for the deploy workflow to complete, then verify the live URL.
+
+If a URL cannot be verified, explicitly tell the user it hasn't been verified yet and explain why.
+
 ## Delegating GitHub Issues to cloud agents (good practices)
 
 When delegating an issue to a cloud agent (Copilot):

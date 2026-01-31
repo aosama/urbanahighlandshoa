@@ -55,6 +55,21 @@ const basePath = import.meta.env.BASE_URL.endsWith('/')
 
     <!-- Hero content -->
     <div class="relative z-10 flex min-h-[calc(100svh-88px)] flex-col items-center justify-center px-6 text-center">
+      <!-- Live Weather Widget (top-right corner) -->
+      <div id="weather-widget" class="absolute right-6 top-20 hidden rounded-2xl border border-white/20 bg-slate-900/60 px-4 py-3 text-white sm:block">
+        <div class="flex items-center gap-3">
+          <div id="weather-icon" class="text-3xl">🌤️</div>
+          <div class="text-left">
+            <div class="flex items-baseline gap-1">
+              <span id="weather-temp" class="text-2xl font-bold">--</span>
+              <span class="text-sm text-white/60">°F</span>
+            </div>
+            <div id="weather-desc" class="text-xs text-white/70">Loading...</div>
+          </div>
+        </div>
+        <div class="mt-1 text-[10px] text-white/40">Urbana, MD</div>
+      </div>
+
       <div class="animate-fade-in-up">
         <span class="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-slate-900/50 px-4 py-2 text-sm font-medium text-white">
           <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
@@ -348,3 +363,93 @@ const basePath = import.meta.env.BASE_URL.endsWith('/')
     animation: fade-in-up 1s ease-out;
   }
 </style>
+
+<script>
+  // Weather widget - fetches live weather for Urbana, MD using Open-Meteo API (free, no key required)
+  const URBANA_LAT = 39.3257;
+  const URBANA_LON = -77.3547;
+  
+  // Weather code to emoji mapping
+  const weatherIcons: Record<number, string> = {
+    0: '☀️',   // Clear sky
+    1: '🌤️',  // Mainly clear
+    2: '⛅',   // Partly cloudy
+    3: '☁️',   // Overcast
+    45: '🌫️', // Fog
+    48: '🌫️', // Depositing rime fog
+    51: '🌧️', // Light drizzle
+    53: '🌧️', // Moderate drizzle
+    55: '🌧️', // Dense drizzle
+    61: '🌧️', // Slight rain
+    63: '🌧️', // Moderate rain
+    65: '🌧️', // Heavy rain
+    71: '🌨️', // Slight snow
+    73: '🌨️', // Moderate snow
+    75: '❄️',  // Heavy snow
+    77: '🌨️', // Snow grains
+    80: '🌦️', // Slight rain showers
+    81: '🌦️', // Moderate rain showers
+    82: '⛈️',  // Violent rain showers
+    85: '🌨️', // Slight snow showers
+    86: '🌨️', // Heavy snow showers
+    95: '⛈️',  // Thunderstorm
+    96: '⛈️',  // Thunderstorm with slight hail
+    99: '⛈️',  // Thunderstorm with heavy hail
+  };
+
+  const weatherDescriptions: Record<number, string> = {
+    0: 'Clear sky',
+    1: 'Mainly clear',
+    2: 'Partly cloudy',
+    3: 'Overcast',
+    45: 'Foggy',
+    48: 'Foggy',
+    51: 'Light drizzle',
+    53: 'Drizzle',
+    55: 'Dense drizzle',
+    61: 'Light rain',
+    63: 'Rain',
+    65: 'Heavy rain',
+    71: 'Light snow',
+    73: 'Snow',
+    75: 'Heavy snow',
+    77: 'Snow grains',
+    80: 'Rain showers',
+    81: 'Rain showers',
+    82: 'Heavy showers',
+    85: 'Snow showers',
+    86: 'Heavy snow',
+    95: 'Thunderstorm',
+    96: 'Thunderstorm',
+    99: 'Severe storm',
+  };
+
+  async function fetchWeather() {
+    try {
+      const url = `https://api.open-meteo.com/v1/forecast?latitude=${URBANA_LAT}&longitude=${URBANA_LON}&current=temperature_2m,weather_code&temperature_unit=fahrenheit&timezone=America%2FNew_York`;
+      const response = await fetch(url);
+      const data = await response.json();
+      
+      const temp = Math.round(data.current.temperature_2m);
+      const code = data.current.weather_code;
+      
+      const tempEl = document.getElementById('weather-temp');
+      const iconEl = document.getElementById('weather-icon');
+      const descEl = document.getElementById('weather-desc');
+      
+      if (tempEl) tempEl.textContent = temp.toString();
+      if (iconEl) iconEl.textContent = weatherIcons[code] || '🌡️';
+      if (descEl) descEl.textContent = weatherDescriptions[code] || 'Current weather';
+    } catch (error) {
+      console.error('Weather fetch failed:', error);
+      const descEl = document.getElementById('weather-desc');
+      if (descEl) descEl.textContent = 'Unavailable';
+    }
+  }
+
+  // Fetch weather on page load
+  fetchWeather();
+  
+  // Refresh every 15 minutes
+  setInterval(fetchWeather, 15 * 60 * 1000);
+</script>
