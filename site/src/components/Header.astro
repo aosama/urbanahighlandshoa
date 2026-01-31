@@ -7,12 +7,14 @@ const basePath = import.meta.env.BASE_URL.endsWith('/')
   : `${import.meta.env.BASE_URL}/`;
 
 const navLinks = [
-  { href: basePath, label: 'Home' },
-  { href: `${basePath}announcements/`, label: 'Announcements' },
-  { href: `${basePath}events/`, label: 'Events' },
-  { href: `${basePath}documents/`, label: 'Documents' },
-  { href: `${basePath}contact/`, label: 'Contact' },
+  { href: basePath, label: 'Home', showInHero: false },
+  { href: `${basePath}announcements/`, label: 'Announcements', showInHero: true },
+  { href: `${basePath}events/`, label: 'Events', showInHero: true },
+  { href: `${basePath}documents/`, label: 'Documents', showInHero: true },
+  { href: `${basePath}contact/`, label: 'Contact', showInHero: true },
 ];
+
+const heroNavLinks = navLinks.filter(link => link.showInHero);
 
 const externalButtons = [
   { href: siteConfig.links.facebook, label: 'Facebook', variant: 'default' },
@@ -37,6 +39,14 @@ const externalButtons = [
       </div>
 
       <nav class="flex flex-wrap gap-3">
+        {heroNavLinks.map((link) => (
+          <a
+            class="rounded-full border border-black/10 bg-white/70 px-4 py-2.5 text-[0.95rem] font-semibold backdrop-blur transition hover:-translate-y-0.5 hover:shadow-[0_8px_18px_rgba(18,33,43,0.12)]"
+            href={link.href}
+          >
+            {link.label}
+          </a>
+        ))}
         {externalButtons.map((button) => (
           <a
             class={button.variant === 'primary' 
@@ -48,14 +58,6 @@ const externalButtons = [
             rel="noopener noreferrer"
           >
             {button.label}
-          </a>
-        ))}
-        {navLinks.slice(1).map((link) => (
-          <a
-            class="rounded-full border border-black/10 bg-white/70 px-4 py-2.5 text-[0.95rem] font-semibold backdrop-blur transition hover:-translate-y-0.5 hover:shadow-[0_8px_18px_rgba(18,33,43,0.12)]"
-            href={link.href}
-          >
-            {link.label}
           </a>
         ))}
       </nav>
