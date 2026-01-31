@@ -16,12 +16,6 @@
 
 - Always read [README.md](README.md) at the start of each chat/session to confirm the current stack, run commands, and deployment workflow.
 
-## Mandatory GH CLI prep (per session)
-
-- Before using the local `gh` command, run `brew update && brew upgrade gh` once at the beginning of the chat session.
-- Familiarize yourself with `gh` capabilities via `gh --help`.
-- Familiarize yourself with `gh` usage through Context7 documentation/examples when needed.
-
 ## Local tooling
 
 - This macOS machine has the GitHub CLI (`gh`) installed and already authenticated.
