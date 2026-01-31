@@ -9,6 +9,16 @@ When you can choose a model (Copilot CLI, VS Code agents, etc.), prefer:
 
 Note: GitHub Copilot **coding agent on GitHub.com** may ignore repository attempts to pin a model; if you are prompted to choose, pick the above.
 
+## Model logging (for cloud agent sessions)
+
+At the very start of each Copilot coding agent session (before making any changes), write a single line in the session log:
+
+- `Model in use: <model-name> (reasoning: <effort>)`
+
+If the model/effort is not visible to you, log:
+
+- `Model in use: unknown`
+
 ## Project overview
 
 This repo hosts the Urbana Highlands HOA website.
