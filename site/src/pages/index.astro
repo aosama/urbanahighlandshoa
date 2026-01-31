@@ -166,13 +166,13 @@ const basePath = import.meta.env.BASE_URL.endsWith('/')
 
     <!-- Services section with glassmorphism cards -->
     <section class="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-900 px-6 py-24">
-      <!-- Decorative gradient orbs -->
-      <div class="pointer-events-none absolute -left-40 -top-40 h-80 w-80 rounded-full bg-emerald-500/30 blur-3xl"></div>
-      <div class="pointer-events-none absolute -bottom-40 -right-40 h-80 w-80 rounded-full bg-sky-500/20 blur-3xl"></div>
+      <!-- Decorative gradient orbs (opacity-based, no blur for performance) -->
+      <div class="pointer-events-none absolute -left-40 -top-40 h-80 w-80 rounded-full bg-emerald-500/20"></div>
+      <div class="pointer-events-none absolute -bottom-40 -right-40 h-80 w-80 rounded-full bg-sky-500/15"></div>
       
       <div class="relative mx-auto max-w-6xl">
         <div class="mb-16 text-center">
-          <span class="mb-4 inline-block rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-semibold text-white backdrop-blur-sm">Quick Access</span>
+          <span class="mb-4 inline-block rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-semibold text-white">Quick Access</span>
           <h2 class="text-4xl font-bold tracking-tight text-white sm:text-5xl" style="font-family: 'Plus Jakarta Sans', system-ui, sans-serif;">
             Resident Services
           </h2>
@@ -183,7 +183,7 @@ const basePath = import.meta.env.BASE_URL.endsWith('/')
 
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           <!-- CiraConnect Card -->
-          <div class="group rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl transition hover:bg-white/10">
+          <div class="group rounded-3xl border border-white/10 bg-slate-800/80 p-8 transition hover:bg-slate-800/90">
             <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-violet-500 to-purple-600 shadow-lg shadow-violet-500/25">
               <svg class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
@@ -205,7 +205,7 @@ const basePath = import.meta.env.BASE_URL.endsWith('/')
           </div>
 
           <!-- Pool Pass Card -->
-          <div class="group rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl transition hover:bg-white/10">
+          <div class="group rounded-3xl border border-white/10 bg-slate-800/80 p-8 transition hover:bg-slate-800/90">
             <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-sky-500 to-cyan-600 shadow-lg shadow-sky-500/25">
               <svg class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -228,7 +228,7 @@ const basePath = import.meta.env.BASE_URL.endsWith('/')
           </div>
 
           <!-- Community Updates Card -->
-          <div class="group rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl transition hover:bg-white/10 sm:col-span-2 lg:col-span-1">
+          <div class="group rounded-3xl border border-white/10 bg-slate-800/80 p-8 transition hover:bg-slate-800/90 sm:col-span-2 lg:col-span-1">
             <div class="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 shadow-lg shadow-blue-500/25">
               <svg class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
