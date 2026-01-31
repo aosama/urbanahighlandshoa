@@ -23,36 +23,8 @@ const basePath = import.meta.env.BASE_URL.endsWith('/')
       <div class="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-slate-900/20 to-slate-900/70"></div>
     </div>
 
-    <!-- Floating glass nav -->
-    <nav class="relative z-20 mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
-      <a href={basePath} class="flex items-center gap-3 text-white">
-        <img 
-          src={`${basePath}assets/UH-logo.jpg`}
-          alt="Urbana Highlands logo"
-          class="h-11 w-11 rounded-xl shadow-lg"
-        />
-        <span class="hidden text-lg font-semibold tracking-tight sm:block">Urbana Highlands</span>
-      </a>
-      
-      <div class="flex items-center gap-2">
-        <div class="hidden items-center gap-1 rounded-full bg-slate-900/60 p-1.5 sm:flex">
-          <a href={basePath} class="rounded-full bg-white/20 px-4 py-2 text-sm font-medium text-white">Home</a>
-          <a href={`${basePath}announcements/`} class="rounded-full px-4 py-2 text-sm font-medium text-white/80 transition hover:bg-white/10 hover:text-white">News</a>
-          <a href={`${basePath}events/`} class="rounded-full px-4 py-2 text-sm font-medium text-white/80 transition hover:bg-white/10 hover:text-white">Events</a>
-          <a href={`${basePath}documents/`} class="rounded-full px-4 py-2 text-sm font-medium text-white/80 transition hover:bg-white/10 hover:text-white">Docs</a>
-          <a href={`${basePath}resources/`} class="rounded-full px-4 py-2 text-sm font-medium text-white/80 transition hover:bg-white/10 hover:text-white">Resources</a>
-          <a href={`${basePath}contact/`} class="rounded-full px-4 py-2 text-sm font-medium text-white/80 transition hover:bg-white/10 hover:text-white">Contact</a>
-        </div>
-        <a 
-          href={siteConfig.links.residentPortal} 
-          target="_blank" 
-          rel="noopener noreferrer"
-          class="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 shadow-lg transition hover:bg-white/90 hover:shadow-xl"
-        >
-          Resident Portal
-        </a>
-      </div>
-    </nav>
+    <!-- Floating glass nav using shared Header component -->
+    <Header variant="hero" />
 
     <!-- Hero content -->
     <div class="relative z-10 flex min-h-[calc(100svh-88px)] flex-col items-center justify-center px-6 text-center">
