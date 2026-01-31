@@ -8,6 +8,7 @@ const pages = [
   { path: `${BASE}/announcements/`, title: 'Announcements' },
   { path: `${BASE}/events/`, title: 'Events' },
   { path: `${BASE}/documents/`, title: 'Documents' },
+  { path: `${BASE}/resources/`, title: 'Community Resources' },
   { path: `${BASE}/contact/`, title: 'Contact' },
 ];
 
