@@ -48,6 +48,7 @@ When a PR changes the website, you must verify the deployed PR preview (not just
 
 - Use the PR preview URL convention: `https://aosama.github.io/urbanahighlandshoa/__pr-preview__/pr-<PR_NUMBER>/`
 - Navigate to the specific page(s) affected (example: `/documents/`), and confirm the change is visible and correct.
+- Before providing any web link (PR preview or production) to the user, verify it is actually accessible (e.g., open it in Playwright or `curl -I` and confirm it returns 200).
 - Include the PR preview URL(s) in your final response so the work is reviewable and referencable.
 
 ## Delegating GitHub Issues to cloud agents (good practices)
