@@ -10,7 +10,7 @@ const { title = siteConfig.orgName } = Astro.props;
 <BaseLayout title={title}>
   <Header variant="simple" />
 
-  <main class="flex-1 px-5 py-10">
+  <main id="main-content" class="flex-1 px-5 py-10">
     <div class="mx-auto max-w-[1100px]">
       <slot />
     </div>
