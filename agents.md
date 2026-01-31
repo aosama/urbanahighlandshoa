@@ -46,5 +46,6 @@ When making changes to the codebase, ensure that all relevant documentation is u
   - Local dev URL is therefore: `http://127.0.0.1:4321/urbanahighlandshoa/` (the root `/` will 404 when `base` is set).
   - Prefer `import.meta.env.BASE_URL` (often as `basePath`) for internal links and **public/** assets (e.g., favicon, `/assets/...`) so they work both locally and on Pages.
 - Deploy workflow builds from the `site/` subdirectory and deploys `site/dist` via `.github/workflows/deploy.yml`.
+- GitHub Pages must be enabled for the repo (Settings → Pages → Build and deployment: GitHub Actions) or the deploy job may fail with 404 (deploy-pages "Failed to create deployment").
 - Keep a single canonical README at repo root; avoid duplicate `site/README.md`.
 - For UI polish and testing, consult skills: `frontend-design` and `webapp-testing`.

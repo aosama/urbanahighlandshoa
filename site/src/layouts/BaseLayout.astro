@@ -17,7 +17,7 @@ const basePath = import.meta.env.BASE_URL.endsWith('/')
     <link rel="icon" href={`${basePath}favicon.ico`} sizes="any" />
     <title>{title}</title>
   </head>
-  <body class="min-h-screen bg-[#f6f2ea] text-[#12212b] antialiased">
+  <body class="min-h-screen flex flex-col bg-[#f6f2ea] text-[#12212b] antialiased">
     <slot />
   </body>
 </html>
