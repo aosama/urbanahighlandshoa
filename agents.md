@@ -16,10 +16,17 @@
 
 - Always read [README.md](README.md) at the start of each chat/session to confirm the current stack, run commands, and deployment workflow.
 
+## Mandatory GH CLI prep (per session)
+
+- Before using the local `gh` command, run `brew update && brew upgrade gh` once at the beginning of the chat session.
+- Familiarize yourself with `gh` capabilities via `gh --help`.
+- Familiarize yourself with `gh` usage through Context7 documentation/examples when needed.
+
 ## Local tooling
 
 - This macOS machine has the GitHub CLI (`gh`) installed and already authenticated.
 - This macOS machine has Homebrew (`brew`), Node.js (`node`), and npm installed.
+- If running on macOS, familiarize yourself with the capabilities of the local `gh` command.
 - If the coding assistant/agent needs additional CLI tools for productivity, it should ask the user for permission to install them (no pushback/limitations on installing dev tools).
 
 ## Always Keep Documnentation Updated
