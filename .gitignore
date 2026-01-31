@@ -17,3 +17,7 @@ Desktop.ini
 site/node_modules/
 site/dist/
 site/.astro/
+
+# Temporary files
+link-check-results.json
+check-links.js
