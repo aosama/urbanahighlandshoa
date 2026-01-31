@@ -22,6 +22,9 @@ site/.astro/
 link-check-results.json
 check-links.js
 
+# Copilot / Codespaces (do not commit cloned skills)
+.copilot/
+
 # Local verification screenshots
 # (Keep screenshots out of the repo; allow local, uncommitted captures.)
 docs/screenshots/
