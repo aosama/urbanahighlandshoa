@@ -1,7 +1,7 @@
 ---
 import '../styles/global.css';
 
-const { title = 'Urbana Highlands HOA' } = Astro.props;
+const { title = 'Urbana Highlands HOA', description = 'Official website for the Urbana Highlands Home Owners Association in Urbana, Maryland. Access resident services, announcements, events, and community documents.' } = Astro.props;
 const basePath = import.meta.env.BASE_URL.endsWith('/')
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
@@ -13,6 +13,7 @@ const basePath = import.meta.env.BASE_URL.endsWith('/')
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href={`${basePath}favicon.svg`} />
     <link rel="icon" href={`${basePath}favicon.ico`} sizes="any" />
     <title>{title}</title>
