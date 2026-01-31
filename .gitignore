@@ -21,3 +21,6 @@ site/.astro/
 # Temporary files
 link-check-results.json
 check-links.js
+
+# Local verification screenshots (keep committed screenshots explicit)
+docs/screenshots/prod-*.png
