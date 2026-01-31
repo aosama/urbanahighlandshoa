@@ -93,3 +93,7 @@ When delegating an issue to a cloud agent (Copilot):
 - GitHub Pages must be enabled for the repo (Settings → Pages → Build and deployment: GitHub Actions) or the deploy job may fail with 404 (deploy-pages "Failed to create deployment").
 - Keep a single canonical README at repo root; avoid duplicate `site/README.md`.
 - For UI polish and testing, consult skills: `frontend-design` and `webapp-testing`.
+
+## User Interaction Protocol
+
+- **"Discover the repo"**: When the user says this, it means the coding agent should read the codebase, understand it, and internalize its structure. This is an instruction for the agent's own orientation—**not** a request for the user to receive help discovering the repo.
