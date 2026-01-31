@@ -10,30 +10,30 @@ const basePath = import.meta.env.BASE_URL.endsWith('/')
 ---
 
 <BaseLayout title={siteConfig.orgName}>
-  <main id="main-content" class="min-h-screen">
-    <Header variant="hero">
-      <div class="mx-auto grid max-w-[1100px] grid-cols-1 items-center gap-8 md:grid-cols-2">
-        <div>
-          <span class="inline-flex rounded-full bg-[rgba(207,168,79,0.18)] px-3 py-1.5 text-[0.85rem] font-semibold text-[#cfa84f]">Established in 1999</span>
-          <h1 class="mt-3 text-[clamp(2rem,3vw,3rem)] font-semibold">{siteConfig.orgName}</h1>
-          <p class="mt-3 text-[1.05rem] text-[#3c4b57]">
-            Urbana Highlands is a quiet community located in Southern Frederick County, Maryland.
-            Residents can use this hub to reach the Resident Portal (CiraConnect), the pool pass system (eSoft), and community updates on Facebook.
-          </p>
-        </div>
-
-        <div class="grid gap-4 rounded-[28px] bg-white p-6 shadow-[0_24px_60px_rgba(15,23,42,0.12)]">
-          <img
-            src={`${basePath}assets/urbana-highlands-pic.jpg`}
-            alt="Urbana Highlands community"
-            class="h-[220px] w-full rounded-[18px] object-cover"
-          />
-          <div class="font-semibold text-[#214738]">A welcoming neighborhood with thoughtful, well-kept spaces.</div>
-          <div class="text-[0.95rem] text-[#6c7a86]">Stay connected with HOA resources, architectural requests, and community notices.</div>
-        </div>
+  <Header variant="hero">
+    <div class="mx-auto grid max-w-[1100px] grid-cols-1 items-center gap-8 md:grid-cols-2">
+      <div>
+        <span class="inline-flex rounded-full bg-[rgba(207,168,79,0.18)] px-3 py-1.5 text-[0.85rem] font-semibold text-[#cfa84f]">Established in 1999</span>
+        <h1 class="mt-3 text-[clamp(2rem,3vw,3rem)] font-semibold">{siteConfig.orgName}</h1>
+        <p class="mt-3 text-[1.05rem] text-[#3c4b57]">
+          Urbana Highlands is a quiet community located in Southern Frederick County, Maryland.
+          Residents can use this hub to reach the Resident Portal (CiraConnect), the pool pass system (eSoft), and community updates on Facebook.
+        </p>
       </div>
-    </Header>
 
+      <div class="grid gap-4 rounded-[28px] bg-white p-6 shadow-[0_24px_60px_rgba(15,23,42,0.12)]">
+        <img
+          src={`${basePath}assets/urbana-highlands-pic.jpg`}
+          alt="Urbana Highlands community"
+          class="h-[220px] w-full rounded-[18px] object-cover"
+        />
+        <div class="font-semibold text-[#214738]">A welcoming neighborhood with thoughtful, well-kept spaces.</div>
+        <div class="text-[0.95rem] text-[#6c7a86]">Stay connected with HOA resources, architectural requests, and community notices.</div>
+      </div>
+    </div>
+  </Header>
+
+  <main id="main-content" class="flex-1">
     <section class="px-5 py-[70px]">
       <div class="mx-auto max-w-[1100px]">
         <div class="mb-8 flex flex-wrap items-end justify-between gap-5">
@@ -120,6 +120,7 @@ const basePath = import.meta.env.BASE_URL.endsWith('/')
       </div>
     </section>
 
-    <Footer />
   </main>
+
+  <Footer />
 </BaseLayout>
