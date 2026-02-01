@@ -28,3 +28,6 @@ check-links.js
 # Local verification screenshots
 # (Keep screenshots out of the repo; allow local, uncommitted captures.)
 docs/screenshots/
+
+# Local working files (vibe coding artifacts)
+.local/
