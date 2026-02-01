@@ -9,7 +9,6 @@ The website is a **static front-end-only** site built with modern web technologi
 - Access to important documents (bylaws, guidelines, meeting minutes)
 - Contact information and links to resident services
 
-
 **Live site:** <https://aosama.github.io/urbanahighlandshoa/>
 
 **Site source code:** `site/` (note: repo root is **not** the Astro app root)
