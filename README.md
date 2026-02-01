@@ -3,12 +3,14 @@
 This repository contains the **official website** for the Urbana Highlands Home Owners Association, a community in Urbana, Maryland.
 
 The website is a **static front-end-only** site built with modern web technologies and hosted on GitHub Pages. It provides residents with:
+
 - HOA announcements and updates
 - Event calendar and information
 - Access to important documents (bylaws, guidelines, meeting minutes)
 - Contact information and links to resident services
 
-**Live site:** https://aosama.github.io/urbanahighlandshoa/
+
+**Live site:** <https://aosama.github.io/urbanahighlandshoa/>
 
 **Site source code:** `site/` (note: repo root is **not** the Astro app root)
 
@@ -35,7 +37,7 @@ npm install
 npm run dev
 ```
 
-The development server will start at: **http://127.0.0.1:4321/urbanahighlandshoa/**
+The development server will start at: <http://127.0.0.1:4321/urbanahighlandshoa/>
 
 **Important:** Because the site is configured for Project Pages with a subpath, the root URL (`/`) will return 404. Always use the full path with `/urbanahighlandshoa/` when testing locally.
 
@@ -70,6 +72,7 @@ Regression tests run with **Playwright** (`cd site && npm test`) and are execute
 ### Configuration
 
 Astro is configured for GitHub Pages Project Pages in `site/astro.config.mjs`:
+
 - `site: "https://aosama.github.io"` - GitHub Pages domain
 - `base: "/urbanahighlandshoa"` - Project subpath
 - `trailingSlash: "always"` - Ensures consistent URLs
@@ -77,7 +80,8 @@ Astro is configured for GitHub Pages Project Pages in `site/astro.config.mjs`:
 ### PR previews
 
 PR previews are published automatically to a predictable URL:
-```
+
+```text
 https://aosama.github.io/urbanahighlandshoa/__pr-preview__/pr-<PR_NUMBER>/
 ```
 
@@ -110,12 +114,14 @@ The site uses **Astro pages** with inline content. Each page is a self-contained
 ### Editing existing content
 
 To update text or content on a page:
+
 1. Open the relevant `.astro` file in `site/src/pages/`
 2. Edit the HTML and text directly within the file
 3. The frontmatter (between `---`) contains any dynamic imports or logic
 4. The template section contains the HTML/Astro markup
 
 Example:
+
 ```astro
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
@@ -132,6 +138,7 @@ import PageLayout from '../../layouts/PageLayout.astro';
 ### Adding new pages
 
 To create a new page:
+
 1. Create a new `.astro` file in `site/src/pages/` (e.g., `site/src/pages/faq/index.astro`)
 2. Import and use `PageLayout` for consistent styling
 3. Add a navigation link in `site/src/components/Header.astro` (the `navLinks` array) if needed
@@ -140,11 +147,13 @@ To create a new page:
 ### Adding documents (PDFs)
 
 To add downloadable documents:
+
 1. Place PDF files in `site/public/docs/` (e.g., `site/public/docs/bylaws.pdf`)
 2. Reference them using the base path: `${basePath}docs/filename.pdf`
 3. The `public/` folder is served as static assets
 
 Example from `documents/index.astro`:
+
 ```astro
 const basePath = import.meta.env.BASE_URL.endsWith('/')
   ? import.meta.env.BASE_URL
@@ -156,6 +165,7 @@ const basePath = import.meta.env.BASE_URL.endsWith('/')
 ### Updating site configuration
 
 Edit `site/src/lib/siteConfig.ts` to update:
+
 - Site name and organization name
 - External links (resident portal, pool pass, social media)
 - Contact information (phone numbers, addresses)
@@ -174,9 +184,11 @@ We welcome contributions to improve the website! Here's how you can help:
 ### Pull request workflow
 
 - **PR previews:** Every PR automatically deploys a preview at:
-  ```
+
+  ```text
   https://aosama.github.io/urbanahighlandshoa/__pr-preview__/pr-<PR_NUMBER>/
   ```
+
 - The preview is deployed by `.github/workflows/pr-preview.yml`
 - Review the preview before merging to ensure everything looks correct
 - Once merged to `main`, changes go live automatically
@@ -196,12 +208,11 @@ We welcome contributions to improve the website! Here's how you can help:
 
 ## Additional documentation
 
-
 - **Copilot cloud setup:** [docs/copilot-cloud-setup.md](docs/copilot-cloud-setup.md)
 - **Repository agent guidance:** [agents.md](agents.md)
 
 ## Legacy reference
 
-- **Legacy site:** https://www.urbanahighlandshoa.com/
+- **Legacy site:** <https://www.urbanahighlandshoa.com/>
 - **Legacy notes:** [docs/legacywebsite/LEGACY_SITE_NOTES.md](docs/legacywebsite/LEGACY_SITE_NOTES.md)
 - **Mockup HTML:** [mockup/index.html](mockup/index.html)
