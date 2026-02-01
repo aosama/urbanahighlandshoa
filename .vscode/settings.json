@@ -1,4 +1,10 @@
 {
   "files.insertFinalNewline": true,
-  "files.trimTrailingWhitespace": true
+  "files.trimTrailingWhitespace": true,
+  "chat.tools.terminal.autoApprove": {
+    "/^git -C /Users/ahmedhamdy/IdeaProjects/urbanahighlandshoa checkout -b chore/commit-legacy-backup$/": {
+      "approve": true,
+      "matchCommandLine": true
+    }
+  }
 }
