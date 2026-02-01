@@ -196,7 +196,7 @@ We welcome contributions to improve the website! Here's how you can help:
 
 ## Additional documentation
 
-- **Quick Copilot guide:** [docs/hello-copilot.md](docs/hello-copilot.md)
+
 - **Copilot cloud setup:** [docs/copilot-cloud-setup.md](docs/copilot-cloud-setup.md)
 - **Repository agent guidance:** [agents.md](agents.md)
 
