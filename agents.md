@@ -2,7 +2,7 @@
 
 ## Session start
 
-- Always read [README.md](README.md) at the start of each chat/session to confirm the current stack, run commands, and deployment workflow.
+- Always read [README.md](README.md) and [agents.md](agents.md) at the start of each chat/session to confirm the current stack, run commands, and deployment workflow.
 
 ## Repo navigation
 
@@ -14,8 +14,25 @@
 ## Repo structure
 
 - Repo root is this repository.
+- Repo root is **not** the website root.
 - The Astro website source lives under `site/` (it is **not** the repo root).
 - `LegacyWordPressExport/` is an important backup from the legacy WordPress site and should be preserved.
+
+## Common commands
+
+Run locally:
+
+- `cd site && npm install`
+- `cd site && npm run dev`
+
+Build:
+
+- `cd site && npm run build`
+
+## Deployment
+
+- GitHub Pages deploy workflow: `.github/workflows/deploy.yml`
+- Hosted as GitHub Pages **Project Pages** under `/urbanahighlandshoa/`.
 
 ## Branch policy
 
