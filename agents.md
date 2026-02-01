@@ -15,6 +15,7 @@
 
 - Repo root is this repository.
 - The Astro website source lives under `site/` (it is **not** the repo root).
+- `LegacyWordPressExport/` is an important backup from the legacy WordPress site and should be preserved.
 
 ## Branch policy
 
