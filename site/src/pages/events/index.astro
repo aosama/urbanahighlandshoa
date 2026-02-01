@@ -1,46 +1,381 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
 import { siteConfig } from '../../lib/siteConfig';
+
+// Fictional events inspired by Frederick, MD and the Urbana Highlands community
+const upcomingEvents = [
+  {
+    id: 1,
+    title: "Spring Fling Community Picnic",
+    date: "Saturday, April 12, 2025",
+    time: "11:00 AM - 3:00 PM",
+    location: "Urbana Highlands Community Park",
+    description: "Celebrate spring with your neighbors! Enjoy live bluegrass music, a BBQ cookout, lawn games, and a special Frederick County historical trivia contest. The famous Catoctin Mountain views provide a stunning backdrop for family photos.",
+    category: "Community",
+    categoryColor: "emerald",
+    emoji: "🌸",
+    image: "https://images.unsplash.com/photo-1504173010664-32509aeebb62?w=600&h=400&fit=crop&auto=format&q=80",
+    featured: true,
+  },
+  {
+    id: 2,
+    title: "Pool Season Kickoff Party",
+    date: "Saturday, May 24, 2025",
+    time: "12:00 PM - 5:00 PM",
+    location: "Urbana Highlands Community Pool",
+    description: "Memorial Day Weekend tradition! Join us for the official opening of the pool season. Free popsicles for kids, DJ music, and swimming competitions. Don't forget to register your pool pass through eSoft!",
+    category: "Pool",
+    categoryColor: "sky",
+    emoji: "🏊",
+    image: "https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=600&h=400&fit=crop",
+    featured: true,
+  },
+  {
+    id: 3,
+    title: "Firefly Night Walk",
+    date: "Friday, June 20, 2025",
+    time: "8:30 PM - 10:00 PM",
+    location: "Walking Trails (meet at playground)",
+    description: "Experience the magic of summer in Maryland! Join naturalist Sarah Chen for a guided evening walk along our community trails to spot fireflies. Learn about local wildlife and the Catoctin Mountains ecosystem. Bring a flashlight and bug spray!",
+    category: "Nature",
+    categoryColor: "amber",
+    emoji: "✨",
+    image: "https://images.unsplash.com/photo-1507400492013-162706c8c05e?w=600&h=400&fit=crop",
+    featured: false,
+  },
+  {
+    id: 4,
+    title: "Independence Day Parade & Celebration",
+    date: "Friday, July 4, 2025",
+    time: "10:00 AM - 2:00 PM",
+    location: "Royal Crest Drive",
+    description: "Our beloved neighborhood tradition! Decorate your bikes, wagons, and golf carts in red, white, and blue. Parade starts at 10 AM sharp. Afterwards, enjoy hot dogs, watermelon, and homemade apple pie at the pavilion. Best decorated entry wins a prize!",
+    category: "Holiday",
+    categoryColor: "rose",
+    emoji: "🎆",
+    image: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=600&h=400&fit=crop",
+    featured: true,
+  },
+  {
+    id: 5,
+    title: "Frederick County Farm Tour",
+    date: "Saturday, July 26, 2025",
+    time: "9:00 AM - 1:00 PM",
+    location: "Carpool from community entrance",
+    description: "Discover the agricultural heritage of Frederick County! We'll visit a local dairy farm, pick fresh produce at a you-pick orchard, and stop at a historic Maryland winery. Space limited to 30 residents. Sign up by July 15th.",
+    category: "Trip",
+    categoryColor: "violet",
+    emoji: "🚜",
+    image: "https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?w=600&h=400&fit=crop",
+    featured: false,
+  },
+  {
+    id: 6,
+    title: "Movie Night Under the Stars",
+    date: "Saturday, August 16, 2025",
+    time: "8:00 PM - 10:30 PM",
+    location: "Community Park",
+    description: "Bring your lawn chairs and blankets for an outdoor movie screening! This year's family-friendly feature: 'Finding Nemo.' Free popcorn and lemonade provided. Rain date: August 17th.",
+    category: "Family",
+    categoryColor: "indigo",
+    emoji: "🎬",
+    image: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=600&h=400&fit=crop",
+    featured: false,
+  },
+  {
+    id: 7,
+    title: "End of Summer Pool Bash",
+    date: "Sunday, September 1, 2025",
+    time: "1:00 PM - 6:00 PM",
+    location: "Urbana Highlands Community Pool",
+    description: "Last splash of summer! Join us for the final pool day of the season with a Labor Day cookout, pool games, and the annual cannonball contest. Prizes for biggest splash and best belly flop!",
+    category: "Pool",
+    categoryColor: "sky",
+    emoji: "💦",
+    image: "https://images.unsplash.com/photo-1560090995-01632a28895b?w=600&h=400&fit=crop",
+    featured: false,
+  },
+  {
+    id: 8,
+    title: "Fall Festival & Pumpkin Decorating",
+    date: "Saturday, October 18, 2025",
+    time: "2:00 PM - 5:00 PM",
+    location: "Community Pavilion",
+    description: "Celebrate autumn in the foothills of the Catoctin Mountains! Pumpkin decorating (supplies provided), apple cider tasting featuring local Frederick orchards, costume parade for kids, and a scarecrow building contest.",
+    category: "Holiday",
+    categoryColor: "orange",
+    emoji: "🎃",
+    image: "https://images.unsplash.com/photo-1509557965875-b88c97052f0e?w=600&h=400&fit=crop",
+    featured: true,
+  },
+  {
+    id: 9,
+    title: "Neighborhood Cleanup Day",
+    date: "Saturday, November 8, 2025",
+    time: "9:00 AM - 12:00 PM",
+    location: "Meet at Community Entrance",
+    description: "Help keep Urbana Highlands beautiful! Join your neighbors for our annual fall cleanup. We'll rake leaves, clean common areas, and prepare flower beds for winter. Coffee and donuts provided. Bring gloves and rakes if you have them.",
+    category: "Community",
+    categoryColor: "emerald",
+    emoji: "🍂",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=400&fit=crop",
+    featured: false,
+  },
+  {
+    id: 10,
+    title: "Holiday Lights Walking Tour",
+    date: "Saturday, December 20, 2025",
+    time: "6:00 PM - 8:00 PM",
+    location: "Starting at Royal Crest Drive",
+    description: "Stroll through our beautifully decorated neighborhood with hot cocoa in hand. Vote for your favorite house decorations—winners announced at the end! Caroling encouraged. Special visit from a jolly guest for the little ones.",
+    category: "Holiday",
+    categoryColor: "rose",
+    emoji: "🎄",
+    image: "https://images.unsplash.com/photo-1482517967863-00e15c9b44be?w=600&h=400&fit=crop",
+    featured: true,
+  },
+];
+
+const categoryColors: Record<string, { bg: string; text: string; badge: string }> = {
+  emerald: { bg: 'bg-emerald-100', text: 'text-emerald-700', badge: 'bg-emerald-500' },
+  sky: { bg: 'bg-sky-100', text: 'text-sky-700', badge: 'bg-sky-500' },
+  amber: { bg: 'bg-amber-100', text: 'text-amber-700', badge: 'bg-amber-500' },
+  rose: { bg: 'bg-rose-100', text: 'text-rose-700', badge: 'bg-rose-500' },
+  violet: { bg: 'bg-violet-100', text: 'text-violet-700', badge: 'bg-violet-500' },
+  indigo: { bg: 'bg-indigo-100', text: 'text-indigo-700', badge: 'bg-indigo-500' },
+  orange: { bg: 'bg-orange-100', text: 'text-orange-700', badge: 'bg-orange-500' },
+};
+
+const featuredEvents = upcomingEvents.filter(e => e.featured);
+const regularEvents = upcomingEvents.filter(e => !e.featured);
 ---
 
 <PageLayout title="Events">
   <Fragment slot="title">
-    <span class="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Events</span>
+    <span class="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">Community Events</span>
   </Fragment>
 
-  <div class="space-y-6">
-    <div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-      <div class="flex items-start gap-4">
-        <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-violet-100 text-2xl">
-          📅
+  <div class="space-y-12">
+    <!-- Introduction -->
+    <div class="text-center">
+      <p class="mx-auto max-w-2xl text-lg text-slate-600">
+        Join your neighbors for fun community gatherings throughout the year! From pool parties to holiday celebrations,
+        there's always something happening in Urbana Highlands.
+      </p>
+    </div>
+
+    <!-- Featured Events Section -->
+    <section>
+      <div class="mb-6 flex items-center gap-3">
+        <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500 to-purple-600 text-lg text-white">⭐</span>
+        <h2 class="text-2xl font-bold text-slate-900">Featured Events</h2>
+      </div>
+
+      <div class="grid gap-6 md:grid-cols-2">
+        {featuredEvents.map((event) => {
+          const colors = categoryColors[event.categoryColor] || categoryColors.emerald;
+          return (
+            <article class="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:shadow-lg">
+              <div class="relative h-48 overflow-hidden">
+                <img
+                  src={event.image}
+                  alt={event.title}
+                  class="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
+                <div class="absolute bottom-4 left-4 right-4">
+                  <span class={`inline-block rounded-full ${colors.badge} px-3 py-1 text-xs font-semibold text-white`}>
+                    {event.category}
+                  </span>
+                </div>
+                <div class="absolute right-4 top-4 flex h-12 w-12 items-center justify-center rounded-xl bg-white/90 text-2xl shadow-lg">
+                  {event.emoji}
+                </div>
+              </div>
+              <div class="p-6">
+                <h3 class="mb-2 text-xl font-bold text-slate-900">{event.title}</h3>
+                <div class="mb-3 flex flex-wrap items-center gap-4 text-sm text-slate-500">
+                  <span class="flex items-center gap-1.5">
+                    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    {event.date}
+                  </span>
+                  <span class="flex items-center gap-1.5">
+                    <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    {event.time}
+                  </span>
+                </div>
+                <div class="mb-4 flex items-center gap-1.5 text-sm text-slate-500">
+                  <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  {event.location}
+                </div>
+                <p class="text-slate-600">{event.description}</p>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+
+    <!-- All Upcoming Events -->
+    <section>
+      <div class="mb-6 flex items-center gap-3">
+        <span class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 text-lg text-white">📅</span>
+        <h2 class="text-2xl font-bold text-slate-900">More Upcoming Events</h2>
+      </div>
+
+      <div class="space-y-4">
+        {regularEvents.map((event) => {
+          const colors = categoryColors[event.categoryColor] || categoryColors.emerald;
+          return (
+            <article class="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:shadow-md sm:flex-row">
+              <div class="relative h-40 shrink-0 overflow-hidden sm:h-auto sm:w-48">
+                <img
+                  src={event.image}
+                  alt={event.title}
+                  class="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div class="absolute right-3 top-3 flex h-10 w-10 items-center justify-center rounded-lg bg-white/90 text-xl shadow">
+                  {event.emoji}
+                </div>
+              </div>
+              <div class="flex flex-1 flex-col justify-center p-5">
+                <div class="mb-2 flex items-center gap-2">
+                  <span class={`inline-block rounded-full ${colors.bg} ${colors.text} px-2.5 py-0.5 text-xs font-semibold`}>
+                    {event.category}
+                  </span>
+                </div>
+                <h3 class="mb-1 text-lg font-bold text-slate-900">{event.title}</h3>
+                <div class="mb-2 flex flex-wrap items-center gap-3 text-sm text-slate-500">
+                  <span class="flex items-center gap-1">
+                    <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                    {event.date}
+                  </span>
+                  <span class="flex items-center gap-1">
+                    <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    {event.time}
+                  </span>
+                  <span class="flex items-center gap-1">
+                    <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    {event.location}
+                  </span>
+                </div>
+                <p class="text-sm text-slate-600 line-clamp-2">{event.description}</p>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    </section>
+
+    <!-- Community Info Cards -->
+    <section class="grid gap-6 md:grid-cols-2">
+      <!-- Pool Info Card -->
+      <div class="rounded-2xl border border-sky-200 bg-gradient-to-br from-sky-50 to-cyan-50 p-6">
+        <div class="mb-4 flex items-center gap-3">
+          <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-sky-500 text-2xl text-white">🏊</span>
+          <div>
+            <h3 class="font-bold text-slate-900">Pool Pass Required</h3>
+            <p class="text-sm text-slate-600">Don't forget to register!</p>
+          </div>
         </div>
-        <div class="flex-1">
-          <h2 class="text-xl font-semibold text-slate-900">Upcoming Events</h2>
-          <p class="mt-2 text-slate-600">
-            Community events and gatherings will be listed here. Stay tuned for pool parties, 
-            neighborhood meetups, and seasonal celebrations.
+        <p class="mb-4 text-slate-600">
+          Pool events require a valid pool pass. Register through the eSoft system before attending pool-related events.
+        </p>
+        <a
+          class="inline-flex items-center gap-2 rounded-full bg-sky-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-sky-700"
+          href={siteConfig.links.poolPass}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Get Pool Pass
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Stay Connected Card -->
+      <div class="rounded-2xl border border-violet-200 bg-gradient-to-br from-violet-50 to-purple-50 p-6">
+        <div class="mb-4 flex items-center gap-3">
+          <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-violet-500 text-2xl text-white">📱</span>
+          <div>
+            <h3 class="font-bold text-slate-900">Stay Updated</h3>
+            <p class="text-sm text-slate-600">Join our Facebook group</p>
+          </div>
+        </div>
+        <p class="mb-4 text-slate-600">
+          Get the latest event updates, RSVP reminders, and connect with neighbors on our community Facebook page.
+        </p>
+        <a
+          class="inline-flex items-center gap-2 rounded-full bg-violet-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-violet-700"
+          href={siteConfig.links.facebook}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Join Facebook Group
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Frederick County Section -->
+    <section class="overflow-hidden rounded-2xl bg-gradient-to-br from-slate-800 via-slate-900 to-emerald-900">
+      <div class="relative">
+        <div class="absolute inset-0 opacity-20">
+          <img
+            src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=1200&h=400&fit=crop"
+            alt="Maryland countryside"
+            class="h-full w-full object-cover"
+          />
+        </div>
+        <div class="relative px-8 py-10 text-center">
+          <span class="mb-3 inline-block rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-semibold text-white">Our Location</span>
+          <h3 class="mb-3 text-2xl font-bold text-white">Nestled in Beautiful Frederick County</h3>
+          <p class="mx-auto max-w-2xl text-white/80">
+            Urbana Highlands sits in the heart of Frederick County, Maryland, with stunning views of the Catoctin Mountains.
+            Our community enjoys easy access to downtown Frederick's historic charm, local farms, wineries, and outdoor recreation.
           </p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="rounded-2xl border border-amber-200 bg-amber-50 p-8">
+    <!-- Event Suggestions -->
+    <div class="rounded-2xl border border-amber-200 bg-amber-50 p-6">
       <div class="flex items-start gap-4">
         <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-amber-100 text-2xl">
-          🔗
+          💡
         </div>
         <div>
-          <h2 class="text-xl font-semibold text-slate-900">Legacy Event Details</h2>
-          <p class="mt-2 text-slate-600">
-            For now, full event details are still hosted on the legacy site.
+          <h3 class="text-lg font-bold text-slate-900">Have an Event Idea?</h3>
+          <p class="mt-1 text-slate-600">
+            We love hearing from our residents! If you have ideas for community events or would like to volunteer to help organize,
+            please reach out to the HOA board through the Resident Portal or at our next board meeting.
           </p>
-          <a 
-            class="mt-4 inline-flex items-center gap-2 rounded-full bg-amber-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-amber-700" 
-            href={siteConfig.links.legacyEventDetails} 
-            target="_blank" 
+          <a
+            class="mt-4 inline-flex items-center gap-2 rounded-full bg-amber-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-amber-700"
+            href={siteConfig.links.residentPortal}
+            target="_blank"
             rel="noopener noreferrer"
           >
-            Open Legacy Site
+            Contact via Resident Portal
             <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
@@ -50,3 +385,12 @@ import { siteConfig } from '../../lib/siteConfig';
     </div>
   </div>
 </PageLayout>
+
+<style>
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
