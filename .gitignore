@@ -31,3 +31,8 @@ docs/screenshots/
 
 # Local working files (vibe coding artifacts)
 .local/
+
+# Lighthouse reports (local performance audits)
+lighthouse-report
+lighthouse-report.report.html
+lighthouse-report.report.json
