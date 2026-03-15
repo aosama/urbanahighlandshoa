@@ -135,6 +135,78 @@ const resourceCategories = [
     </div>
   </div>
 
+  <!-- Featured: Community Trash Service -->
+  <div class="mb-8 overflow-hidden rounded-2xl border border-amber-200 bg-gradient-to-br from-amber-50 via-white to-orange-50 shadow-md">
+    <div class="flex flex-col md:flex-row">
+      <div class="flex items-center justify-center bg-gradient-to-br from-amber-100 to-orange-100 p-6 md:w-2/5 md:p-8">
+        <div class="w-full max-w-md rounded-2xl border border-amber-200 bg-white/80 p-5 shadow-sm backdrop-blur">
+          <div class="mb-3 flex items-center gap-2">
+            <span class="text-2xl" aria-hidden="true">🗑️</span>
+            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-amber-700">Urbana Highlands</p>
+          </div>
+          <h3 class="mb-2 text-xl font-bold text-slate-900">Trash Service Provider</h3>
+          <p class="text-sm leading-relaxed text-slate-600">
+            <strong>J &amp; J Trash Service, Inc.</strong><br />
+            Main: <a href="tel:3012451002" class="font-semibold text-amber-700 hover:text-amber-800">(301) 245-1002</a><br />
+            Alternate: <a href="tel:3018982109" class="font-semibold text-amber-700 hover:text-amber-800">(301) 898-2109</a>
+          </p>
+          <p class="mt-3 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-xs leading-relaxed text-amber-900">
+            Frederick County does not provide residential trash pickup for this community.
+            Trash service is arranged through the HOA.
+          </p>
+        </div>
+      </div>
+
+      <div class="flex flex-col justify-center p-6 md:w-3/5 md:p-8">
+        <div class="mb-3 flex flex-wrap items-center gap-2">
+          <span class="inline-flex items-center rounded-full bg-amber-600 px-3 py-0.5 text-xs font-semibold uppercase tracking-wide text-white">Trash Pickup</span>
+          <span class="inline-flex items-center rounded-full border border-amber-300 bg-amber-50 px-3 py-0.5 text-xs font-medium text-amber-800">HOA-Contracted</span>
+        </div>
+        <h2 class="mb-2 text-2xl font-bold text-slate-900">Community Trash Collection</h2>
+        <p class="mb-4 text-base leading-relaxed text-slate-600">
+          For Urbana Highlands residents, trash pickup is handled by <strong>J &amp; J Trash Service, Inc.</strong>.
+          Use the links below for support, account access, and service updates.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a
+            href="https://www.facebook.com/JandJTrashInc"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 rounded-lg bg-[#1877F2] px-4 py-2.5 text-sm font-semibold text-white shadow transition hover:brightness-95 hover:shadow-md"
+          >
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0022 12z"/></svg>
+            Facebook Updates
+          </a>
+          <a
+            href="mailto:customerservice@jandjinctrashservice.com"
+            class="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-4 py-2.5 text-sm font-semibold text-white shadow transition hover:bg-slate-800 hover:shadow-md"
+          >
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l9 6 9-6m-18 8h18a2 2 0 002-2V8a2 2 0 00-2-2H3a2 2 0 00-2 2v6a2 2 0 002 2z" /></svg>
+            Email Support
+          </a>
+          <a
+            href="https://secure.soft-pak.com/webpakjt/signin.jsp"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 rounded-lg border border-amber-300 bg-white px-4 py-2.5 text-sm font-semibold text-amber-800 transition hover:bg-amber-50"
+          >
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a5 5 0 00-10 0v2m-2 0h14a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2v-8a2 2 0 012-2z" /></svg>
+            Pay Online
+          </a>
+          <a
+            href="https://www.urbanahighlandshoa.com/events/bulk-trash-pick-up-5-4-2024/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-4 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50"
+          >
+            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10m-11 9h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v11a2 2 0 002 2z" /></svg>
+            HOA Bulk Pickup Notice
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="grid gap-6 md:grid-cols-2">
     {resourceCategories.map((category) => (
       <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md">
