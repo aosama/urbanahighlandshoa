@@ -40,6 +40,33 @@ The development server will start at: <http://127.0.0.1:4321/urbanahighlandshoa/
 
 **Important:** Because the site is configured for Project Pages with a subpath, the root URL (`/`) will return 404. Always use the full path with `/urbanahighlandshoa/` when testing locally.
 
+### Dev container
+
+This repository includes a dev container configuration in `.devcontainer/` for VS Code Dev Containers and GitHub Codespaces.
+
+- Open the repository root in VS Code
+- Run **Dev Containers: Reopen in Container**
+- The container builds from `.devcontainer/Dockerfile`, based on the official Node.js devcontainer image
+- The container installs the latest GitHub CLI via a devcontainer feature
+- Playwright's Linux system dependencies are baked into the image at build time
+- On first create, VS Code runs `cd site && npm ci`
+
+After the container starts, use the normal workflow:
+
+```bash
+cd site
+npm run dev
+```
+
+The forwarded app port is `4321`, and the site remains available at <http://127.0.0.1:4321/urbanahighlandshoa/>.
+
+If you need to run Playwright tests in a fresh container, install the browser once:
+
+```bash
+cd site
+npx playwright install chromium
+```
+
 ### Available commands
 
 - `npm run dev` - Start development server with hot reload
@@ -202,13 +229,13 @@ We welcome contributions to improve the website! Here's how you can help:
 ### Getting help
 
 - Check existing documentation in the `docs/` folder
-- Review [agents.md](agents.md) for repository guidance
+- Review [AGENTS.md](AGENTS.md) for repository guidance
 - Open an issue for questions or suggestions
 
 ## Additional documentation
 
 - **Copilot cloud setup:** [docs/copilot-cloud-setup.md](docs/copilot-cloud-setup.md)
-- **Repository agent guidance:** [agents.md](agents.md)
+- **Repository agent guidance:** [AGENTS.md](AGENTS.md)
 
 ## Legacy reference
 

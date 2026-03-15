@@ -2,7 +2,7 @@
 
 ## Session start
 
-- Always read [README.md](README.md) and [agents.md](agents.md) at the start of each chat/session to confirm the current stack, run commands, and deployment workflow.
+- Always read [README.md](README.md) and [AGENTS.md](AGENTS.md) at the start of each chat/session to confirm the current stack, run commands, and deployment workflow.
 
 ## Repo navigation
 
