@@ -11,6 +11,8 @@ This repo includes:
 
 Copilot coding agent will run this workflow before it starts work. The workflow reuses the same shared site setup action as the CI workflows, so the agent gets the same Node.js and `npm ci` bootstrap behavior used elsewhere in the repo.
 
+This works whether you prefer to land changes directly on `main` or use a pull request for larger/riskier updates.
+
 Note: Astro CLI may attempt to send telemetry during builds; the repo disables it in CI to avoid Copilot firewall blocks.
 
 ## 2) MCP (Model Context Protocol) capabilities

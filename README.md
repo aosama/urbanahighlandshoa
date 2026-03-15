@@ -79,6 +79,7 @@ npx playwright install chromium
 
 The site automatically deploys to GitHub Pages when changes are pushed to the `main` branch.
 Before publishing, the deploy workflow rebuilds the site and reruns the Playwright regression suite so production deploys are gated on passing tests.
+In practice, that means a single maintainer can push routine changes straight to `main` and still keep the build/test safety net.
 
 ## Testing
 
@@ -204,22 +205,22 @@ We welcome contributions to improve the website! Here's how you can help:
 
 ### Making changes
 
-1. **Fork the repository** or create a new branch
+1. **Work directly on `main`** for small routine changes, or create a branch if you want isolation
 2. **Make your changes** to the site (see [Content model](#content-model) above)
 3. **Test locally** (see [Local development](#local-development))
-4. **Submit a Pull Request** with a clear description of your changes
+4. **Open a Pull Request** only when it is useful for previewing, discussing, or isolating a larger change
 
 ### Pull request workflow
 
-- **PR previews:** Every PR automatically deploys a preview at:
+- **PR previews:** If you open a PR, it automatically gets a preview at:
 
   ```text
   https://aosama.github.io/urbanahighlandshoa/__pr-preview__/pr-<PR_NUMBER>/
   ```
 
 - The preview is deployed by `.github/workflows/pr-preview.yml`
-- Review the preview and PR regression test results before merging to ensure everything looks correct
-- Once merged to `main`, the deploy workflow reruns the build and regression suite before changes go live
+- Use the preview when it helps with UI verification or sharing a hosted link
+- Once changes land on `main`, the deploy workflow reruns the build and regression suite before they go live
 
 ### Code style
 

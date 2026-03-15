@@ -54,12 +54,10 @@ Build:
 
 ## Branch policy
 
-- **Default:** Do not push directly to `main`. All changes should go through a pull request.
-- **Exception:** If the user explicitly instructs “commit and push to `main` (no PR)”, you may push directly to `main`.
-  - If branch protections block the push, fall back to pushing a branch and open a PR.
-- Create a feature branch for your work (e.g., `feature/add-events-page`, `fix/header-nav`).
-- Open a PR, wait for the PR preview and regression checks to finish, verify your changes, then request review.
-- Only merge after approval (or self-merge if you're the sole maintainer and the build passes).
+- This is a single-contributor repository, so direct pushes to `main` are fine for routine, low-risk work.
+- Use a feature branch and open a PR when it helps: larger changes, risky refactors, UI work that benefits from a preview, or anytime you want a clean review surface.
+- If a branch protection or environment rule blocks a direct push, fall back to a branch and PR.
+- When you do use a PR, wait for the relevant checks you care about and use the preview URL if it is helpful.
 
 ## Local tooling
 
@@ -86,16 +84,16 @@ When making changes to the codebase, ensure that all relevant documentation is u
 
 - When editing HTML files or doing web design work, you must preview the result (Playwright preferred).
 
-### Screenshot evidence (required for UI changes)
+### Screenshot evidence (helpful for UI changes)
 
-- For any UI-visible change (layout, CSS, images, content), attach **at least one screenshot** as evidence in the **Pull Request conversation**.
-- **Preference:** screenshots should be attached to the PR (e.g., in PR comments) and treated as transient review artifacts.
-- **Do NOT commit screenshots** into the repository (no new image files in git). Upload/attach them to GitHub in the PR conversation instead.
-- Prefer capturing the screenshot from the **PR Preview URL** (not only local dev), and mention the exact URL/path in the PR comment.
+- For UI-visible changes, capture a screenshot when it will help with verification or future reference.
+- If you are using a PR, prefer attaching screenshots there as transient review artifacts instead of committing them.
+- Do **not** commit screenshots into the repository unless the user explicitly wants that.
+- Prefer the PR preview URL for screenshots when a PR preview exists; otherwise local verification is fine.
 
 ## Verify work in PR Preview (GitHub Pages)
 
-When a PR changes the website, you must verify the deployed PR preview (not just local build output):
+When a PR changes the website and you want a hosted verification pass, use the deployed PR preview:
 
 - Use the PR preview URL convention: `https://aosama.github.io/urbanahighlandshoa/__pr-preview__/pr-<PR_NUMBER>/`
 - Navigate to the specific page(s) affected (example: `/documents/`), and confirm the change is visible and correct.
@@ -122,12 +120,12 @@ If a URL cannot be verified, explicitly tell the user it hasn't been verified ye
 
 When delegating an issue to a cloud agent (Copilot):
 
-- **Make the task small and bounded**: one issue → one PR; avoid multi-issue “mega PRs”.
+- **Make the task small and bounded**: one issue → one focused change. A PR is optional unless you specifically want one.
 - **Write explicit scope**: list exactly which files/areas are in-scope and what is out-of-scope.
 - **Define acceptance criteria**: include concrete, checkable outcomes (routes, UI behavior, URLs, etc.).
 - **Require verification steps**:
   - run the standard build (`cd site && npm ci && npm run build`)
-  - if UI changes: verify on PR Preview and post the preview URL(s)
+  - if UI changes and a PR exists: verify on PR Preview and post the preview URL(s)
 - **Prefer minimal changes**: avoid refactors unless required to meet acceptance.
 - **Ask for clarification when needed**: if requirements are ambiguous, stop and ask rather than guessing.
 
