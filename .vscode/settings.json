@@ -9,4 +9,5 @@
   },
   "chat.editor.fontSize": 16,
   "chat.fontSize": 16,
+  "astro.language-server.ls-path": "./site/node_modules/@astrojs/language-server/bin/nodeServer.js"
 }
