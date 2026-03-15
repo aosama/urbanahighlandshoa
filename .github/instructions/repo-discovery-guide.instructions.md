@@ -131,7 +131,9 @@ Behavior summary (verified):
 - `regression-tests.yml` is a manual workflow that mirrors the build-and-test portion without deploying.
 - `.github/actions/setup-site/action.yml` is the shared CI bootstrap path; it installs Node 24 through `actions/setup-node@v6`, enables npm caching, and runs `npm ci` in `site/`.
 - `.github/workflows/copilot-setup-steps.yml` is the Copilot coding-agent bootstrap workflow. The job name must remain `copilot-setup-steps` for agent pickup.
-- All three workflows opt JavaScript actions into Node 24 with `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true`, which is the current GitHub-recommended bridge while some official actions still publish Node 20-based releases or nested pins.
+- This Copilot bootstrap workflow is unrelated to GitHub Agentic Workflows via `gh aw`; `gh aw` is a CLI surface for authoring and running agentic workflows, not a replacement for Copilot setup steps.
+- `deploy.yml` and `regression-tests.yml` opt JavaScript actions into Node 24 with `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true`, which is the current GitHub-recommended bridge while some official actions still publish Node 20-based releases or nested pins.
+- `copilot-setup-steps.yml` should stay close to GitHub's documented Copilot setup-step shape because unsupported workflow customizations may be ignored by Copilot.
 
 ## 6. Repo-specific gotchas
 
