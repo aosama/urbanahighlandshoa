@@ -1,6 +1,9 @@
 {
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
+  "files.exclude": {
+    "**/.git": false
+  },
   "workbench.colorCustomizations": {
     "terminal.background": "#000000"
   }
