@@ -15,8 +15,8 @@ The website is a **static front-end-only** site built with modern web technologi
 
 ## Tech stack
 
-- **[Astro](https://astro.build/) 5.17+** - Modern static site generator
-- **[Tailwind CSS](https://tailwindcss.com/) 4.1+** - Utility-first CSS framework
+- **[Astro](https://astro.build/) 6.0+** - Modern static site generator
+- **[Tailwind CSS](https://tailwindcss.com/) 4.2+** - Utility-first CSS framework
 - **[TypeScript](https://www.typescriptlang.org/)** - Type-safe configuration
 - **GitHub Pages** - Hosting (Project Pages mode)
 - **GitHub Actions** - CI/CD for automated deployment
@@ -25,7 +25,7 @@ The website is a **static front-end-only** site built with modern web technologi
 
 ### Prerequisites
 
-- Node.js 20 or later
+- Node.js 24 or later
 - npm (comes with Node.js)
 
 ### Setup and run
@@ -46,15 +46,17 @@ This repository includes a dev container configuration in `.devcontainer/` for V
 
 - Open the repository root in VS Code
 - Run **Dev Containers: Reopen in Container**
-- The container builds from `.devcontainer/Dockerfile`, based on the official Node.js devcontainer image
+- The container uses the official JavaScript/Node devcontainer image pinned to the Node 24 release line
 - The container installs the latest GitHub CLI via a devcontainer feature
-- Playwright's Linux system dependencies are baked into the image at build time
-- On first create, VS Code runs `cd site && npm ci`
+
+For coding agents and maintainers: avoid wiring `cd site && npm ci && npm run test:install` into `postCreateCommand`. In this repository, that startup hook can stall the entire dev container. Run dependency install and Playwright setup manually after the container is ready instead.
 
 After the container starts, use the normal workflow:
 
 ```bash
 cd site
+npm ci
+npm run test:install
 npm run dev
 ```
 
@@ -64,14 +66,16 @@ If you need to run Playwright tests in a fresh container, install the browser on
 
 ```bash
 cd site
-npx playwright install chromium
+npm run test:install
 ```
 
 ### Available commands
 
 - `npm run dev` - Start development server with hot reload
+- `npm run check` - Run Astro's project validation checks
 - `npm run build` - Build production site to `site/dist/`
 - `npm run preview` - Preview the production build locally
+- `npm run test:install` - Install Playwright Chromium plus required Linux dependencies
 - `npm test` - Run Playwright regression tests
 - `npm run test:ui` - Run Playwright tests with the UI runner
 
@@ -91,12 +95,13 @@ Regression tests run with **Playwright** (`cd site && npm test`). In CI, the dep
 - **Trigger:** Push to `main` or manual workflow dispatch
 - **Process:**
   1. Checks out code
-  2. Sets up Node.js 20 and installs `site/` dependencies
-  3. Installs Playwright Chromium
-  4. Builds the site with `npm run build`
-  5. Runs `npm test`
-  6. Uploads `site/dist/` as Pages artifact
-  7. Deploys to GitHub Pages
+  2. Sets up Node.js 24 and installs `site/` dependencies
+  3. Installs Playwright Chromium and required Linux dependencies
+  4. Runs `npm run check`
+  5. Builds the site with `npm run build`
+  6. Runs `npm test`
+  7. Uploads `site/dist/` as Pages artifact
+  8. Deploys to GitHub Pages
 
 ### Configuration
 

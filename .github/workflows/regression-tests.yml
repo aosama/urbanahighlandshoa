@@ -3,6 +3,9 @@ name: Regression Tests
 on:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 env:
   ASTRO_TELEMETRY_DISABLED: "1"
 
@@ -22,7 +25,10 @@ jobs:
         uses: ./.github/actions/setup-site
 
       - name: Install Playwright browsers
-        run: npx playwright install --with-deps chromium
+        run: npm run test:install
+
+      - name: Type and Astro check
+        run: npm run check
 
       - name: Build site
         run: npm run build

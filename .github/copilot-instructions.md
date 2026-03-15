@@ -4,24 +4,7 @@
 
 - Main project overview: `README.md`
 - Legacy website (AS-IS documentation): `docs/legacywebsite/LEGACY_SITE_NOTES.md`
-
-## Repo structure
-
-- Repo root is this repository.
-- Repo root is **not** the website root.
-- The Astro website source lives under `site/` (it is **not** the repo root).
 - `LegacyWordPressExport/` is an important backup from the legacy WordPress site and should be preserved.
-
-## Common commands
-
-Run locally:
-
-- `cd site && npm install`
-- `cd site && npm run dev`
-
-Build:
-
-- `cd site && npm run build`
 
 ## Deployment
 
@@ -39,19 +22,16 @@ Build:
 - Do not pollute the repo root with unnecessary files.
 - Use appropriate directories for different types of files (e.g., `docs/`, `src/`, `tests/`).
 
-## Always Keep Documnentation Updated
+## Always Keep Documentation Updated
 
 When making changes to the codebase, ensure that all relevant documentation is updated accordingly. This includes:
 
-- README files
-- Inline code comments
-- API documentation
-- User guides
-- Any other relevant documentation
+- `README.md` file.
+- `repo-discovery-guide.instructions.md` file.
 
 ## Verify HTML changes (local)
 
-- When editing HTML files or doing web design work, you must preview the result (Playwright preferred).
+- When editing HTML files or doing web design work, you must preview the result in your browser.
 
 ### Screenshot evidence (helpful for UI changes)
 
@@ -82,18 +62,20 @@ Before sharing any URL (local dev server, production site, external links):
 
 If a URL cannot be verified, explicitly tell the user it hasn't been verified yet and explain why.
 
-## Repo lessons / gotchas
 
-- GitHub Pages is **Project Pages**, so the site is served from `/urbanahighlandshoa/`.
-  - Local dev URL is therefore: the dev server URL + `/urbanahighlandshoa/` (the root `/` will 404 when `base` is set).
-  - Prefer `import.meta.env.BASE_URL` (often as `basePath`) for internal links and **public/** assets (e.g., favicon, `/assets/...`) so they work both locally and on Pages.
-- Deploy workflow builds from the `site/` subdirectory and deploys `site/dist` via `.github/workflows/deploy.yml`.
-- GitHub Pages must be enabled for the repo (Settings → Pages → Build and deployment: GitHub Actions) or the deploy job may fail with 404 (deploy-pages "Failed to create deployment").
-- Keep a single canonical README at repo root; avoid duplicate `site/README.md`.
+## General coding and documentation guidelines
+
+- Keep a single canonical `README.md` at repo root. Do not create other README files elsewhere.
 - For UI polish and testing, consult skills: `frontend-design` and `webapp-testing`.
 
 ## User Interaction Protocol
 
 - **"Discover the repo"**: When the user says this, it means the coding agent should read the codebase, understand it, and internalize its structure. This is an instruction for the agent's own orientation—**not** a request for the user to receive help discovering the repo.
 
-- The user will be updating this file, do not exclude it from code commits and pushes if you see an update.
+- The user will be updating this file `agents.md` or `copilot-instructions.md`, do not exclude it from code commits and pushes if you see an update.
+
+
+## Repository memory
+
+- Use `store_memory` only for durable, verified, non-obvious facts that will likely help future sessions; prefer a few high-value memories over many low-value ones.
+- Do not store temporary task state, branch-specific details, obvious one-file facts, speculation, or secrets.

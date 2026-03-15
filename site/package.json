@@ -1,22 +1,33 @@
 {
   "name": "site",
+  "private": true,
   "type": "module",
   "version": "0.0.1",
+  "packageManager": "npm@11.9.0",
+  "engines": {
+    "node": ">=24",
+    "npm": ">=11"
+  },
   "scripts": {
     "dev": "astro dev",
+    "check": "astro check",
     "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "test:install": "playwright install --with-deps chromium",
     "test": "playwright test",
     "test:ui": "playwright test --ui"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.1.18",
-    "astro": "^5.17.1",
-    "tailwindcss": "^4.1.18"
+    "@tailwindcss/vite": "^4.2.1",
+    "astro": "^6.0.4",
+    "tailwindcss": "^4.2.1"
   },
   "devDependencies": {
-    "@playwright/test": "^1.58.1",
-    "playwright": "^1.58.1"
+    "@astrojs/check": "^0.9.7",
+    "@types/node": "^24.5.2",
+    "@playwright/test": "^1.58.2",
+    "playwright": "^1.58.2",
+    "typescript": "^5.9.3"
   }
 }

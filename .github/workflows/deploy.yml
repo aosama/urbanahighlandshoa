@@ -19,6 +19,8 @@ env:
 
 jobs:
   verify:
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -32,7 +34,10 @@ jobs:
         uses: ./.github/actions/setup-site
 
       - name: Install Playwright browsers
-        run: npx playwright install --with-deps chromium
+        run: npm run test:install
+
+      - name: Type and Astro check
+        run: npm run check
 
       - name: Build
         run: npm run build
@@ -49,7 +54,7 @@ jobs:
           retention-days: 7
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: site/dist
 
