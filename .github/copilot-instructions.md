@@ -2,14 +2,14 @@
 
 ## Session start
 
-- Always read [README.md](README.md) and [AGENTS.md](AGENTS.md) at the start of each chat/session to confirm the current stack, run commands, and deployment workflow.
+- Always read `README.md` and `AGENTS.md` at the start of each chat/session to confirm the current stack, run commands, and deployment workflow.
 
 ## Repo navigation
 
-- Main project overview: [README.md](README.md)
-- Legacy website (AS-IS documentation): [docs/legacywebsite/LEGACY_SITE_NOTES.md](docs/legacywebsite/LEGACY_SITE_NOTES.md)
+- Main project overview: `README.md`
+- Legacy website (AS-IS documentation): `docs/legacywebsite/LEGACY_SITE_NOTES.md`
 
-- Cloud Copilot setup (coding agent + MCP): [docs/copilot-cloud-setup.md](docs/copilot-cloud-setup.md)
+- Cloud Copilot setup (coding agent + MCP): `docs/copilot-cloud-setup.md`
 
 ## Repo structure
 
