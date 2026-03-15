@@ -127,12 +127,12 @@ Behavior summary (verified):
 - `deploy.yml` triggers on pushes to `main` and manual workflow dispatch.
 - Production deploys are gated by a `verify` job before the `deploy` job runs.
 - The `verify` job checks out the repo, uses `.github/actions/setup-site`, installs Playwright browsers via `npm run test:install`, runs `npm run check`, builds the site, runs Playwright regression tests, uploads the Playwright report, packages `site/dist` into the `github-pages` tar artifact, and uploads that artifact with `actions/upload-artifact@v6`.
-- The deploy job publishes the previously uploaded Pages artifact with `actions/deploy-pages@v4`.
+- The deploy job uses `actions/github-script@v8` to look up the `github-pages` artifact for the current workflow run, create the Pages deployment through the GitHub API, and poll until the deployment reports success.
 - `regression-tests.yml` is a manual workflow that mirrors the build-and-test portion without deploying.
 - `.github/actions/setup-site/action.yml` is the shared CI bootstrap path; it installs Node 24 through `actions/setup-node@v6`, enables npm caching, and runs `npm ci` in `site/`.
 - `.github/workflows/copilot-setup-steps.yml` is the Copilot coding-agent bootstrap workflow. The job name must remain `copilot-setup-steps` for agent pickup.
 - This Copilot bootstrap workflow is unrelated to GitHub Agentic Workflows via `gh aw`; `gh aw` is a CLI surface for authoring and running agentic workflows, not a replacement for Copilot setup steps.
-- `deploy.yml` and `regression-tests.yml` opt JavaScript actions into Node 24 with `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true`. The deploy workflow also avoids `actions/upload-pages-artifact@v4` because that wrapper still pins a Node 20-era `upload-artifact` SHA that emits deprecation warnings on current runners.
+- `deploy.yml` and `regression-tests.yml` opt JavaScript actions into Node 24 with `FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true`. The deploy workflow also avoids `actions/upload-pages-artifact@v4` and `actions/deploy-pages@v4` because those wrappers still emit Node 20 deprecation warnings on current runners.
 - `copilot-setup-steps.yml` should stay close to GitHub's documented Copilot setup-step shape because unsupported workflow customizations may be ignored by Copilot.
 
 ## 6. Repo-specific gotchas

@@ -77,8 +77,6 @@ jobs:
           if-no-files-found: error
 
   deploy:
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
     needs: verify
     runs-on: ubuntu-latest
     environment:
@@ -87,4 +85,91 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        # `actions/deploy-pages@v4` still emits a Node 20 deprecation warning,
+        # so call the Pages deployment API directly from Node 24.
+        uses: actions/github-script@v8
+        with:
+          retries: 3
+          script: |
+            const artifactName = 'github-pages'
+            const reportingIntervalMs = 5000
+            const timeoutMs = 600000
+            const owner = context.repo.owner
+            const repo = context.repo.repo
+            const runId = context.runId
+            const buildVersion = process.env.GITHUB_SHA
+
+            const artifactsResponse = await github.rest.actions.listWorkflowRunArtifacts({
+              owner,
+              repo,
+              run_id: runId,
+              per_page: 100
+            })
+
+            const artifact = artifactsResponse.data.artifacts.find(({name}) => name === artifactName)
+
+            if (!artifact) {
+              throw new Error(`No artifact named "${artifactName}" was found for workflow run ${runId}.`)
+            }
+
+            const idToken = await core.getIDToken()
+            const deploymentResponse = await github.request('POST /repos/{owner}/{repo}/pages/deployments', {
+              owner,
+              repo,
+              artifact_id: artifact.id,
+              pages_build_version: buildVersion,
+              oidc_token: idToken
+            })
+
+            const pageUrl = deploymentResponse.data.page_url || ''
+            if (pageUrl) {
+              core.setOutput('page_url', pageUrl)
+            }
+
+            const deploymentId =
+              deploymentResponse.data.id ||
+              deploymentResponse.data.status_url?.split('/').pop() ||
+              buildVersion
+
+            const finalErrorStatus = {
+              deployment_failed: 'Deployment failed, try again later.',
+              deployment_content_failed:
+                'Artifact could not be deployed. Please ensure the content does not contain hard links or symlinks and stays under the Pages size limits.',
+              deployment_cancelled: 'Deployment cancelled.',
+              deployment_lost: 'Deployment failed to report final status.'
+            }
+
+            const temporaryStatusMessage = {
+              unknown_status: 'Unable to get deployment status yet. Waiting for the next poll.',
+              not_found: 'Deployment status is not ready yet. Waiting for the next poll.',
+              deployment_attempt_error: 'Deployment temporarily failed. Waiting for the automatic retry.'
+            }
+
+            const deadline = Date.now() + timeoutMs
+
+            while (Date.now() < deadline) {
+              const statusResponse = await github.request(
+                'GET /repos/{owner}/{repo}/pages/deployments/{deploymentId}',
+                {
+                  owner,
+                  repo,
+                  deploymentId
+                }
+              )
+
+              const status = statusResponse.data.status
+
+              if (status === 'succeed') {
+                core.info('Reported success!')
+                return pageUrl
+              }
+
+              if (status in finalErrorStatus) {
+                throw new Error(finalErrorStatus[status])
+              }
+
+              core.info(temporaryStatusMessage[status] || `Deployment status: ${status}`)
+              await new Promise((resolve) => setTimeout(resolve, reportingIntervalMs))
+            }
+
+            throw new Error('Timeout reached while waiting for the GitHub Pages deployment to complete.')
