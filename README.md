@@ -84,7 +84,7 @@ npm run test:install
 The site automatically deploys to GitHub Pages when changes are pushed to the `main` branch.
 Before publishing, the deploy workflow rebuilds the site and reruns the Playwright regression suite so production deploys are gated on passing tests.
 In practice, that means a single maintainer can push routine changes straight to `main` and still keep the build/test safety net.
-The deploy and regression workflows also opt GitHub JavaScript actions into the Node 24 runtime now, so Pages and artifact actions stay ahead of the 2026 Node 20 deprecation timeline.
+The deploy and regression workflows also opt GitHub JavaScript actions into the Node 24 runtime now, and the deploy workflow packages the Pages artifact directly with `actions/upload-artifact@v6` to avoid the lingering Node 20 warning inside GitHub's `upload-pages-artifact` wrapper.
 
 ## Testing
 
@@ -101,7 +101,7 @@ Regression tests run with **Playwright** (`cd site && npm test`). In CI, the dep
   4. Runs `npm run check`
   5. Builds the site with `npm run build`
   6. Runs `npm test`
-  7. Uploads `site/dist/` as Pages artifact
+  7. Packages `site/dist/` into the `github-pages` tar artifact and uploads it with `actions/upload-artifact@v6`
   8. Deploys to GitHub Pages
 
 ### Configuration

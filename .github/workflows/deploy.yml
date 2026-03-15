@@ -54,10 +54,26 @@ jobs:
           path: site/playwright-report/
           retention-days: 7
 
+      - name: Package Pages artifact
+        run: |
+          tar \
+            --dereference --hard-dereference \
+            --directory site/dist \
+            -cvf "$RUNNER_TEMP/artifact.tar" \
+            --exclude=.git \
+            --exclude=.github \
+            --exclude=".[^/]*" \
+            .
+
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v4
+        # GitHub's upload-pages-artifact wrapper still pins an upload-artifact
+        # release that triggers the runner's Node 20 deprecation warning.
+        uses: actions/upload-artifact@v6
         with:
-          path: site/dist
+          name: github-pages
+          path: ${{ runner.temp }}/artifact.tar
+          retention-days: 1
+          if-no-files-found: error
 
   deploy:
     needs: verify
