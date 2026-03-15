@@ -13,12 +13,13 @@
     - `create-github-issues-for-unmet-specification-requirements`
     - `create-github-pull-request-from-specification`
     - `webapp-testing`
-    - `gh-cli`
-  - From `bytedance/deer-flow`:
+  - From repository-local custom skills:
+    - `github-cli`
+  - From `https://github.com/anthropics/skills/tree/main/skills/frontend-design`:
     - `frontend-design`
 - Reach for these skills when the task matches:
   - Use the `create-github-*` skills for issue, PR, and workflow generation from requirements or implementation plans.
-  - Use `gh-cli` for repository, branch, PR, issue, and workflow operations that are better handled with `gh`.
+  - Use `github-cli` for repository, branch, PR, issue, and workflow operations that are better handled with `gh`.
   - Use `frontend-design` for UI polish and `webapp-testing` for browser-based verification and Playwright-style validation.
 
 ## Repo navigation
