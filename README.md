@@ -83,7 +83,7 @@ In practice, that means a single maintainer can push routine changes straight to
 
 ## Testing
 
-Regression tests run with **Playwright** (`cd site && npm test`) and are executed in CI via `.github/workflows/regression-tests.yml` for pull requests to `main`. The deploy workflow also reruns the same build-and-test checks on `main` before publishing to GitHub Pages.
+Regression tests run with **Playwright** (`cd site && npm test`). In CI, the deploy workflow reruns the same build-and-test checks on every push to `main` before publishing to GitHub Pages, and `.github/workflows/regression-tests.yml` remains available as a manual workflow dispatch when you want an extra run without deploying.
 
 ### Deployment workflow
 
@@ -105,16 +105,6 @@ Astro is configured for GitHub Pages Project Pages in `site/astro.config.mjs`:
 - `site: "https://aosama.github.io"` - GitHub Pages domain
 - `base: "/urbanahighlandshoa"` - Project subpath
 - `trailingSlash: "always"` - Ensures consistent URLs
-
-### PR previews
-
-PR previews are published automatically to a predictable URL:
-
-```text
-https://aosama.github.io/urbanahighlandshoa/__pr-preview__/pr-<PR_NUMBER>/
-```
-
-The preview is deployed by `.github/workflows/pr-preview.yml` and (when permissions allow) the workflow keeps a single preview URL comment updated on the PR.
 
 ### Requirements
 
@@ -208,19 +198,13 @@ We welcome contributions to improve the website! Here's how you can help:
 1. **Work directly on `main`** for small routine changes, or create a branch if you want isolation
 2. **Make your changes** to the site (see [Content model](#content-model) above)
 3. **Test locally** (see [Local development](#local-development))
-4. **Open a Pull Request** only when it is useful for previewing, discussing, or isolating a larger change
+4. **Push to `main`** when you are ready to publish
 
-### Pull request workflow
+### Publishing workflow
 
-- **PR previews:** If you open a PR, it automatically gets a preview at:
-
-  ```text
-  https://aosama.github.io/urbanahighlandshoa/__pr-preview__/pr-<PR_NUMBER>/
-  ```
-
-- The preview is deployed by `.github/workflows/pr-preview.yml`
-- Use the preview when it helps with UI verification or sharing a hosted link
-- Once changes land on `main`, the deploy workflow reruns the build and regression suite before they go live
+- Pushes to `main` trigger `.github/workflows/deploy.yml`
+- The deploy workflow rebuilds the site, reruns Playwright regression tests, and then publishes to GitHub Pages
+- Use `.github/workflows/regression-tests.yml` manually if you want an extra CI test run without deploying
 
 ### Code style
 
@@ -237,7 +221,6 @@ We welcome contributions to improve the website! Here's how you can help:
 
 ## Additional documentation
 
-- **Copilot cloud setup:** [docs/copilot-cloud-setup.md](docs/copilot-cloud-setup.md)
 - **Repository agent guidance:** [AGENTS.md](AGENTS.md)
 
 ## Legacy reference

@@ -11,22 +11,20 @@
     - `create-github-issue-feature-from-specification`
     - `create-github-issues-feature-from-implementation-plan`
     - `create-github-issues-for-unmet-specification-requirements`
-    - `create-github-pull-request-from-specification`
     - `webapp-testing`
   - From repository-local custom skills:
     - `github-cli`
   - From `https://github.com/anthropics/skills/tree/main/skills/frontend-design`:
     - `frontend-design`
 - Reach for these skills when the task matches:
-  - Use the `create-github-*` skills for issue, PR, and workflow generation from requirements or implementation plans.
-  - Use `github-cli` for repository, branch, PR, issue, and workflow operations that are better handled with `gh`.
+  - Use the `create-github-*` skills for issue and workflow generation from requirements or implementation plans.
+  - Use `github-cli` for repository, branch, issue, and workflow operations that are better handled with `gh`.
   - Use `frontend-design` for UI polish and `webapp-testing` for browser-based verification and Playwright-style validation.
 
 ## Repo navigation
 
 - Main project overview: `README.md`
 - Legacy website (AS-IS documentation): `docs/legacywebsite/LEGACY_SITE_NOTES.md`
-- Cloud Copilot setup (coding agent + MCP): `docs/copilot-cloud-setup.md`
 
 ## Repo structure
 
@@ -54,10 +52,9 @@ Build:
 
 ## Branch policy
 
-- This is a single-contributor repository, so direct pushes to `main` are fine for routine, low-risk work.
-- Use a feature branch and open a PR when it helps: larger changes, risky refactors, UI work that benefits from a preview, or anytime you want a clean review surface.
-- If a branch protection or environment rule blocks a direct push, fall back to a branch and PR.
-- When you do use a PR, wait for the relevant checks you care about and use the preview URL if it is helpful.
+- This is a single-contributor repository, so work on `main` by default.
+- Use a temporary local branch only when it helps you isolate or experiment before landing back on `main`.
+- If a branch protection or environment rule unexpectedly blocks a direct push, ask the user how they want to proceed.
 
 ## Local tooling
 
@@ -87,19 +84,16 @@ When making changes to the codebase, ensure that all relevant documentation is u
 ### Screenshot evidence (helpful for UI changes)
 
 - For UI-visible changes, capture a screenshot when it will help with verification or future reference.
-- If you are using a PR, prefer attaching screenshots there as transient review artifacts instead of committing them.
 - Do **not** commit screenshots into the repository unless the user explicitly wants that.
-- Prefer the PR preview URL for screenshots when a PR preview exists; otherwise local verification is fine.
+- Prefer local verification first; use the production site after deploy when you need a hosted check.
 
-## Verify work in PR Preview (GitHub Pages)
+## Verify deployed site (GitHub Pages)
 
-When a PR changes the website and you want a hosted verification pass, use the deployed PR preview:
+When you need a hosted verification pass, use the production site:
 
-- Use the PR preview URL convention: `https://aosama.github.io/urbanahighlandshoa/__pr-preview__/pr-<PR_NUMBER>/`
-- Navigate to the specific page(s) affected (example: `/documents/`), and confirm the change is visible and correct.
-- Before providing any web link (PR preview or production) to the user, verify it is actually accessible (e.g., open it in Playwright or `curl -I` and confirm it returns 200).
-- Include the PR preview URL(s) in your final response so the work is reviewable and referencable.
-- When a PR is merged, rely on the `main` deploy workflow for the final production publish; the preview cleanup workflow is only needed for closed, unmerged PRs.
+- Production URL: `https://aosama.github.io/urbanahighlandshoa/`
+- Navigate to the specific page(s) affected (example: `/documents/`) and confirm the change is visible and correct after deployment
+- Before providing any web link to the user, verify it is actually accessible (e.g., open it in Playwright or `curl -I` and confirm it returns 200)
 
 ## URL Verification (Critical)
 
@@ -107,7 +101,7 @@ When a PR changes the website and you want a hosted verification pass, use the d
 
 **Never guess.** Do not make assumptions about versions, image tags, URLs, or environment behavior. Verify using authoritative sources (e.g., official registries/docs) or ask for clarification.
 
-Before sharing any URL (local dev server, PR preview, production site, external links):
+Before sharing any URL (local dev server, production site, external links):
 
 1. **Verify accessibility**: Use `curl -I <url>` to confirm HTTP 200, or open in Playwright/browser.
 2. **Verify the specific path**: Don't assume a page exists—check the exact URL you're about to share.
@@ -120,12 +114,12 @@ If a URL cannot be verified, explicitly tell the user it hasn't been verified ye
 
 When delegating an issue to a cloud agent (Copilot):
 
-- **Make the task small and bounded**: one issue → one focused change. A PR is optional unless you specifically want one.
+- **Make the task small and bounded**: one issue → one focused change.
 - **Write explicit scope**: list exactly which files/areas are in-scope and what is out-of-scope.
 - **Define acceptance criteria**: include concrete, checkable outcomes (routes, UI behavior, URLs, etc.).
 - **Require verification steps**:
   - run the standard build (`cd site && npm ci && npm run build`)
-  - if UI changes and a PR exists: verify on PR Preview and post the preview URL(s)
+  - if UI changes: verify locally and, when useful, verify on the production site after deploy
 - **Prefer minimal changes**: avoid refactors unless required to meet acceptance.
 - **Ask for clarification when needed**: if requirements are ambiguous, stop and ask rather than guessing.
 
