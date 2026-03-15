@@ -3,12 +3,29 @@
 ## Session start
 
 - Always read `README.md` and `AGENTS.md` at the start of each chat/session to confirm the current stack, run commands, and deployment workflow.
+- Keep the repository's shared Copilot skills under `.github/skills` so they are available to anyone working in this repo.
+- Use `~/.copilot/skills` only for personal skills or local overrides that should not be committed.
+- Ensure the following shared skills are present under `.github/skills`:
+  - From `github/awesome-copilot`:
+    - `create-github-action-workflow-specification`
+    - `create-github-issue-feature-from-specification`
+    - `create-github-issues-feature-from-implementation-plan`
+    - `create-github-issues-for-unmet-specification-requirements`
+    - `create-github-pull-request-from-specification`
+    - `webapp-testing`
+  - From repository-local custom skills:
+    - `github-cli`
+  - From `https://github.com/anthropics/skills/tree/main/skills/frontend-design`:
+    - `frontend-design`
+- Reach for these skills when the task matches:
+  - Use the `create-github-*` skills for issue, PR, and workflow generation from requirements or implementation plans.
+  - Use `github-cli` for repository, branch, PR, issue, and workflow operations that are better handled with `gh`.
+  - Use `frontend-design` for UI polish and `webapp-testing` for browser-based verification and Playwright-style validation.
 
 ## Repo navigation
 
 - Main project overview: `README.md`
 - Legacy website (AS-IS documentation): `docs/legacywebsite/LEGACY_SITE_NOTES.md`
-
 - Cloud Copilot setup (coding agent + MCP): `docs/copilot-cloud-setup.md`
 
 ## Repo structure
