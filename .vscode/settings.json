@@ -7,7 +7,7 @@
   "workbench.colorCustomizations": {
     "terminal.background": "#000000"
   },
-  "chat.editor.fontSize": 16,
-  "chat.fontSize": 16,
+  "chat.editor.fontSize": 14,
+  "chat.fontSize": 14,
   "astro.language-server.ls-path": "./site/node_modules/@astrojs/language-server/bin/nodeServer.js"
 }

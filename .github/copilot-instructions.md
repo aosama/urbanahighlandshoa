@@ -33,13 +33,6 @@ Build:
 
 - This is a single-contributor repository, so work on `main` by default.
 - Use a temporary local branch only when it helps you isolate or experiment before landing back on `main`.
-- If a branch protection or environment rule unexpectedly blocks a direct push, ask the user how they want to proceed.
-
-## Local tooling
-
-- Ensure you have the GitHub CLI (`gh`) installed and authenticated.
-- Ensure you have Node.js (`node`) and npm installed.
-- If the coding assistant/agent needs additional CLI tools for productivity, it should ask the user for permission to install them (no pushback/limitations on installing dev tools).
 
 ## Keep Repo Clean
 
@@ -102,3 +95,5 @@ If a URL cannot be verified, explicitly tell the user it hasn't been verified ye
 ## User Interaction Protocol
 
 - **"Discover the repo"**: When the user says this, it means the coding agent should read the codebase, understand it, and internalize its structure. This is an instruction for the agent's own orientation—**not** a request for the user to receive help discovering the repo.
+
+- The user will be updating this file, do not exclude it from code commits and pushes if you see an update.
