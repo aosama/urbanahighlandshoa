@@ -14,7 +14,7 @@ const navLinks = [
   { href: basePath, label: 'Home' },
   { href: `${basePath}announcements/`, label: 'News' },
   { href: `${basePath}events/`, label: 'Events' },
-  { href: `${basePath}documents/`, label: 'Docs' },
+  { href: `${basePath}documents/`, label: 'Forms & Documents' },
   { href: `${basePath}resources/`, label: 'Resources' },
   { href: `${basePath}contact/`, label: 'Contact' },
 ];
@@ -26,7 +26,7 @@ const isHero = variant === 'hero';
   <!-- Hero variant: transparent floating nav for homepage -->
   <nav class="relative z-20 mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
     <a href={basePath} class="flex items-center gap-3 text-white">
-      <img 
+      <img
         src={`${basePath}assets/UH-logo.jpg`}
         alt="Urbana Highlands logo"
         class="h-11 w-11 rounded-xl shadow-lg"
@@ -37,15 +37,15 @@ const isHero = variant === 'hero';
       />
       <span class="hidden text-lg font-semibold tracking-tight sm:block">Urbana Highlands</span>
     </a>
-    
+
     <div class="flex items-center gap-2">
       <div class="hidden items-center gap-1 rounded-full bg-slate-900/60 p-1.5 sm:flex">
         {navLinks.map((link, index) => (
-          <a 
-            href={link.href} 
+          <a
+            href={link.href}
             class={`rounded-full px-4 py-2 text-sm font-medium transition ${
-              index === 0 
-                ? 'bg-white/20 text-white' 
+              index === 0
+                ? 'bg-white/20 text-white'
                 : 'text-white/80 hover:bg-white/10 hover:text-white'
             }`}
           >
@@ -54,9 +54,9 @@ const isHero = variant === 'hero';
         ))}
       </div>
 
-      <a 
-        href={siteConfig.links.residentPortal} 
-        target="_blank" 
+      <a
+        href={siteConfig.links.residentPortal}
+        target="_blank"
         rel="noopener noreferrer"
         class="hidden rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-slate-900 shadow-lg transition hover:bg-white/90 hover:shadow-xl sm:inline-flex"
       >
@@ -97,7 +97,7 @@ const isHero = variant === 'hero';
   <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-900/95 backdrop-blur-xl">
     <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
       <a class="flex items-center gap-3 font-bold text-white transition hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400 rounded-lg" href={basePath}>
-        <img 
+        <img
           src={`${basePath}assets/UH-logo.jpg`}
           alt="Urbana Highlands logo"
           class="h-10 w-10 rounded-xl shadow-lg"
@@ -112,8 +112,8 @@ const isHero = variant === 'hero';
       <div class="flex items-center gap-6">
         <nav class="hidden items-center gap-1 md:flex">
           {navLinks.map((link) => (
-            <a 
-              class="rounded-lg px-3 py-2 text-sm font-medium text-slate-300 transition hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400" 
+            <a
+              class="rounded-lg px-3 py-2 text-sm font-medium text-slate-300 transition hover:bg-white/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
               href={link.href}
             >
               {link.label}

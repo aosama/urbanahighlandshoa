@@ -71,8 +71,8 @@ When making changes to the codebase, ensure that all relevant documentation is u
 When you need a hosted verification pass, use the production site:
 
 - Production URL: `https://aosama.github.io/urbanahighlandshoa/`
-- Navigate to the specific page(s) affected (example: `/documents/`) and confirm the change is visible and correct after deployment
-- Before providing any web link to the user, verify it is actually accessible (e.g., open it in Playwright or `curl -I` and confirm it returns 200)
+- Navigate to the specific page(s) affected (example: `/documents/`) and confirm the change is visible and correct after deployment using your browser
+- Before providing any web link to the user, verify it is actually accessible (e.g., open it in browser and confirm it rendered correctly)
 
 ## URL Verification (Critical)
 
@@ -82,7 +82,7 @@ When you need a hosted verification pass, use the production site:
 
 Before sharing any URL (local dev server, production site, external links):
 
-1. **Verify accessibility**: Use `curl -I <url>` to confirm HTTP 200, or open in Playwright/browser.
+1. **Verify accessibility**: Use your browser to confirm the page rendered correctly.
 2. **Verify the specific path**: Don't assume a page exists—check the exact URL you're about to share.
 3. **For local dev servers**: Confirm the server is running and responding before sharing the localhost URL.
 4. **For deployed sites**: Wait for the deploy workflow to complete, then verify the live URL.

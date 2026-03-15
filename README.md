@@ -167,7 +167,7 @@ To create a new page:
 
 To add downloadable documents:
 
-1. Place PDF files in `site/public/docs/` (e.g., `site/public/docs/bylaws.pdf`)
+1. Place PDF files in `site/public/docs/` (e.g., `site/public/docs/design-guidelines-and-architectural-procedures.pdf`)
 2. Reference them using the base path: `${basePath}docs/filename.pdf`
 3. The `public/` folder is served as static assets
 
@@ -178,7 +178,9 @@ const basePath = import.meta.env.BASE_URL.endsWith('/')
   ? import.meta.env.BASE_URL
   : `${import.meta.env.BASE_URL}/`;
 
-<a href={`${basePath}docs/bylaws.pdf`} target="_blank">Bylaws (PDF)</a>
+<a href={`${basePath}docs/design-guidelines-and-architectural-procedures.pdf`} target="_blank">
+  Design Guidelines and Architectural Procedures (PDF)
+</a>
 ```
 
 ### Updating site configuration
