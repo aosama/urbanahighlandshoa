@@ -7,6 +7,8 @@
     "ms-edgedevtools.vscode-edge-devtools",
     "vscode-icons-team.vscode-icons",
     "tomoki1207.pdf",
-    "ms-vscode-remote.remote-wsl"
+    "ms-vscode-remote.remote-wsl",
+    "mutantdino.resourcemonitor",
+    "wholroyd.jinja"
   ]
 }
