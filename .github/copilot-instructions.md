@@ -50,6 +50,7 @@ Build:
 
 - GitHub Pages deploy workflow: `.github/workflows/deploy.yml`
 - Hosted as GitHub Pages **Project Pages** under `/urbanahighlandshoa/`.
+- Production deploys are gated by the site build plus Playwright regression tests inside `.github/workflows/deploy.yml`.
 
 ## Branch policy
 
@@ -57,7 +58,7 @@ Build:
 - **Exception:** If the user explicitly instructs “commit and push to `main` (no PR)”, you may push directly to `main`.
   - If branch protections block the push, fall back to pushing a branch and open a PR.
 - Create a feature branch for your work (e.g., `feature/add-events-page`, `fix/header-nav`).
-- Open a PR, wait for the PR preview to deploy, verify your changes, then request review.
+- Open a PR, wait for the PR preview and regression checks to finish, verify your changes, then request review.
 - Only merge after approval (or self-merge if you're the sole maintainer and the build passes).
 
 ## Local tooling
@@ -100,6 +101,7 @@ When a PR changes the website, you must verify the deployed PR preview (not just
 - Navigate to the specific page(s) affected (example: `/documents/`), and confirm the change is visible and correct.
 - Before providing any web link (PR preview or production) to the user, verify it is actually accessible (e.g., open it in Playwright or `curl -I` and confirm it returns 200).
 - Include the PR preview URL(s) in your final response so the work is reviewable and referencable.
+- When a PR is merged, rely on the `main` deploy workflow for the final production publish; the preview cleanup workflow is only needed for closed, unmerged PRs.
 
 ## URL Verification (Critical)
 

@@ -78,10 +78,11 @@ npx playwright install chromium
 ## Deployment (GitHub Pages)
 
 The site automatically deploys to GitHub Pages when changes are pushed to the `main` branch.
+Before publishing, the deploy workflow rebuilds the site and reruns the Playwright regression suite so production deploys are gated on passing tests.
 
 ## Testing
 
-Regression tests run with **Playwright** (`cd site && npm test`) and are executed in CI via `.github/workflows/regression-tests.yml` on pushes and PRs to `main`.
+Regression tests run with **Playwright** (`cd site && npm test`) and are executed in CI via `.github/workflows/regression-tests.yml` for pull requests to `main`. The deploy workflow also reruns the same build-and-test checks on `main` before publishing to GitHub Pages.
 
 ### Deployment workflow
 
@@ -89,11 +90,12 @@ Regression tests run with **Playwright** (`cd site && npm test`) and are execute
 - **Trigger:** Push to `main` or manual workflow dispatch
 - **Process:**
   1. Checks out code
-  2. Sets up Node.js 20
-  3. Installs dependencies with `npm ci` in `site/`
+  2. Sets up Node.js 20 and installs `site/` dependencies
+  3. Installs Playwright Chromium
   4. Builds the site with `npm run build`
-  5. Uploads `site/dist/` as Pages artifact
-  6. Deploys to GitHub Pages
+  5. Runs `npm test`
+  6. Uploads `site/dist/` as Pages artifact
+  7. Deploys to GitHub Pages
 
 ### Configuration
 
@@ -111,7 +113,7 @@ PR previews are published automatically to a predictable URL:
 https://aosama.github.io/urbanahighlandshoa/__pr-preview__/pr-<PR_NUMBER>/
 ```
 
-The preview is deployed by `.github/workflows/pr-preview.yml` and (when permissions allow) the workflow will also comment the URL on the PR.
+The preview is deployed by `.github/workflows/pr-preview.yml` and (when permissions allow) the workflow keeps a single preview URL comment updated on the PR.
 
 ### Requirements
 
@@ -216,8 +218,8 @@ We welcome contributions to improve the website! Here's how you can help:
   ```
 
 - The preview is deployed by `.github/workflows/pr-preview.yml`
-- Review the preview before merging to ensure everything looks correct
-- Once merged to `main`, changes go live automatically
+- Review the preview and PR regression test results before merging to ensure everything looks correct
+- Once merged to `main`, the deploy workflow reruns the build and regression suite before changes go live
 
 ### Code style
 

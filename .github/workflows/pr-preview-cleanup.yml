@@ -13,31 +13,26 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
+env:
+  ASTRO_TELEMETRY_DISABLED: "1"
+
 jobs:
   cleanup-pr-preview:
+    if: github.event.pull_request.merged != true
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout main
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: main
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-          cache-dependency-path: site/package-lock.json
-
-      - name: Install
-        working-directory: site
-        run: npm ci
+      - name: Set up site dependencies
+        uses: ./.github/actions/setup-site
 
       - name: Build (main)
         working-directory: site
         env:
-          ASTRO_TELEMETRY_DISABLED: "1"
           ASTRO_BASE: "/urbanahighlandshoa"
         run: npm run build
 
