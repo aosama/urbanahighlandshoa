@@ -7,8 +7,9 @@ This repo is designed to work well with **GitHub Copilot coding agent** (the clo
 This repo includes:
 
 - `.github/workflows/copilot-setup-steps.yml`
+- `.github/actions/setup-site/action.yml`
 
-Copilot coding agent will run this workflow before it starts work (it installs Node and runs `npm ci` in `site/`).
+Copilot coding agent will run this workflow before it starts work. The workflow reuses the same shared site setup action as the CI workflows, so the agent gets the same Node.js and `npm ci` bootstrap behavior used elsewhere in the repo.
 
 Note: Astro CLI may attempt to send telemetry during builds; the repo disables it in CI to avoid Copilot firewall blocks.
 
