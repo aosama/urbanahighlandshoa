@@ -1,17 +1,5 @@
 # Coding Agent Guidance
 
-## Session start
-
-- Always read `README.md` and `AGENTS.md` at the start of each chat/session to confirm the current stack, run commands, and deployment workflow.
-- Keep the repository's shared Copilot skills under `.github/skills` so they are available to anyone working in this repo.
-- Use `~/.copilot/skills` only for personal skills or local overrides that should not be committed.
-- The project skill inventory and hydration process live in `.github/skills/update-or-hydrate-skills/SKILL.md`.
-- Use the `update-or-hydrate-skills` skill when the repo's shared skills are missing, stale, or need to be refreshed.
-- Reach for these skills when the task matches:
-  - Use the `create-github-*` skills for issue and workflow generation from requirements or implementation plans.
-  - Use `github-cli` for repository, branch, issue, and workflow operations that are better handled with `gh`.
-  - Use `frontend-design` for UI polish and `webapp-testing` for browser-based verification and Playwright-style validation.
-
 ## Repo navigation
 
 - Main project overview: `README.md`
@@ -100,19 +88,6 @@ Before sharing any URL (local dev server, production site, external links):
 4. **For deployed sites**: Wait for the deploy workflow to complete, then verify the live URL.
 
 If a URL cannot be verified, explicitly tell the user it hasn't been verified yet and explain why.
-
-## Delegating GitHub Issues to cloud agents (good practices)
-
-When delegating an issue to a cloud agent (Copilot):
-
-- **Make the task small and bounded**: one issue → one focused change.
-- **Write explicit scope**: list exactly which files/areas are in-scope and what is out-of-scope.
-- **Define acceptance criteria**: include concrete, checkable outcomes (routes, UI behavior, URLs, etc.).
-- **Require verification steps**:
-  - run the standard build (`cd site && npm ci && npm run build`)
-  - if UI changes: verify locally and, when useful, verify on the production site after deploy
-- **Prefer minimal changes**: avoid refactors unless required to meet acceptance.
-- **Ask for clarification when needed**: if requirements are ambiguous, stop and ask rather than guessing.
 
 ## Repo lessons / gotchas
 
