@@ -5,17 +5,8 @@
 - Always read `README.md` and `AGENTS.md` at the start of each chat/session to confirm the current stack, run commands, and deployment workflow.
 - Keep the repository's shared Copilot skills under `.github/skills` so they are available to anyone working in this repo.
 - Use `~/.copilot/skills` only for personal skills or local overrides that should not be committed.
-- Ensure the following shared skills are present under `.github/skills`:
-  - From `github/awesome-copilot`:
-    - `create-github-action-workflow-specification`
-    - `create-github-issue-feature-from-specification`
-    - `create-github-issues-feature-from-implementation-plan`
-    - `create-github-issues-for-unmet-specification-requirements`
-    - `webapp-testing`
-  - From repository-local custom skills:
-    - `github-cli`
-  - From `https://github.com/anthropics/skills/tree/main/skills/frontend-design`:
-    - `frontend-design`
+- The project skill inventory and hydration process live in `.github/skills/update-or-hydrate-skills/SKILL.md`.
+- Use the `update-or-hydrate-skills` skill when the repo's shared skills are missing, stale, or need to be refreshed.
 - Reach for these skills when the task matches:
   - Use the `create-github-*` skills for issue and workflow generation from requirements or implementation plans.
   - Use `github-cli` for repository, branch, issue, and workflow operations that are better handled with `gh`.

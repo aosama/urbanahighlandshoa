@@ -2,8 +2,6 @@
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "workbench.colorCustomizations": {
-    "panel.background": "#000000",
-    "terminal.background": "#000000",
-    "editor.background": "#000000"
+    "terminal.background": "#000000"
   }
 }
