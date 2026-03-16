@@ -35,6 +35,9 @@ jobs:
       - name: Set up site dependencies
         uses: ./.github/actions/setup-site
 
+      - name: Install Playwright browsers
+        run: npm run test:install
+
       - name: Type and Astro check
         run: npm run check
 
