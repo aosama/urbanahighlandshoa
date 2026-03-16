@@ -14,25 +14,16 @@ const basePath = import.meta.env.BASE_URL.endsWith('/')
   <div class="relative min-h-[100svh] overflow-hidden">
     <!-- Background image with overlay -->
     <div class="absolute inset-0">
-      <picture>
-        <source
-          type="image/webp"
-          srcset={`${basePath}assets/community/hero-welcome-640.webp 640w, ${basePath}assets/community/hero-welcome-960.webp 960w, ${basePath}assets/community/hero-welcome-1280.webp 1280w, ${basePath}assets/community/hero-welcome-1920.webp 1920w`}
-          sizes="100vw"
-        />
-        <img
-          src={`${basePath}assets/community/hero-welcome.jpg`}
-          srcset={`${basePath}assets/community/hero-welcome.jpg 1920w`}
-          sizes="100vw"
-          alt="Urbana Highlands community entrance, playground, and scenic mountain views"
-          class="h-full w-full object-cover"
-          width="1920"
-          height="1288"
-          loading="eager"
-          decoding="async"
-          fetchpriority="high"
-        />
-      </picture>
+      <img
+        src={`${basePath}assets/community/hero-welcome-v2.jpg`}
+        alt="Urbana Highlands entrance sign with playground, tennis courts, clubhouse, and mountain views"
+        class="h-full w-full object-cover"
+        width="1248"
+        height="832"
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
+      />
       <div class="absolute inset-0 bg-gradient-to-b from-slate-900/40 via-slate-900/20 to-slate-900/70"></div>
     </div>
 
