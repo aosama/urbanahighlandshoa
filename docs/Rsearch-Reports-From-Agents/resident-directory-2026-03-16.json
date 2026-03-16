@@ -1,0 +1,2840 @@
+{
+  "metadata": {
+    "exportedAt": "2026-03-16T00:31:20.977Z",
+    "sourceUrl": "https://resident.ciranet.com/community/resident-directory",
+    "rowCount": 471,
+    "visibleFields": [
+      "address",
+      "residents",
+      "rawText"
+    ]
+  },
+  "rows": [
+    {
+      "rowNumber": 1,
+      "address": "9609 Brigadoon Pl",
+      "residents": "",
+      "rawText": "9609 Brigadoon Pl"
+    },
+    {
+      "rowNumber": 2,
+      "address": "9611 Brigadoon Pl",
+      "residents": "",
+      "rawText": "9611 Brigadoon Pl"
+    },
+    {
+      "rowNumber": 3,
+      "address": "9613 Brigadoon Pl",
+      "residents": "",
+      "rawText": "9613 Brigadoon Pl"
+    },
+    {
+      "rowNumber": 4,
+      "address": "9600 Brigadoon Pl",
+      "residents": "",
+      "rawText": "9600 Brigadoon Pl"
+    },
+    {
+      "rowNumber": 5,
+      "address": "9601 Brigadoon Pl",
+      "residents": "",
+      "rawText": "9601 Brigadoon Pl"
+    },
+    {
+      "rowNumber": 6,
+      "address": "9602 Brigadoon Pl",
+      "residents": "",
+      "rawText": "9602 Brigadoon Pl"
+    },
+    {
+      "rowNumber": 7,
+      "address": "9603 Brigadoon Pl",
+      "residents": "",
+      "rawText": "9603 Brigadoon Pl"
+    },
+    {
+      "rowNumber": 8,
+      "address": "9604 Brigadoon Pl",
+      "residents": "",
+      "rawText": "9604 Brigadoon Pl"
+    },
+    {
+      "rowNumber": 9,
+      "address": "9605 Brigadoon Pl",
+      "residents": "",
+      "rawText": "9605 Brigadoon Pl"
+    },
+    {
+      "rowNumber": 10,
+      "address": "9606 Brigadoon Pl",
+      "residents": "",
+      "rawText": "9606 Brigadoon Pl"
+    },
+    {
+      "rowNumber": 11,
+      "address": "9607 Brigadoon Pl",
+      "residents": "",
+      "rawText": "9607 Brigadoon Pl"
+    },
+    {
+      "rowNumber": 12,
+      "address": "9608 Brigadoon Pl",
+      "residents": "",
+      "rawText": "9608 Brigadoon Pl"
+    },
+    {
+      "rowNumber": 13,
+      "address": "9610 Brigadoon Pl",
+      "residents": "",
+      "rawText": "9610 Brigadoon Pl"
+    },
+    {
+      "rowNumber": 14,
+      "address": "9612 Brigadoon Pl",
+      "residents": "",
+      "rawText": "9612 Brigadoon Pl"
+    },
+    {
+      "rowNumber": 15,
+      "address": "9614 Brigadoon Pl",
+      "residents": "",
+      "rawText": "9614 Brigadoon Pl"
+    },
+    {
+      "rowNumber": 16,
+      "address": "9615 Brigadoon Pl",
+      "residents": "",
+      "rawText": "9615 Brigadoon Pl"
+    },
+    {
+      "rowNumber": 17,
+      "address": "9616 Brigadoon Pl",
+      "residents": "",
+      "rawText": "9616 Brigadoon Pl"
+    },
+    {
+      "rowNumber": 18,
+      "address": "9618 Brigadoon Pl",
+      "residents": "",
+      "rawText": "9618 Brigadoon Pl"
+    },
+    {
+      "rowNumber": 19,
+      "address": "9620 Brigadoon Pl",
+      "residents": "",
+      "rawText": "9620 Brigadoon Pl"
+    },
+    {
+      "rowNumber": 20,
+      "address": "9622 Brigadoon Pl",
+      "residents": "",
+      "rawText": "9622 Brigadoon Pl"
+    },
+    {
+      "rowNumber": 21,
+      "address": "9624 Brigadoon Pl",
+      "residents": "",
+      "rawText": "9624 Brigadoon Pl"
+    },
+    {
+      "rowNumber": 22,
+      "address": "9626 Brigadoon Pl",
+      "residents": "",
+      "rawText": "9626 Brigadoon Pl"
+    },
+    {
+      "rowNumber": 23,
+      "address": "9630 Brigadoon Pl",
+      "residents": "",
+      "rawText": "9630 Brigadoon Pl"
+    },
+    {
+      "rowNumber": 24,
+      "address": "9632 Brigadoon Pl",
+      "residents": "",
+      "rawText": "9632 Brigadoon Pl"
+    },
+    {
+      "rowNumber": 25,
+      "address": "9628 Brigadoon Pl",
+      "residents": "Brion & Katrina Harrigan",
+      "rawText": "9628 Brigadoon Pl Brion & Katrina Harrigan"
+    },
+    {
+      "rowNumber": 26,
+      "address": "3831 Braveheart Dr",
+      "residents": "",
+      "rawText": "3831 Braveheart Dr"
+    },
+    {
+      "rowNumber": 27,
+      "address": "3832 Braveheart Dr",
+      "residents": "",
+      "rawText": "3832 Braveheart Dr"
+    },
+    {
+      "rowNumber": 28,
+      "address": "3833 Braveheart Dr",
+      "residents": "",
+      "rawText": "3833 Braveheart Dr"
+    },
+    {
+      "rowNumber": 29,
+      "address": "9634 Brigadoon Pl",
+      "residents": "",
+      "rawText": "9634 Brigadoon Pl"
+    },
+    {
+      "rowNumber": 30,
+      "address": "3834 Braveheart Dr",
+      "residents": "",
+      "rawText": "3834 Braveheart Dr"
+    },
+    {
+      "rowNumber": 31,
+      "address": "3835 Braveheart Dr",
+      "residents": "",
+      "rawText": "3835 Braveheart Dr"
+    },
+    {
+      "rowNumber": 32,
+      "address": "3836 Braveheart Dr",
+      "residents": "",
+      "rawText": "3836 Braveheart Dr"
+    },
+    {
+      "rowNumber": 33,
+      "address": "3837 Braveheart Dr",
+      "residents": "",
+      "rawText": "3837 Braveheart Dr"
+    },
+    {
+      "rowNumber": 34,
+      "address": "3838 Braveheart Dr",
+      "residents": "Jean Pita Diomi Kazadi",
+      "rawText": "3838 Braveheart Dr Jean Pita Diomi Kazadi"
+    },
+    {
+      "rowNumber": 35,
+      "address": "3839 Braveheart Dr",
+      "residents": "",
+      "rawText": "3839 Braveheart Dr"
+    },
+    {
+      "rowNumber": 36,
+      "address": "3840 Braveheart Dr",
+      "residents": "",
+      "rawText": "3840 Braveheart Dr"
+    },
+    {
+      "rowNumber": 37,
+      "address": "3841 Braveheart Dr",
+      "residents": "",
+      "rawText": "3841 Braveheart Dr"
+    },
+    {
+      "rowNumber": 38,
+      "address": "3842 Braveheart Dr",
+      "residents": "",
+      "rawText": "3842 Braveheart Dr"
+    },
+    {
+      "rowNumber": 39,
+      "address": "3843 Braveheart Dr",
+      "residents": "",
+      "rawText": "3843 Braveheart Dr"
+    },
+    {
+      "rowNumber": 40,
+      "address": "3844 Braveheart Dr",
+      "residents": "",
+      "rawText": "3844 Braveheart Dr"
+    },
+    {
+      "rowNumber": 41,
+      "address": "3845 Braveheart Dr",
+      "residents": "",
+      "rawText": "3845 Braveheart Dr"
+    },
+    {
+      "rowNumber": 42,
+      "address": "3846 Braveheart Dr",
+      "residents": "",
+      "rawText": "3846 Braveheart Dr"
+    },
+    {
+      "rowNumber": 43,
+      "address": "3847 Braveheart Dr",
+      "residents": "",
+      "rawText": "3847 Braveheart Dr"
+    },
+    {
+      "rowNumber": 44,
+      "address": "3848 Braveheart Dr",
+      "residents": "",
+      "rawText": "3848 Braveheart Dr"
+    },
+    {
+      "rowNumber": 45,
+      "address": "3960 Mount Nevis Pass",
+      "residents": "",
+      "rawText": "3960 Mount Nevis Pass"
+    },
+    {
+      "rowNumber": 46,
+      "address": "3961 Mount Nevis Pass",
+      "residents": "",
+      "rawText": "3961 Mount Nevis Pass"
+    },
+    {
+      "rowNumber": 47,
+      "address": "3962 Mount Nevis Pass",
+      "residents": "",
+      "rawText": "3962 Mount Nevis Pass"
+    },
+    {
+      "rowNumber": 48,
+      "address": "3963 Mount Nevis Pass",
+      "residents": "",
+      "rawText": "3963 Mount Nevis Pass"
+    },
+    {
+      "rowNumber": 49,
+      "address": "3964 Mount Nevis Pass",
+      "residents": "",
+      "rawText": "3964 Mount Nevis Pass"
+    },
+    {
+      "rowNumber": 50,
+      "address": "3965 Mount Nevis Pass",
+      "residents": "Eduardo Sanchez-Quiros & Stefanie Sanchez",
+      "rawText": "3965 Mount Nevis Pass Eduardo Sanchez-Quiros & Stefanie Sanchez"
+    },
+    {
+      "rowNumber": 51,
+      "address": "3849 Braveheart Dr",
+      "residents": "",
+      "rawText": "3849 Braveheart Dr"
+    },
+    {
+      "rowNumber": 52,
+      "address": "3850 Braveheart Dr",
+      "residents": "",
+      "rawText": "3850 Braveheart Dr"
+    },
+    {
+      "rowNumber": 53,
+      "address": "3851 Braveheart Dr",
+      "residents": "",
+      "rawText": "3851 Braveheart Dr"
+    },
+    {
+      "rowNumber": 54,
+      "address": "3853 Braveheart Dr",
+      "residents": "",
+      "rawText": "3853 Braveheart Dr"
+    },
+    {
+      "rowNumber": 55,
+      "address": "3854 Braveheart Dr",
+      "residents": "",
+      "rawText": "3854 Braveheart Dr"
+    },
+    {
+      "rowNumber": 56,
+      "address": "3855 Braveheart Dr",
+      "residents": "Michael & Rebecca Abel",
+      "rawText": "3855 Braveheart Dr Michael & Rebecca Abel"
+    },
+    {
+      "rowNumber": 57,
+      "address": "3852 Braveheart Dr",
+      "residents": "",
+      "rawText": "3852 Braveheart Dr"
+    },
+    {
+      "rowNumber": 58,
+      "address": "3856 Braveheart Dr",
+      "residents": "",
+      "rawText": "3856 Braveheart Dr"
+    },
+    {
+      "rowNumber": 59,
+      "address": "3857 Braveheart Dr",
+      "residents": "Robert & Jessica Renner",
+      "rawText": "3857 Braveheart Dr Robert & Jessica Renner"
+    },
+    {
+      "rowNumber": 60,
+      "address": "3858 Braveheart Dr",
+      "residents": "",
+      "rawText": "3858 Braveheart Dr"
+    },
+    {
+      "rowNumber": 61,
+      "address": "3859 Braveheart Dr",
+      "residents": "",
+      "rawText": "3859 Braveheart Dr"
+    },
+    {
+      "rowNumber": 62,
+      "address": "3860 Braveheart Dr",
+      "residents": "",
+      "rawText": "3860 Braveheart Dr"
+    },
+    {
+      "rowNumber": 63,
+      "address": "3861 Braveheart Dr",
+      "residents": "",
+      "rawText": "3861 Braveheart Dr"
+    },
+    {
+      "rowNumber": 64,
+      "address": "3863 Braveheart Dr",
+      "residents": "",
+      "rawText": "3863 Braveheart Dr"
+    },
+    {
+      "rowNumber": 65,
+      "address": "3865 Braveheart Dr",
+      "residents": "",
+      "rawText": "3865 Braveheart Dr"
+    },
+    {
+      "rowNumber": 66,
+      "address": "3867 Braveheart Dr",
+      "residents": "",
+      "rawText": "3867 Braveheart Dr"
+    },
+    {
+      "rowNumber": 67,
+      "address": "3869 Braveheart Dr",
+      "residents": "",
+      "rawText": "3869 Braveheart Dr"
+    },
+    {
+      "rowNumber": 68,
+      "address": "3875 Braveheart Dr",
+      "residents": "",
+      "rawText": "3875 Braveheart Dr"
+    },
+    {
+      "rowNumber": 69,
+      "address": "3877 Braveheart Dr",
+      "residents": "",
+      "rawText": "3877 Braveheart Dr"
+    },
+    {
+      "rowNumber": 70,
+      "address": "3881 Braveheart Dr",
+      "residents": "",
+      "rawText": "3881 Braveheart Dr"
+    },
+    {
+      "rowNumber": 71,
+      "address": "3883 Braveheart Dr",
+      "residents": "",
+      "rawText": "3883 Braveheart Dr"
+    },
+    {
+      "rowNumber": 72,
+      "address": "3906 Braveheart Cir",
+      "residents": "",
+      "rawText": "3906 Braveheart Cir"
+    },
+    {
+      "rowNumber": 73,
+      "address": "3910 Braveheart Cir",
+      "residents": "",
+      "rawText": "3910 Braveheart Cir"
+    },
+    {
+      "rowNumber": 74,
+      "address": "3873 Braveheart Dr",
+      "residents": "",
+      "rawText": "3873 Braveheart Dr"
+    },
+    {
+      "rowNumber": 75,
+      "address": "3901 Braveheart Cir",
+      "residents": "",
+      "rawText": "3901 Braveheart Cir"
+    },
+    {
+      "rowNumber": 76,
+      "address": "3902 Braveheart Cir",
+      "residents": "",
+      "rawText": "3902 Braveheart Cir"
+    },
+    {
+      "rowNumber": 77,
+      "address": "3903 Braveheart Cir",
+      "residents": "",
+      "rawText": "3903 Braveheart Cir"
+    },
+    {
+      "rowNumber": 78,
+      "address": "3913 Braveheart Cir",
+      "residents": "",
+      "rawText": "3913 Braveheart Cir"
+    },
+    {
+      "rowNumber": 79,
+      "address": "3915 Braveheart Cir",
+      "residents": "",
+      "rawText": "3915 Braveheart Cir"
+    },
+    {
+      "rowNumber": 80,
+      "address": "3917 Braveheart Cir",
+      "residents": "Christopher J. Walker & Andrea L. Baiocchi Walker",
+      "rawText": "3917 Braveheart Cir Christopher J. Walker & Andrea L. Baiocchi Walker"
+    },
+    {
+      "rowNumber": 81,
+      "address": "3919 Braveheart Cir",
+      "residents": "",
+      "rawText": "3919 Braveheart Cir"
+    },
+    {
+      "rowNumber": 82,
+      "address": "3921 Braveheart Cir",
+      "residents": "Senthil Rajagopaian & Kasivisalatchi Ramakrishnan",
+      "rawText": "3921 Braveheart Cir Senthil Rajagopaian & Kasivisalatchi Ramakrishnan"
+    },
+    {
+      "rowNumber": 83,
+      "address": "3923 Braveheart Cir",
+      "residents": "",
+      "rawText": "3923 Braveheart Cir"
+    },
+    {
+      "rowNumber": 84,
+      "address": "3925 Braveheart Cir",
+      "residents": "",
+      "rawText": "3925 Braveheart Cir"
+    },
+    {
+      "rowNumber": 85,
+      "address": "3927 Braveheart Cir",
+      "residents": "",
+      "rawText": "3927 Braveheart Cir"
+    },
+    {
+      "rowNumber": 86,
+      "address": "3929 Braveheart Cir",
+      "residents": "",
+      "rawText": "3929 Braveheart Cir"
+    },
+    {
+      "rowNumber": 87,
+      "address": "3930 Braveheart Cir",
+      "residents": "",
+      "rawText": "3930 Braveheart Cir"
+    },
+    {
+      "rowNumber": 88,
+      "address": "3934 Braveheart Cir",
+      "residents": "",
+      "rawText": "3934 Braveheart Cir"
+    },
+    {
+      "rowNumber": 89,
+      "address": "3936 Braveheart Cir",
+      "residents": "Jahangir Rasoulpour & Behjat Hadipour",
+      "rawText": "3936 Braveheart Cir Jahangir Rasoulpour & Behjat Hadipour"
+    },
+    {
+      "rowNumber": 90,
+      "address": "3938 Braveheart Cir",
+      "residents": "",
+      "rawText": "3938 Braveheart Cir"
+    },
+    {
+      "rowNumber": 91,
+      "address": "3939 Braveheart Cir",
+      "residents": "",
+      "rawText": "3939 Braveheart Cir"
+    },
+    {
+      "rowNumber": 92,
+      "address": "3942 Braveheart Cir",
+      "residents": "",
+      "rawText": "3942 Braveheart Cir"
+    },
+    {
+      "rowNumber": 93,
+      "address": "3940 Braveheart Cir",
+      "residents": "",
+      "rawText": "3940 Braveheart Cir"
+    },
+    {
+      "rowNumber": 94,
+      "address": "3945 Braveheart Cir",
+      "residents": "",
+      "rawText": "3945 Braveheart Cir"
+    },
+    {
+      "rowNumber": 95,
+      "address": "3946 Braveheart Cir",
+      "residents": "",
+      "rawText": "3946 Braveheart Cir"
+    },
+    {
+      "rowNumber": 96,
+      "address": "3947 Braveheart Cir",
+      "residents": "",
+      "rawText": "3947 Braveheart Cir"
+    },
+    {
+      "rowNumber": 97,
+      "address": "3948 Braveheart Cir",
+      "residents": "",
+      "rawText": "3948 Braveheart Cir"
+    },
+    {
+      "rowNumber": 98,
+      "address": "3949 Braveheart Cir",
+      "residents": "",
+      "rawText": "3949 Braveheart Cir"
+    },
+    {
+      "rowNumber": 99,
+      "address": "3950 Braveheart Cir",
+      "residents": "",
+      "rawText": "3950 Braveheart Cir"
+    },
+    {
+      "rowNumber": 100,
+      "address": "3951 Braveheart Cir",
+      "residents": "",
+      "rawText": "3951 Braveheart Cir"
+    },
+    {
+      "rowNumber": 101,
+      "address": "3952 Braveheart Cir",
+      "residents": "",
+      "rawText": "3952 Braveheart Cir"
+    },
+    {
+      "rowNumber": 102,
+      "address": "3954 Braveheart Cir",
+      "residents": "",
+      "rawText": "3954 Braveheart Cir"
+    },
+    {
+      "rowNumber": 103,
+      "address": "3956 Braveheart Cir",
+      "residents": "",
+      "rawText": "3956 Braveheart Cir"
+    },
+    {
+      "rowNumber": 104,
+      "address": "3958 Braveheart Cir",
+      "residents": "",
+      "rawText": "3958 Braveheart Cir"
+    },
+    {
+      "rowNumber": 105,
+      "address": "3960 Braveheart Cir",
+      "residents": "",
+      "rawText": "3960 Braveheart Cir"
+    },
+    {
+      "rowNumber": 106,
+      "address": "3900 Aberdeen Way",
+      "residents": "",
+      "rawText": "3900 Aberdeen Way"
+    },
+    {
+      "rowNumber": 107,
+      "address": "3901 Aberdeen Way",
+      "residents": "",
+      "rawText": "3901 Aberdeen Way"
+    },
+    {
+      "rowNumber": 108,
+      "address": "3902 Aberdeen Way",
+      "residents": "",
+      "rawText": "3902 Aberdeen Way"
+    },
+    {
+      "rowNumber": 109,
+      "address": "3903 Aberdeen Way",
+      "residents": "",
+      "rawText": "3903 Aberdeen Way"
+    },
+    {
+      "rowNumber": 110,
+      "address": "3904 Aberdeen Way",
+      "residents": "",
+      "rawText": "3904 Aberdeen Way"
+    },
+    {
+      "rowNumber": 111,
+      "address": "3905 Aberdeen Way",
+      "residents": "",
+      "rawText": "3905 Aberdeen Way"
+    },
+    {
+      "rowNumber": 112,
+      "address": "3906 Aberdeen Way",
+      "residents": "",
+      "rawText": "3906 Aberdeen Way"
+    },
+    {
+      "rowNumber": 113,
+      "address": "9720 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9720 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 114,
+      "address": "3907 Aberdeen Way",
+      "residents": "",
+      "rawText": "3907 Aberdeen Way"
+    },
+    {
+      "rowNumber": 115,
+      "address": "3908 Aberdeen Way",
+      "residents": "",
+      "rawText": "3908 Aberdeen Way"
+    },
+    {
+      "rowNumber": 116,
+      "address": "9721 Royal Crest Cir",
+      "residents": "Michael B. Hayden",
+      "rawText": "9721 Royal Crest Cir Michael B. Hayden"
+    },
+    {
+      "rowNumber": 117,
+      "address": "3909 Aberdeen Way",
+      "residents": "",
+      "rawText": "3909 Aberdeen Way"
+    },
+    {
+      "rowNumber": 118,
+      "address": "3910 Aberdeen Way",
+      "residents": "",
+      "rawText": "3910 Aberdeen Way"
+    },
+    {
+      "rowNumber": 119,
+      "address": "3911 Aberdeen Way",
+      "residents": "",
+      "rawText": "3911 Aberdeen Way"
+    },
+    {
+      "rowNumber": 120,
+      "address": "9722 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9722 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 121,
+      "address": "3912 Aberdeen Way",
+      "residents": "",
+      "rawText": "3912 Aberdeen Way"
+    },
+    {
+      "rowNumber": 122,
+      "address": "3913 Aberdeen Way",
+      "residents": "",
+      "rawText": "3913 Aberdeen Way"
+    },
+    {
+      "rowNumber": 123,
+      "address": "9723 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9723 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 124,
+      "address": "3914 Aberdeen Way",
+      "residents": "",
+      "rawText": "3914 Aberdeen Way"
+    },
+    {
+      "rowNumber": 125,
+      "address": "3915 Aberdeen Way",
+      "residents": "",
+      "rawText": "3915 Aberdeen Way"
+    },
+    {
+      "rowNumber": 126,
+      "address": "9724 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9724 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 127,
+      "address": "3932 Braveheart Cir",
+      "residents": "Axiang Liu & Bingfang Ruth Xu",
+      "rawText": "3932 Braveheart Cir Axiang Liu & Bingfang Ruth Xu"
+    },
+    {
+      "rowNumber": 128,
+      "address": "3935 Braveheart Cir",
+      "residents": "",
+      "rawText": "3935 Braveheart Cir"
+    },
+    {
+      "rowNumber": 129,
+      "address": "3900 Braveheart Cir",
+      "residents": "",
+      "rawText": "3900 Braveheart Cir"
+    },
+    {
+      "rowNumber": 130,
+      "address": "3941 Braveheart Cir",
+      "residents": "",
+      "rawText": "3941 Braveheart Cir"
+    },
+    {
+      "rowNumber": 131,
+      "address": "3937 Braveheart Cir",
+      "residents": "Suresh Gattu & Praveena Gaddamidi",
+      "rawText": "3937 Braveheart Cir Suresh Gattu & Praveena Gaddamidi"
+    },
+    {
+      "rowNumber": 132,
+      "address": "9725 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9725 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 133,
+      "address": "3944 Braveheart Cir",
+      "residents": "",
+      "rawText": "3944 Braveheart Cir"
+    },
+    {
+      "rowNumber": 134,
+      "address": "3820 Braveheart Ln",
+      "residents": "",
+      "rawText": "3820 Braveheart Ln"
+    },
+    {
+      "rowNumber": 135,
+      "address": "3822 Braveheart Ln",
+      "residents": "",
+      "rawText": "3822 Braveheart Ln"
+    },
+    {
+      "rowNumber": 136,
+      "address": "3824 Braveheart Ln",
+      "residents": "",
+      "rawText": "3824 Braveheart Ln"
+    },
+    {
+      "rowNumber": 137,
+      "address": "3826 Braveheart Ln",
+      "residents": "",
+      "rawText": "3826 Braveheart Ln"
+    },
+    {
+      "rowNumber": 138,
+      "address": "9726 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9726 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 139,
+      "address": "3871 Braveheart Dr",
+      "residents": "",
+      "rawText": "3871 Braveheart Dr"
+    },
+    {
+      "rowNumber": 140,
+      "address": "3840 Glasgow Way",
+      "residents": "",
+      "rawText": "3840 Glasgow Way"
+    },
+    {
+      "rowNumber": 141,
+      "address": "9727 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9727 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 142,
+      "address": "3841 Glasgow Way",
+      "residents": "",
+      "rawText": "3841 Glasgow Way"
+    },
+    {
+      "rowNumber": 143,
+      "address": "3842 Glasgow Way",
+      "residents": "",
+      "rawText": "3842 Glasgow Way"
+    },
+    {
+      "rowNumber": 144,
+      "address": "9728 Royal Crest Cir",
+      "residents": "Mihai Lungulescu & Nicole Bankert",
+      "rawText": "9728 Royal Crest Cir Mihai Lungulescu & Nicole Bankert"
+    },
+    {
+      "rowNumber": 145,
+      "address": "3843 Glasgow Way",
+      "residents": "",
+      "rawText": "3843 Glasgow Way"
+    },
+    {
+      "rowNumber": 146,
+      "address": "9729 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9729 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 147,
+      "address": "3844 Glasgow Way",
+      "residents": "Pankaj M Mistry",
+      "rawText": "3844 Glasgow Way Pankaj M Mistry"
+    },
+    {
+      "rowNumber": 148,
+      "address": "9730 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9730 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 149,
+      "address": "3845 Glasgow Way",
+      "residents": "",
+      "rawText": "3845 Glasgow Way"
+    },
+    {
+      "rowNumber": 150,
+      "address": "3846 Glasgow Way",
+      "residents": "",
+      "rawText": "3846 Glasgow Way"
+    },
+    {
+      "rowNumber": 151,
+      "address": "9731 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9731 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 152,
+      "address": "3848 Glasgow Way",
+      "residents": "",
+      "rawText": "3848 Glasgow Way"
+    },
+    {
+      "rowNumber": 153,
+      "address": "3847 Glasgow Way",
+      "residents": "",
+      "rawText": "3847 Glasgow Way"
+    },
+    {
+      "rowNumber": 154,
+      "address": "9732 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9732 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 155,
+      "address": "3850 Glasgow Way",
+      "residents": "",
+      "rawText": "3850 Glasgow Way"
+    },
+    {
+      "rowNumber": 156,
+      "address": "3849 Glasgow Way",
+      "residents": "",
+      "rawText": "3849 Glasgow Way"
+    },
+    {
+      "rowNumber": 157,
+      "address": "3851 Glasgow Way",
+      "residents": "",
+      "rawText": "3851 Glasgow Way"
+    },
+    {
+      "rowNumber": 158,
+      "address": "3852 Glasgow Way",
+      "residents": "",
+      "rawText": "3852 Glasgow Way"
+    },
+    {
+      "rowNumber": 159,
+      "address": "9733 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9733 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 160,
+      "address": "9734 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9734 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 161,
+      "address": "3853 Glasgow Way",
+      "residents": "",
+      "rawText": "3853 Glasgow Way"
+    },
+    {
+      "rowNumber": 162,
+      "address": "3854 Glasgow Way",
+      "residents": "",
+      "rawText": "3854 Glasgow Way"
+    },
+    {
+      "rowNumber": 163,
+      "address": "3855 Glasgow Way",
+      "residents": "",
+      "rawText": "3855 Glasgow Way"
+    },
+    {
+      "rowNumber": 164,
+      "address": "9657 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9657 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 165,
+      "address": "9735 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9735 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 166,
+      "address": "9659 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9659 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 167,
+      "address": "9661 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9661 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 168,
+      "address": "9736 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9736 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 169,
+      "address": "9663 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9663 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 170,
+      "address": "9665 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9665 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 171,
+      "address": "9737 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9737 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 172,
+      "address": "9667 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9667 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 173,
+      "address": "9668 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9668 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 174,
+      "address": "9669 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9669 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 175,
+      "address": "9670 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9670 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 176,
+      "address": "9739 Royal Crest Cir",
+      "residents": "James H. O'Brien & Maria I. Reyes Peguero",
+      "rawText": "9739 Royal Crest Cir James H. O'Brien & Maria I. Reyes Peguero"
+    },
+    {
+      "rowNumber": 177,
+      "address": "9671 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9671 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 178,
+      "address": "9672 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9672 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 179,
+      "address": "9741 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9741 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 180,
+      "address": "9673 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9673 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 181,
+      "address": "9743 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9743 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 182,
+      "address": "9745 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9745 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 183,
+      "address": "9747 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9747 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 184,
+      "address": "9749 Royal Crest Cir",
+      "residents": "Domenic Turchi, Jr.",
+      "rawText": "9749 Royal Crest Cir Domenic Turchi, Jr."
+    },
+    {
+      "rowNumber": 185,
+      "address": "3800 Shetland Ct",
+      "residents": "",
+      "rawText": "3800 Shetland Ct"
+    },
+    {
+      "rowNumber": 186,
+      "address": "9675 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9675 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 187,
+      "address": "9676 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9676 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 188,
+      "address": "3801 Shetland Ct",
+      "residents": "",
+      "rawText": "3801 Shetland Ct"
+    },
+    {
+      "rowNumber": 189,
+      "address": "9677 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9677 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 190,
+      "address": "9678 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9678 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 191,
+      "address": "3802 Shetland Ct",
+      "residents": "",
+      "rawText": "3802 Shetland Ct"
+    },
+    {
+      "rowNumber": 192,
+      "address": "9680 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9680 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 193,
+      "address": "3803 Shetland Ct",
+      "residents": "",
+      "rawText": "3803 Shetland Ct"
+    },
+    {
+      "rowNumber": 194,
+      "address": "9682 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9682 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 195,
+      "address": "3804 Shetland Ct",
+      "residents": "",
+      "rawText": "3804 Shetland Ct"
+    },
+    {
+      "rowNumber": 196,
+      "address": "9684 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9684 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 197,
+      "address": "9685 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9685 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 198,
+      "address": "3805 Shetland Ct",
+      "residents": "",
+      "rawText": "3805 Shetland Ct"
+    },
+    {
+      "rowNumber": 199,
+      "address": "9686 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9686 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 200,
+      "address": "3806 Shetland Ct",
+      "residents": "",
+      "rawText": "3806 Shetland Ct"
+    },
+    {
+      "rowNumber": 201,
+      "address": "9687 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9687 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 202,
+      "address": "9688 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9688 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 203,
+      "address": "3807 Shetland Ct",
+      "residents": "",
+      "rawText": "3807 Shetland Ct"
+    },
+    {
+      "rowNumber": 204,
+      "address": "9689 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9689 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 205,
+      "address": "3808 Shetland Ct",
+      "residents": "",
+      "rawText": "3808 Shetland Ct"
+    },
+    {
+      "rowNumber": 206,
+      "address": "9690 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9690 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 207,
+      "address": "9691 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9691 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 208,
+      "address": "3809 Shetland Ct",
+      "residents": "",
+      "rawText": "3809 Shetland Ct"
+    },
+    {
+      "rowNumber": 209,
+      "address": "9692 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9692 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 210,
+      "address": "9693 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9693 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 211,
+      "address": "9694 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9694 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 212,
+      "address": "9695 Royal Crest Cir",
+      "residents": "Joseph E Sheets",
+      "rawText": "9695 Royal Crest Cir Joseph E Sheets"
+    },
+    {
+      "rowNumber": 213,
+      "address": "3810 Shetland Ct",
+      "residents": "",
+      "rawText": "3810 Shetland Ct"
+    },
+    {
+      "rowNumber": 214,
+      "address": "9696 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9696 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 215,
+      "address": "9698 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9698 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 216,
+      "address": "3811 Shetland Ct",
+      "residents": "",
+      "rawText": "3811 Shetland Ct"
+    },
+    {
+      "rowNumber": 217,
+      "address": "9700 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9700 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 218,
+      "address": "3812 Shetland Ct",
+      "residents": "",
+      "rawText": "3812 Shetland Ct"
+    },
+    {
+      "rowNumber": 219,
+      "address": "9701 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9701 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 220,
+      "address": "9702 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9702 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 221,
+      "address": "3813 Shetland Ct",
+      "residents": "",
+      "rawText": "3813 Shetland Ct"
+    },
+    {
+      "rowNumber": 222,
+      "address": "9703 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9703 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 223,
+      "address": "9704 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9704 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 224,
+      "address": "3814 Shetland Ct",
+      "residents": "",
+      "rawText": "3814 Shetland Ct"
+    },
+    {
+      "rowNumber": 225,
+      "address": "9705 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9705 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 226,
+      "address": "9706 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9706 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 227,
+      "address": "3815 Shetland Ct",
+      "residents": "",
+      "rawText": "3815 Shetland Ct"
+    },
+    {
+      "rowNumber": 228,
+      "address": "9707 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9707 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 229,
+      "address": "9708 Royal Crest Cir",
+      "residents": "Tao Pang & Liqun Xu",
+      "rawText": "9708 Royal Crest Cir Tao Pang & Liqun Xu"
+    },
+    {
+      "rowNumber": 230,
+      "address": "3816 Shetland Ct",
+      "residents": "",
+      "rawText": "3816 Shetland Ct"
+    },
+    {
+      "rowNumber": 231,
+      "address": "9709 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9709 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 232,
+      "address": "9710 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9710 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 233,
+      "address": "9711 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9711 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 234,
+      "address": "9713 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9713 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 235,
+      "address": "3818 Shetland Ct",
+      "residents": "",
+      "rawText": "3818 Shetland Ct"
+    },
+    {
+      "rowNumber": 236,
+      "address": "9715 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9715 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 237,
+      "address": "3819 Shetland Ct",
+      "residents": "",
+      "rawText": "3819 Shetland Ct"
+    },
+    {
+      "rowNumber": 238,
+      "address": "9716 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9716 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 239,
+      "address": "9717 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9717 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 240,
+      "address": "9718 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9718 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 241,
+      "address": "3820 Shetland Ct",
+      "residents": "",
+      "rawText": "3820 Shetland Ct"
+    },
+    {
+      "rowNumber": 242,
+      "address": "9719 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9719 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 243,
+      "address": "3904 Braveheart Cir",
+      "residents": "",
+      "rawText": "3904 Braveheart Cir"
+    },
+    {
+      "rowNumber": 244,
+      "address": "3905 Braveheart Cir",
+      "residents": "",
+      "rawText": "3905 Braveheart Cir"
+    },
+    {
+      "rowNumber": 245,
+      "address": "3907 Braveheart Cir",
+      "residents": "",
+      "rawText": "3907 Braveheart Cir"
+    },
+    {
+      "rowNumber": 246,
+      "address": "9674 Royal Crest Cir",
+      "residents": "",
+      "rawText": "9674 Royal Crest Cir"
+    },
+    {
+      "rowNumber": 247,
+      "address": "9519 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9519 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 248,
+      "address": "9520 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9520 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 249,
+      "address": "9521 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9521 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 250,
+      "address": "9522 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9522 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 251,
+      "address": "9523 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9523 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 252,
+      "address": "9525 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9525 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 253,
+      "address": "9524 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9524 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 254,
+      "address": "9526 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9526 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 255,
+      "address": "9527 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9527 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 256,
+      "address": "9529 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9529 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 257,
+      "address": "9528 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9528 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 258,
+      "address": "9530 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9530 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 259,
+      "address": "9531 Brigadoon Ln",
+      "residents": "Jonathan A. Hughes",
+      "rawText": "9531 Brigadoon Ln Jonathan A. Hughes"
+    },
+    {
+      "rowNumber": 260,
+      "address": "9532 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9532 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 261,
+      "address": "9533 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9533 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 262,
+      "address": "9534 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9534 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 263,
+      "address": "9535 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9535 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 264,
+      "address": "9536 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9536 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 265,
+      "address": "9537 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9537 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 266,
+      "address": "9538 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9538 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 267,
+      "address": "9539 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9539 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 268,
+      "address": "9540 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9540 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 269,
+      "address": "9541 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9541 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 270,
+      "address": "9543 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9543 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 271,
+      "address": "9545 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9545 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 272,
+      "address": "3821 Shetland Ct",
+      "residents": "",
+      "rawText": "3821 Shetland Ct"
+    },
+    {
+      "rowNumber": 273,
+      "address": "9547 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9547 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 274,
+      "address": "9549 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9549 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 275,
+      "address": "3822 Shetland Ct",
+      "residents": "",
+      "rawText": "3822 Shetland Ct"
+    },
+    {
+      "rowNumber": 276,
+      "address": "9551 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9551 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 277,
+      "address": "9553 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9553 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 278,
+      "address": "3823 Shetland Ct",
+      "residents": "",
+      "rawText": "3823 Shetland Ct"
+    },
+    {
+      "rowNumber": 279,
+      "address": "9555 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9555 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 280,
+      "address": "9557 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9557 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 281,
+      "address": "3932 Loch Ness Ct",
+      "residents": "",
+      "rawText": "3932 Loch Ness Ct"
+    },
+    {
+      "rowNumber": 282,
+      "address": "3933 Loch Ness Ct",
+      "residents": "",
+      "rawText": "3933 Loch Ness Ct"
+    },
+    {
+      "rowNumber": 283,
+      "address": "3934 Loch Ness Ct",
+      "residents": "",
+      "rawText": "3934 Loch Ness Ct"
+    },
+    {
+      "rowNumber": 284,
+      "address": "3935 Loch Ness Ct",
+      "residents": "",
+      "rawText": "3935 Loch Ness Ct"
+    },
+    {
+      "rowNumber": 285,
+      "address": "3936 Loch Ness Ct",
+      "residents": "",
+      "rawText": "3936 Loch Ness Ct"
+    },
+    {
+      "rowNumber": 286,
+      "address": "3937 Loch Ness Ct",
+      "residents": "",
+      "rawText": "3937 Loch Ness Ct"
+    },
+    {
+      "rowNumber": 287,
+      "address": "3938 Loch Ness Ct",
+      "residents": "",
+      "rawText": "3938 Loch Ness Ct"
+    },
+    {
+      "rowNumber": 288,
+      "address": "3939 Loch Ness Ct",
+      "residents": "",
+      "rawText": "3939 Loch Ness Ct"
+    },
+    {
+      "rowNumber": 289,
+      "address": "3940 Loch Ness Ct",
+      "residents": "",
+      "rawText": "3940 Loch Ness Ct"
+    },
+    {
+      "rowNumber": 290,
+      "address": "3941 Loch Ness Ct",
+      "residents": "",
+      "rawText": "3941 Loch Ness Ct"
+    },
+    {
+      "rowNumber": 291,
+      "address": "3942 Loch Ness Ct",
+      "residents": "Richard Wurth",
+      "rawText": "3942 Loch Ness Ct Richard Wurth"
+    },
+    {
+      "rowNumber": 292,
+      "address": "3943 Loch Ness Ct",
+      "residents": "",
+      "rawText": "3943 Loch Ness Ct"
+    },
+    {
+      "rowNumber": 293,
+      "address": "3944 Loch Ness Ct",
+      "residents": "",
+      "rawText": "3944 Loch Ness Ct"
+    },
+    {
+      "rowNumber": 294,
+      "address": "3945 Loch Ness Ct",
+      "residents": "",
+      "rawText": "3945 Loch Ness Ct"
+    },
+    {
+      "rowNumber": 295,
+      "address": "3946 Loch Ness Ct",
+      "residents": "",
+      "rawText": "3946 Loch Ness Ct"
+    },
+    {
+      "rowNumber": 296,
+      "address": "3948 Loch Ness Ct",
+      "residents": "",
+      "rawText": "3948 Loch Ness Ct"
+    },
+    {
+      "rowNumber": 297,
+      "address": "3947 Loch Ness Ct",
+      "residents": "Charles P. & Amy Thompson, II",
+      "rawText": "3947 Loch Ness Ct Charles P. & Amy Thompson, II"
+    },
+    {
+      "rowNumber": 298,
+      "address": "3949 Loch Ness Ct",
+      "residents": "",
+      "rawText": "3949 Loch Ness Ct"
+    },
+    {
+      "rowNumber": 299,
+      "address": "3951 Loch Ness Ct",
+      "residents": "",
+      "rawText": "3951 Loch Ness Ct"
+    },
+    {
+      "rowNumber": 300,
+      "address": "9400 Brigadoon Way",
+      "residents": "",
+      "rawText": "9400 Brigadoon Way"
+    },
+    {
+      "rowNumber": 301,
+      "address": "9402 Brigadoon Way",
+      "residents": "",
+      "rawText": "9402 Brigadoon Way"
+    },
+    {
+      "rowNumber": 302,
+      "address": "9406 Brigadoon Way",
+      "residents": "",
+      "rawText": "9406 Brigadoon Way"
+    },
+    {
+      "rowNumber": 303,
+      "address": "9404 Brigadoon Way",
+      "residents": "",
+      "rawText": "9404 Brigadoon Way"
+    },
+    {
+      "rowNumber": 304,
+      "address": "9408 Brigadoon Way",
+      "residents": "Scott E. & Ianthe I. Stanley",
+      "rawText": "9408 Brigadoon Way Scott E. & Ianthe I. Stanley"
+    },
+    {
+      "rowNumber": 305,
+      "address": "9501 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9501 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 306,
+      "address": "9503 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9503 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 307,
+      "address": "9505 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9505 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 308,
+      "address": "9507 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9507 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 309,
+      "address": "9509 Brigadoon Ln",
+      "residents": "Stephen & Lynora Barber",
+      "rawText": "9509 Brigadoon Ln Stephen & Lynora Barber"
+    },
+    {
+      "rowNumber": 310,
+      "address": "9511 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9511 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 311,
+      "address": "9513 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9513 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 312,
+      "address": "9515 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9515 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 313,
+      "address": "9517 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9517 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 314,
+      "address": "9518 Brigadoon Ln",
+      "residents": "",
+      "rawText": "9518 Brigadoon Ln"
+    },
+    {
+      "rowNumber": 315,
+      "address": "3817 Shetland Ct",
+      "residents": "",
+      "rawText": "3817 Shetland Ct"
+    },
+    {
+      "rowNumber": 316,
+      "address": "3908 Braveheart Cir",
+      "residents": "",
+      "rawText": "3908 Braveheart Cir"
+    },
+    {
+      "rowNumber": 317,
+      "address": "3909 Braveheart Cir",
+      "residents": "",
+      "rawText": "3909 Braveheart Cir"
+    },
+    {
+      "rowNumber": 318,
+      "address": "3911 Braveheart Cir",
+      "residents": "",
+      "rawText": "3911 Braveheart Cir"
+    },
+    {
+      "rowNumber": 319,
+      "address": "3879 Braveheart Dr",
+      "residents": "",
+      "rawText": "3879 Braveheart Dr"
+    },
+    {
+      "rowNumber": 320,
+      "address": "3933 Braveheart Cir",
+      "residents": "",
+      "rawText": "3933 Braveheart Cir"
+    },
+    {
+      "rowNumber": 321,
+      "address": "3931 Braveheart Cir",
+      "residents": "",
+      "rawText": "3931 Braveheart Cir"
+    },
+    {
+      "rowNumber": 322,
+      "address": "3914 Braveheart Cir",
+      "residents": "",
+      "rawText": "3914 Braveheart Cir"
+    },
+    {
+      "rowNumber": 323,
+      "address": "3912 Braveheart Cir",
+      "residents": "",
+      "rawText": "3912 Braveheart Cir"
+    },
+    {
+      "rowNumber": 324,
+      "address": "3885 Braveheart Dr",
+      "residents": "",
+      "rawText": "3885 Braveheart Dr"
+    },
+    {
+      "rowNumber": 325,
+      "address": "3828 Braveheart Dr",
+      "residents": "",
+      "rawText": "3828 Braveheart Dr"
+    },
+    {
+      "rowNumber": 326,
+      "address": "3830 Braveheart Dr",
+      "residents": "",
+      "rawText": "3830 Braveheart Dr"
+    },
+    {
+      "rowNumber": 327,
+      "address": "9323 Bishopgate Dr",
+      "residents": "",
+      "rawText": "9323 Bishopgate Dr"
+    },
+    {
+      "rowNumber": 328,
+      "address": "4103 Celtic Way",
+      "residents": "",
+      "rawText": "4103 Celtic Way"
+    },
+    {
+      "rowNumber": 329,
+      "address": "4113 Celtic Way",
+      "residents": "",
+      "rawText": "4113 Celtic Way"
+    },
+    {
+      "rowNumber": 330,
+      "address": "9327 Bishopgate Dr",
+      "residents": "",
+      "rawText": "9327 Bishopgate Dr"
+    },
+    {
+      "rowNumber": 331,
+      "address": "4108 Celtic Way",
+      "residents": "",
+      "rawText": "4108 Celtic Way"
+    },
+    {
+      "rowNumber": 332,
+      "address": "4100 Celtic Way",
+      "residents": "",
+      "rawText": "4100 Celtic Way"
+    },
+    {
+      "rowNumber": 333,
+      "address": "4100 Tantallon Way",
+      "residents": "",
+      "rawText": "4100 Tantallon Way"
+    },
+    {
+      "rowNumber": 334,
+      "address": "9326 Bishopgate Dr",
+      "residents": "",
+      "rawText": "9326 Bishopgate Dr"
+    },
+    {
+      "rowNumber": 335,
+      "address": "4108 Tantallon Way",
+      "residents": "",
+      "rawText": "4108 Tantallon Way"
+    },
+    {
+      "rowNumber": 336,
+      "address": "4102 Celtic Way",
+      "residents": "",
+      "rawText": "4102 Celtic Way"
+    },
+    {
+      "rowNumber": 337,
+      "address": "4111 Celtic Way",
+      "residents": "",
+      "rawText": "4111 Celtic Way"
+    },
+    {
+      "rowNumber": 338,
+      "address": "9328 Bishopgate Dr",
+      "residents": "",
+      "rawText": "9328 Bishopgate Dr"
+    },
+    {
+      "rowNumber": 339,
+      "address": "4102 Tantallon Way",
+      "residents": "",
+      "rawText": "4102 Tantallon Way"
+    },
+    {
+      "rowNumber": 340,
+      "address": "9330 Bishopgate Dr",
+      "residents": "",
+      "rawText": "9330 Bishopgate Dr"
+    },
+    {
+      "rowNumber": 341,
+      "address": "9329 Bishopgate Dr",
+      "residents": "",
+      "rawText": "9329 Bishopgate Dr"
+    },
+    {
+      "rowNumber": 342,
+      "address": "4104 Tantallon Way",
+      "residents": "",
+      "rawText": "4104 Tantallon Way"
+    },
+    {
+      "rowNumber": 343,
+      "address": "4106 Tantallon Way",
+      "residents": "Shannon H. Duncan & Malvin N. Duncan, Jr.",
+      "rawText": "4106 Tantallon Way Shannon H. Duncan & Malvin N. Duncan, Jr."
+    },
+    {
+      "rowNumber": 344,
+      "address": "4107 Celtic Way",
+      "residents": "",
+      "rawText": "4107 Celtic Way"
+    },
+    {
+      "rowNumber": 345,
+      "address": "4109 Celtic Way",
+      "residents": "",
+      "rawText": "4109 Celtic Way"
+    },
+    {
+      "rowNumber": 346,
+      "address": "4112 Celtic Way",
+      "residents": "",
+      "rawText": "4112 Celtic Way"
+    },
+    {
+      "rowNumber": 347,
+      "address": "4003 Tottenham Ct",
+      "residents": "",
+      "rawText": "4003 Tottenham Ct"
+    },
+    {
+      "rowNumber": 348,
+      "address": "4122 Brushfield Dr",
+      "residents": "",
+      "rawText": "4122 Brushfield Dr"
+    },
+    {
+      "rowNumber": 349,
+      "address": "4001 Tottenham Ct",
+      "residents": "",
+      "rawText": "4001 Tottenham Ct"
+    },
+    {
+      "rowNumber": 350,
+      "address": "4110 Celtic Way",
+      "residents": "",
+      "rawText": "4110 Celtic Way"
+    },
+    {
+      "rowNumber": 351,
+      "address": "4116 Brushfield Dr",
+      "residents": "",
+      "rawText": "4116 Brushfield Dr"
+    },
+    {
+      "rowNumber": 352,
+      "address": "4105 Celtic Way",
+      "residents": "",
+      "rawText": "4105 Celtic Way"
+    },
+    {
+      "rowNumber": 353,
+      "address": "4109 Brushfield Dr",
+      "residents": "",
+      "rawText": "4109 Brushfield Dr"
+    },
+    {
+      "rowNumber": 354,
+      "address": "4120 Brushfield Dr",
+      "residents": "Nadel & Myla Dellupac",
+      "rawText": "4120 Brushfield Dr Nadel & Myla Dellupac"
+    },
+    {
+      "rowNumber": 355,
+      "address": "4103 Brushfield Dr",
+      "residents": "",
+      "rawText": "4103 Brushfield Dr"
+    },
+    {
+      "rowNumber": 356,
+      "address": "4118 Brushfield Dr",
+      "residents": "",
+      "rawText": "4118 Brushfield Dr"
+    },
+    {
+      "rowNumber": 357,
+      "address": "4005 Tottenham Ct",
+      "residents": "",
+      "rawText": "4005 Tottenham Ct"
+    },
+    {
+      "rowNumber": 358,
+      "address": "4111 Brushfield Dr",
+      "residents": "",
+      "rawText": "4111 Brushfield Dr"
+    },
+    {
+      "rowNumber": 359,
+      "address": "4107 Brushfield Dr",
+      "residents": "",
+      "rawText": "4107 Brushfield Dr"
+    },
+    {
+      "rowNumber": 360,
+      "address": "4110 Brushfield Dr",
+      "residents": "",
+      "rawText": "4110 Brushfield Dr"
+    },
+    {
+      "rowNumber": 361,
+      "address": "9654 Bothwell Ln",
+      "residents": "",
+      "rawText": "9654 Bothwell Ln"
+    },
+    {
+      "rowNumber": 362,
+      "address": "4123 Brushfield Dr",
+      "residents": "",
+      "rawText": "4123 Brushfield Dr"
+    },
+    {
+      "rowNumber": 363,
+      "address": "4114 Brushfield Dr",
+      "residents": "",
+      "rawText": "4114 Brushfield Dr"
+    },
+    {
+      "rowNumber": 364,
+      "address": "4122 Celtic Way",
+      "residents": "",
+      "rawText": "4122 Celtic Way"
+    },
+    {
+      "rowNumber": 365,
+      "address": "9656 Bothwell Ln",
+      "residents": "",
+      "rawText": "9656 Bothwell Ln"
+    },
+    {
+      "rowNumber": 366,
+      "address": "4117 Tantallon Way",
+      "residents": "",
+      "rawText": "4117 Tantallon Way"
+    },
+    {
+      "rowNumber": 367,
+      "address": "4115 Brushfield Dr",
+      "residents": "",
+      "rawText": "4115 Brushfield Dr"
+    },
+    {
+      "rowNumber": 368,
+      "address": "4115 Tantallon Way",
+      "residents": "",
+      "rawText": "4115 Tantallon Way"
+    },
+    {
+      "rowNumber": 369,
+      "address": "9341 Bishopgate Dr",
+      "residents": "",
+      "rawText": "9341 Bishopgate Dr"
+    },
+    {
+      "rowNumber": 370,
+      "address": "4113 Brushfield Dr",
+      "residents": "Alhajie Fofanah & Hawa Coker",
+      "rawText": "4113 Brushfield Dr Alhajie Fofanah & Hawa Coker"
+    },
+    {
+      "rowNumber": 371,
+      "address": "4118 Celtic Way",
+      "residents": "",
+      "rawText": "4118 Celtic Way"
+    },
+    {
+      "rowNumber": 372,
+      "address": "9331 Bishopgate Dr",
+      "residents": "",
+      "rawText": "9331 Bishopgate Dr"
+    },
+    {
+      "rowNumber": 373,
+      "address": "4105 Brushfield Dr",
+      "residents": "",
+      "rawText": "4105 Brushfield Dr"
+    },
+    {
+      "rowNumber": 374,
+      "address": "4112 Brushfield Dr",
+      "residents": "",
+      "rawText": "4112 Brushfield Dr"
+    },
+    {
+      "rowNumber": 375,
+      "address": "4125 Brushfield Dr",
+      "residents": "",
+      "rawText": "4125 Brushfield Dr"
+    },
+    {
+      "rowNumber": 376,
+      "address": "9640 Bothwell Ln",
+      "residents": "",
+      "rawText": "9640 Bothwell Ln"
+    },
+    {
+      "rowNumber": 377,
+      "address": "9642 Bothwell Ln",
+      "residents": "",
+      "rawText": "9642 Bothwell Ln"
+    },
+    {
+      "rowNumber": 378,
+      "address": "9644 Bothwell Ln",
+      "residents": "",
+      "rawText": "9644 Bothwell Ln"
+    },
+    {
+      "rowNumber": 379,
+      "address": "9646 Bothwell Ln",
+      "residents": "",
+      "rawText": "9646 Bothwell Ln"
+    },
+    {
+      "rowNumber": 380,
+      "address": "4113 Tantallon Way",
+      "residents": "",
+      "rawText": "4113 Tantallon Way"
+    },
+    {
+      "rowNumber": 381,
+      "address": "9333 Bishopgate Dr",
+      "residents": "",
+      "rawText": "9333 Bishopgate Dr"
+    },
+    {
+      "rowNumber": 382,
+      "address": "9620 Bothwell Ln",
+      "residents": "",
+      "rawText": "9620 Bothwell Ln"
+    },
+    {
+      "rowNumber": 383,
+      "address": "9622 Bothwell Ln",
+      "residents": "",
+      "rawText": "9622 Bothwell Ln"
+    },
+    {
+      "rowNumber": 384,
+      "address": "9624 Bothwell Ln",
+      "residents": "",
+      "rawText": "9624 Bothwell Ln"
+    },
+    {
+      "rowNumber": 385,
+      "address": "9626 Bothwell Ln",
+      "residents": "",
+      "rawText": "9626 Bothwell Ln"
+    },
+    {
+      "rowNumber": 386,
+      "address": "9628 Bothwell Ln",
+      "residents": "",
+      "rawText": "9628 Bothwell Ln"
+    },
+    {
+      "rowNumber": 387,
+      "address": "9630 Bothwell Ln",
+      "residents": "",
+      "rawText": "9630 Bothwell Ln"
+    },
+    {
+      "rowNumber": 388,
+      "address": "4104 Celtic Way",
+      "residents": "",
+      "rawText": "4104 Celtic Way"
+    },
+    {
+      "rowNumber": 389,
+      "address": "4133 Brushfield Dr",
+      "residents": "",
+      "rawText": "4133 Brushfield Dr"
+    },
+    {
+      "rowNumber": 390,
+      "address": "4107 Tantallon Way",
+      "residents": "Osvaldo Font & Gretchen Rivera-Capella",
+      "rawText": "4107 Tantallon Way Osvaldo Font & Gretchen Rivera-Capella"
+    },
+    {
+      "rowNumber": 391,
+      "address": "9667 Bothwell Ln",
+      "residents": "",
+      "rawText": "9667 Bothwell Ln"
+    },
+    {
+      "rowNumber": 392,
+      "address": "9669 Bothwell Ln",
+      "residents": "Salman Akhtar & Humaira Ahmed",
+      "rawText": "9669 Bothwell Ln Salman Akhtar & Humaira Ahmed"
+    },
+    {
+      "rowNumber": 393,
+      "address": "9671 Bothwell Ln",
+      "residents": "",
+      "rawText": "9671 Bothwell Ln"
+    },
+    {
+      "rowNumber": 394,
+      "address": "4127 Brushfield Dr",
+      "residents": "",
+      "rawText": "4127 Brushfield Dr"
+    },
+    {
+      "rowNumber": 395,
+      "address": "9335 Bishopgate Dr",
+      "residents": "",
+      "rawText": "9335 Bishopgate Dr"
+    },
+    {
+      "rowNumber": 396,
+      "address": "4131 Brushfield Dr",
+      "residents": "",
+      "rawText": "4131 Brushfield Dr"
+    },
+    {
+      "rowNumber": 397,
+      "address": "9637 Bothwell Ln",
+      "residents": "",
+      "rawText": "9637 Bothwell Ln"
+    },
+    {
+      "rowNumber": 398,
+      "address": "9639 Bothwell Ln",
+      "residents": "",
+      "rawText": "9639 Bothwell Ln"
+    },
+    {
+      "rowNumber": 399,
+      "address": "9641 Bothwell Ln",
+      "residents": "",
+      "rawText": "9641 Bothwell Ln"
+    },
+    {
+      "rowNumber": 400,
+      "address": "9645 Bothwell Ln",
+      "residents": "",
+      "rawText": "9645 Bothwell Ln"
+    },
+    {
+      "rowNumber": 401,
+      "address": "9647 Bothwell Ln",
+      "residents": "",
+      "rawText": "9647 Bothwell Ln"
+    },
+    {
+      "rowNumber": 402,
+      "address": "9321 Bishopgate Dr",
+      "residents": "",
+      "rawText": "9321 Bishopgate Dr"
+    },
+    {
+      "rowNumber": 403,
+      "address": "9339 Bishopgate Dr",
+      "residents": "",
+      "rawText": "9339 Bishopgate Dr"
+    },
+    {
+      "rowNumber": 404,
+      "address": "4129 Brushfield Dr",
+      "residents": "Heather M. Tydings & Greg Weakley",
+      "rawText": "4129 Brushfield Dr Heather M. Tydings & Greg Weakley"
+    },
+    {
+      "rowNumber": 405,
+      "address": "4007 Tottenham Ct",
+      "residents": "",
+      "rawText": "4007 Tottenham Ct"
+    },
+    {
+      "rowNumber": 406,
+      "address": "4105 Tantallon Way",
+      "residents": "",
+      "rawText": "4105 Tantallon Way"
+    },
+    {
+      "rowNumber": 407,
+      "address": "4111 Tantallon Way",
+      "residents": "",
+      "rawText": "4111 Tantallon Way"
+    },
+    {
+      "rowNumber": 408,
+      "address": "9613 Bothwell Ln",
+      "residents": "",
+      "rawText": "9613 Bothwell Ln"
+    },
+    {
+      "rowNumber": 409,
+      "address": "9325 Bishopgate Dr",
+      "residents": "",
+      "rawText": "9325 Bishopgate Dr"
+    },
+    {
+      "rowNumber": 410,
+      "address": "9643 Bothwell Ln",
+      "residents": "",
+      "rawText": "9643 Bothwell Ln"
+    },
+    {
+      "rowNumber": 411,
+      "address": "9342 Bishopgate Dr",
+      "residents": "",
+      "rawText": "9342 Bishopgate Dr"
+    },
+    {
+      "rowNumber": 412,
+      "address": "9340 Bishopgate Dr",
+      "residents": "",
+      "rawText": "9340 Bishopgate Dr"
+    },
+    {
+      "rowNumber": 413,
+      "address": "9615 Bothwell Ln",
+      "residents": "",
+      "rawText": "9615 Bothwell Ln"
+    },
+    {
+      "rowNumber": 414,
+      "address": "9619 Bothwell Ln",
+      "residents": "",
+      "rawText": "9619 Bothwell Ln"
+    },
+    {
+      "rowNumber": 415,
+      "address": "9617 Bothwell Ln",
+      "residents": "",
+      "rawText": "9617 Bothwell Ln"
+    },
+    {
+      "rowNumber": 416,
+      "address": "4109 Tantallon Way",
+      "residents": "",
+      "rawText": "4109 Tantallon Way"
+    },
+    {
+      "rowNumber": 417,
+      "address": "4114 Celtic Way",
+      "residents": "",
+      "rawText": "4114 Celtic Way"
+    },
+    {
+      "rowNumber": 418,
+      "address": "9336 Bishopgate Dr",
+      "residents": "Ricardo Diaz & Paula Galeano",
+      "rawText": "9336 Bishopgate Dr Ricardo Diaz & Paula Galeano"
+    },
+    {
+      "rowNumber": 419,
+      "address": "9603 Bothwell Ln",
+      "residents": "",
+      "rawText": "9603 Bothwell Ln"
+    },
+    {
+      "rowNumber": 420,
+      "address": "9607 Bothwell Ln",
+      "residents": "",
+      "rawText": "9607 Bothwell Ln"
+    },
+    {
+      "rowNumber": 421,
+      "address": "4101 Celtic Way",
+      "residents": "",
+      "rawText": "4101 Celtic Way"
+    },
+    {
+      "rowNumber": 422,
+      "address": "9609 Bothwell Ln",
+      "residents": "",
+      "rawText": "9609 Bothwell Ln"
+    },
+    {
+      "rowNumber": 423,
+      "address": "9338 Bishopgate Dr",
+      "residents": "",
+      "rawText": "9338 Bishopgate Dr"
+    },
+    {
+      "rowNumber": 424,
+      "address": "9660 Bothwell Ln",
+      "residents": "",
+      "rawText": "9660 Bothwell Ln"
+    },
+    {
+      "rowNumber": 425,
+      "address": "9605 Bothwell Ln",
+      "residents": "",
+      "rawText": "9605 Bothwell Ln"
+    },
+    {
+      "rowNumber": 426,
+      "address": "4116 Celtic Way",
+      "residents": "",
+      "rawText": "4116 Celtic Way"
+    },
+    {
+      "rowNumber": 427,
+      "address": "9601 Bothwell Ln",
+      "residents": "",
+      "rawText": "9601 Bothwell Ln"
+    },
+    {
+      "rowNumber": 428,
+      "address": "9621 Bothwell Ln",
+      "residents": "",
+      "rawText": "9621 Bothwell Ln"
+    },
+    {
+      "rowNumber": 429,
+      "address": "4120 Celtic Way",
+      "residents": "",
+      "rawText": "4120 Celtic Way"
+    },
+    {
+      "rowNumber": 430,
+      "address": "9662 Bothwell Ln",
+      "residents": "",
+      "rawText": "9662 Bothwell Ln"
+    },
+    {
+      "rowNumber": 431,
+      "address": "9658 Bothwell Ln",
+      "residents": "",
+      "rawText": "9658 Bothwell Ln"
+    },
+    {
+      "rowNumber": 432,
+      "address": "3994 Braidwood Dr",
+      "residents": "",
+      "rawText": "3994 Braidwood Dr"
+    },
+    {
+      "rowNumber": 433,
+      "address": "4108 Brushfield Dr",
+      "residents": "",
+      "rawText": "4108 Brushfield Dr"
+    },
+    {
+      "rowNumber": 434,
+      "address": "3998 Braidwood Dr",
+      "residents": "",
+      "rawText": "3998 Braidwood Dr"
+    },
+    {
+      "rowNumber": 435,
+      "address": "3996 Braidwood Dr",
+      "residents": "",
+      "rawText": "3996 Braidwood Dr"
+    },
+    {
+      "rowNumber": 436,
+      "address": "4006 Braidwood Dr",
+      "residents": "",
+      "rawText": "4006 Braidwood Dr"
+    },
+    {
+      "rowNumber": 437,
+      "address": "4008 Braidwood Dr",
+      "residents": "",
+      "rawText": "4008 Braidwood Dr"
+    },
+    {
+      "rowNumber": 438,
+      "address": "4106 Celtic Way",
+      "residents": "Mark & Lynn Jafari",
+      "rawText": "4106 Celtic Way Mark & Lynn Jafari"
+    },
+    {
+      "rowNumber": 439,
+      "address": "4004 Braidwood Dr",
+      "residents": "",
+      "rawText": "4004 Braidwood Dr"
+    },
+    {
+      "rowNumber": 440,
+      "address": "4002 Braidwood Dr",
+      "residents": "",
+      "rawText": "4002 Braidwood Dr"
+    },
+    {
+      "rowNumber": 441,
+      "address": "9337 Bishopgate Dr",
+      "residents": "",
+      "rawText": "9337 Bishopgate Dr"
+    },
+    {
+      "rowNumber": 442,
+      "address": "9669 Ethan Ridge Dr",
+      "residents": "",
+      "rawText": "9669 Ethan Ridge Dr"
+    },
+    {
+      "rowNumber": 443,
+      "address": "9667 Ethan Ridge Dr",
+      "residents": "",
+      "rawText": "9667 Ethan Ridge Dr"
+    },
+    {
+      "rowNumber": 444,
+      "address": "9663 Ethan Ridge Dr",
+      "residents": "",
+      "rawText": "9663 Ethan Ridge Dr"
+    },
+    {
+      "rowNumber": 445,
+      "address": "9659 Ethan Ridge Dr",
+      "residents": "",
+      "rawText": "9659 Ethan Ridge Dr"
+    },
+    {
+      "rowNumber": 446,
+      "address": "9661 Ethan Ridge Dr",
+      "residents": "",
+      "rawText": "9661 Ethan Ridge Dr"
+    },
+    {
+      "rowNumber": 447,
+      "address": "9633 Bothwell Ln",
+      "residents": "",
+      "rawText": "9633 Bothwell Ln"
+    },
+    {
+      "rowNumber": 448,
+      "address": "9631 Bothwell Ln",
+      "residents": "",
+      "rawText": "9631 Bothwell Ln"
+    },
+    {
+      "rowNumber": 449,
+      "address": "9665 Ethan Ridge Dr",
+      "residents": "",
+      "rawText": "9665 Ethan Ridge Dr"
+    },
+    {
+      "rowNumber": 450,
+      "address": "9629 Bothwell Ln",
+      "residents": "",
+      "rawText": "9629 Bothwell Ln"
+    },
+    {
+      "rowNumber": 451,
+      "address": "9623 Bothwell Ln",
+      "residents": "",
+      "rawText": "9623 Bothwell Ln"
+    },
+    {
+      "rowNumber": 452,
+      "address": "9627 Bothwell Ln",
+      "residents": "",
+      "rawText": "9627 Bothwell Ln"
+    },
+    {
+      "rowNumber": 453,
+      "address": "3990 Braidwood Dr",
+      "residents": "Jane F. Kuhn",
+      "rawText": "3990 Braidwood Dr Jane F. Kuhn"
+    },
+    {
+      "rowNumber": 454,
+      "address": "9643 Ethan Ridge Dr",
+      "residents": "",
+      "rawText": "9643 Ethan Ridge Dr"
+    },
+    {
+      "rowNumber": 455,
+      "address": "9645 Ethan Ridge Dr",
+      "residents": "",
+      "rawText": "9645 Ethan Ridge Dr"
+    },
+    {
+      "rowNumber": 456,
+      "address": "9647 Ethan Ridge Dr",
+      "residents": "",
+      "rawText": "9647 Ethan Ridge Dr"
+    },
+    {
+      "rowNumber": 457,
+      "address": "9649 Ethan Ridge Dr",
+      "residents": "",
+      "rawText": "9649 Ethan Ridge Dr"
+    },
+    {
+      "rowNumber": 458,
+      "address": "9625 Bothwell Ln",
+      "residents": "",
+      "rawText": "9625 Bothwell Ln"
+    },
+    {
+      "rowNumber": 459,
+      "address": "9661 Bothwell Ln",
+      "residents": "",
+      "rawText": "9661 Bothwell Ln"
+    },
+    {
+      "rowNumber": 460,
+      "address": "9651 Bothwell Ln",
+      "residents": "",
+      "rawText": "9651 Bothwell Ln"
+    },
+    {
+      "rowNumber": 461,
+      "address": "9653 Bothwell Ln",
+      "residents": "",
+      "rawText": "9653 Bothwell Ln"
+    },
+    {
+      "rowNumber": 462,
+      "address": "9657 Bothwell Ln",
+      "residents": "",
+      "rawText": "9657 Bothwell Ln"
+    },
+    {
+      "rowNumber": 463,
+      "address": "9631 Ethan Ridge Dr",
+      "residents": "",
+      "rawText": "9631 Ethan Ridge Dr"
+    },
+    {
+      "rowNumber": 464,
+      "address": "9655 Bothwell Ln",
+      "residents": "",
+      "rawText": "9655 Bothwell Ln"
+    },
+    {
+      "rowNumber": 465,
+      "address": "9639 Ethan Ridge Dr",
+      "residents": "",
+      "rawText": "9639 Ethan Ridge Dr"
+    },
+    {
+      "rowNumber": 466,
+      "address": "9659 Bothwell Ln",
+      "residents": "Ravindra & Naga Chalamalasetty",
+      "rawText": "9659 Bothwell Ln Ravindra & Naga Chalamalasetty"
+    },
+    {
+      "rowNumber": 467,
+      "address": "3992 Braidwood Dr",
+      "residents": "",
+      "rawText": "3992 Braidwood Dr"
+    },
+    {
+      "rowNumber": 468,
+      "address": "9633 Ethan Ridge Dr",
+      "residents": "",
+      "rawText": "9633 Ethan Ridge Dr"
+    },
+    {
+      "rowNumber": 469,
+      "address": "9635 Ethan Ridge Dr",
+      "residents": "Sujoy Roy",
+      "rawText": "9635 Ethan Ridge Dr Sujoy Roy"
+    },
+    {
+      "rowNumber": 470,
+      "address": "9637 Ethan Ridge Dr",
+      "residents": "",
+      "rawText": "9637 Ethan Ridge Dr"
+    },
+    {
+      "rowNumber": 471,
+      "address": "9665 Bothwell Ln",
+      "residents": "",
+      "rawText": "9665 Bothwell Ln"
+    }
+  ]
+}
