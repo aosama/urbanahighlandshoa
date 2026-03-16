@@ -14,12 +14,8 @@ jobs:
   test:
     name: Run Regression Tests
     runs-on: ubuntu-latest
-    container:
-      image: mcr.microsoft.com/playwright:v1.58.2-noble
-      options: --ipc=host
     defaults:
       run:
-        shell: bash
         working-directory: site
 
     steps:
