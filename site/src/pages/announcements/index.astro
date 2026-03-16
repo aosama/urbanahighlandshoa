@@ -1,24 +1,113 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
+import { siteConfig } from '../../lib/siteConfig';
 ---
 
-<PageLayout title="Announcements">
+<PageLayout title="News & Events">
   <Fragment slot="title">
-    <span class="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Announcements</span>
+    <span class="bg-gradient-to-r from-emerald-300 via-sky-300 to-violet-300 bg-clip-text text-transparent">
+      News &amp; Events
+    </span>
   </Fragment>
 
-  <div class="rounded-2xl border border-slate-200 bg-white p-8 shadow-sm">
-    <div class="flex items-start gap-4">
-      <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-emerald-100 text-2xl">
-        📢
-      </div>
-      <div>
-        <h2 class="text-xl font-semibold text-slate-900">Coming Soon</h2>
-        <p class="mt-2 text-slate-600">
-          This page will host HOA announcements and notices. Check back soon for community updates, 
-          policy changes, and important notifications.
-        </p>
+  <div class="space-y-8">
+    <div class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-xl shadow-slate-200/70">
+      <div class="grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+        <div>
+          <span class="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-4 py-2 text-sm font-semibold text-emerald-700">
+            Community Pulse
+          </span>
+          <h2 class="mt-5 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">One place for notices, reminders, and neighborhood happenings</h2>
+          <p class="mt-4 max-w-2xl text-lg leading-relaxed text-slate-600">
+            We merged the old News and Events sections into a single page so HOA updates and upcoming activities are
+            easier to scan together.
+          </p>
+        </div>
+
+        <div class="rounded-[1.5rem] bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-6 text-white shadow-lg">
+          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-sky-300">Current Setup</p>
+          <div class="mt-4 grid gap-3">
+            <div class="rounded-2xl bg-white/10 px-4 py-3">
+              <p class="text-sm text-sky-100">HOA announcements</p>
+              <p class="mt-1 font-semibold">Policy reminders, notices, and community guidance</p>
+            </div>
+            <div class="rounded-2xl bg-white/10 px-4 py-3">
+              <p class="text-sm text-sky-100">Upcoming events</p>
+              <p class="mt-1 font-semibold">Seasonal gatherings, pool events, and neighborhood meetups</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
+    <div class="grid gap-6 lg:grid-cols-[1fr_1fr_0.9fr]">
+      <article class="rounded-[1.75rem] border border-emerald-200 bg-gradient-to-br from-emerald-50 via-white to-teal-50 p-6 shadow-sm">
+        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-100 text-2xl">📢</div>
+        <h3 class="mt-5 text-2xl font-bold tracking-tight text-slate-900">News</h3>
+        <p class="mt-3 text-slate-600">
+          Official notices, seasonal reminders, and community-facing updates will live here as they are published.
+        </p>
+      </article>
+
+      <article class="rounded-[1.75rem] border border-violet-200 bg-gradient-to-br from-violet-50 via-white to-sky-50 p-6 shadow-sm">
+        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-violet-100 text-2xl">📅</div>
+        <h3 class="mt-5 text-2xl font-bold tracking-tight text-slate-900">Events</h3>
+        <p class="mt-3 text-slate-600">
+          Watch this section for neighborhood gatherings, pool-season happenings, and community celebrations.
+        </p>
+      </article>
+
+      <article class="rounded-[1.75rem] border border-amber-200 bg-gradient-to-br from-amber-50 via-white to-orange-50 p-6 shadow-sm">
+        <div class="flex h-12 w-12 items-center justify-center rounded-2xl bg-amber-100 text-2xl">🔗</div>
+        <h3 class="mt-5 text-2xl font-bold tracking-tight text-slate-900">Legacy Event Details</h3>
+        <p class="mt-3 text-slate-600">
+          Some older event-detail content still lives on the legacy site while the new experience fills in.
+        </p>
+        <a
+          class="mt-5 inline-flex items-center gap-2 rounded-full bg-amber-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-amber-700"
+          href={siteConfig.links.legacyEventDetails}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open Legacy Site
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+      </article>
+    </div>
+
+    <section>
+      <div class="mb-5">
+        <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500">Helpful Reminders</p>
+        <h2 class="mt-2 text-2xl font-bold tracking-tight text-slate-900">Common project and upkeep reminders</h2>
+      </div>
+
+      <div class="grid gap-5 md:grid-cols-3">
+        <article class="rounded-[1.5rem] border border-emerald-200 bg-white p-6 shadow-sm">
+          <div class="inline-flex rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-700">Landscaping</div>
+          <h3 class="mt-4 text-xl font-semibold text-slate-900">Missing a street tree?</h3>
+          <p class="mt-3 text-slate-600">
+            Tree removal and replacement typically require an Architectural Change Request and an approved replacement variety.
+          </p>
+        </article>
+
+        <article class="rounded-[1.5rem] border border-sky-200 bg-white p-6 shadow-sm">
+          <div class="inline-flex rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-sky-700">Home Exterior</div>
+          <h3 class="mt-4 text-xl font-semibold text-slate-900">Replacing your roof?</h3>
+          <p class="mt-3 text-slate-600">
+            If materials, color, or design differ from the original installation, get HOA approval before work begins.
+          </p>
+        </article>
+
+        <article class="rounded-[1.5rem] border border-violet-200 bg-white p-6 shadow-sm">
+          <div class="inline-flex rounded-full bg-violet-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-violet-700">Projects</div>
+          <h3 class="mt-4 text-xl font-semibold text-slate-900">Adding a deck?</h3>
+          <p class="mt-3 text-slate-600">
+            Log into the Resident Portal and complete the Architectural Change Request before starting construction.
+          </p>
+        </article>
+      </div>
+    </section>
   </div>
 </PageLayout>

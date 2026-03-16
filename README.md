@@ -4,8 +4,8 @@ This repository contains the **official website** for the Urbana Highlands Home 
 
 The website is a **static front-end-only** site built with modern web technologies and hosted on GitHub Pages. It provides residents with:
 
-- HOA announcements and updates
-- Event calendar and information
+- HOA announcements and event updates
+- Onboarding guidance for new residents
 - Access to important documents (bylaws, guidelines, meeting minutes)
 - Contact information and links to resident services
 
@@ -126,11 +126,12 @@ The site uses **Astro pages** with inline content. Each page is a self-contained
 
 - **Homepage:** `site/src/pages/index.astro`
 - **Section pages:**
-  - `site/src/pages/announcements/index.astro`
-  - `site/src/pages/events/index.astro`
+  - `site/src/pages/announcements/index.astro` - merged News & Events page
+  - `site/src/pages/onboard/index.astro` - onboarding page for new residents
   - `site/src/pages/documents/index.astro`
   - `site/src/pages/resources/index.astro`
   - `site/src/pages/contact/index.astro`
+  - `site/src/pages/events/index.astro` - handoff page that points visitors to News & Events
 - **Shared layouts:**
   - `site/src/layouts/BaseLayout.astro` - Base HTML structure, head tags
   - `site/src/layouts/PageLayout.astro` - Standard page wrapper (includes Header/Footer)

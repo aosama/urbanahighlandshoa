@@ -1,0 +1,193 @@
+---
+import PageLayout from '../../layouts/PageLayout.astro';
+import { siteConfig } from '../../lib/siteConfig';
+
+const basePath = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+
+const onboardingSteps = [
+  {
+    number: '01',
+    eyebrow: 'Start Here',
+    title: 'Register in the Resident Portal',
+    body:
+      'Create your Resident Portal account or confirm you can already sign in. This is the main place to manage dues, submit requests, and stay connected with HOA updates.',
+    actionHref: siteConfig.links.residentPortal,
+    actionLabel: 'Open Resident Portal',
+    accent: 'from-emerald-500 to-teal-500',
+    ring: 'ring-emerald-200',
+    badge: 'bg-emerald-100 text-emerald-700',
+  },
+  {
+    number: '02',
+    eyebrow: 'Seasonal Access',
+    title: 'Get Your Pool Passes',
+    body:
+      'Use the pool registration system to request passes for your household and confirm any details you need before pool season begins.',
+    actionHref: siteConfig.links.poolPass,
+    actionLabel: 'Pool Pass Registration',
+    accent: 'from-sky-500 to-cyan-500',
+    ring: 'ring-sky-200',
+    badge: 'bg-sky-100 text-sky-700',
+  },
+  {
+    number: '03',
+    eyebrow: 'Your Household Info',
+    title: 'Review Your Profile and Directory Preferences',
+    body:
+      'Inside the Resident Portal, verify your contact details and communication preferences. If the resident directory is enabled for your account, decide what personal information you do or do not want visible there.',
+    actionHref: siteConfig.links.residentPortal,
+    actionLabel: 'Review Portal Profile',
+    accent: 'from-fuchsia-500 to-rose-500',
+    ring: 'ring-fuchsia-200',
+    badge: 'bg-fuchsia-100 text-fuchsia-700',
+  },
+  {
+    number: '04',
+    eyebrow: 'Before You Start Projects',
+    title: 'Read the HOA Documents',
+    body:
+      'Check the design guidelines and request forms before making exterior changes. Roofs, decks, landscaping, and other visible projects may need ARC review first.',
+    actionHref: `${basePath}documents/`,
+    actionLabel: 'Open Documents',
+    accent: 'from-amber-500 to-orange-500',
+    ring: 'ring-amber-200',
+    badge: 'bg-amber-100 text-amber-700',
+  },
+  {
+    number: '05',
+    eyebrow: 'Stay Oriented',
+    title: 'Save Your Key Links and Contacts',
+    body:
+      'Keep the management company number, pool contact, Facebook group, and community resources handy so routine questions are easy to resolve.',
+    actionHref: `${basePath}resources/`,
+    actionLabel: 'See Resources',
+    accent: 'from-violet-500 to-indigo-500',
+    ring: 'ring-violet-200',
+    badge: 'bg-violet-100 text-violet-700',
+  },
+];
+---
+
+<PageLayout title="Onboard">
+  <Fragment slot="title">
+    <span class="bg-gradient-to-r from-emerald-300 via-sky-300 to-fuchsia-300 bg-clip-text text-transparent">
+      Onboard
+    </span>
+  </Fragment>
+
+  <div class="space-y-10">
+    <section class="relative overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-xl shadow-slate-200/80">
+      <div class="absolute inset-x-0 top-0 h-28 bg-gradient-to-r from-emerald-400/15 via-sky-400/15 to-fuchsia-400/15"></div>
+      <div class="relative grid gap-8 p-6 lg:grid-cols-[1.3fr_0.9fr] lg:p-8">
+        <div class="space-y-5">
+          <div class="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-emerald-50 px-4 py-2 text-sm font-semibold text-emerald-700">
+            <span class="h-2.5 w-2.5 rounded-full bg-emerald-500"></span>
+            New to Urbana Highlands?
+          </div>
+
+          <div>
+            <h2 class="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Your first stop for getting settled</h2>
+            <p class="mt-3 max-w-2xl text-lg leading-relaxed text-slate-600">
+              Start with the quick walkthrough below, then move through the checklist to get your access, preferences,
+              and community essentials in place.
+            </p>
+          </div>
+
+          <div class="overflow-hidden rounded-[1.5rem] border border-slate-200 bg-slate-950 shadow-2xl shadow-slate-300/40">
+            <video
+              autoplay
+              controls
+              loop
+              muted
+              preload="metadata"
+              playsinline
+              class="aspect-video w-full bg-slate-950 object-cover"
+            >
+              <source
+                src={`${basePath}video/HOA_Welcomes_New_Resident_Registration.mp4`}
+                type="video/mp4"
+              />
+              Your browser does not support the onboarding video.
+            </video>
+          </div>
+        </div>
+
+        <aside class="grid gap-4 self-start">
+          <div class="rounded-[1.75rem] border border-sky-200 bg-gradient-to-br from-sky-50 via-white to-cyan-50 p-6 shadow-lg shadow-sky-100/70">
+            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-sky-700">What To Confirm</p>
+            <ul class="mt-4 space-y-3 text-sm leading-relaxed text-slate-700">
+              <li class="rounded-2xl bg-white/80 px-4 py-3">Primary email and phone number for your household</li>
+              <li class="rounded-2xl bg-white/80 px-4 py-3">Mailing address and emergency contact details, if your account uses them</li>
+              <li class="rounded-2xl bg-white/80 px-4 py-3">Directory visibility settings for your name and contact info, if that feature applies</li>
+            </ul>
+          </div>
+
+          <div class="rounded-[1.75rem] border border-emerald-200 bg-gradient-to-br from-emerald-600 to-teal-600 p-6 text-white shadow-lg shadow-emerald-300/40">
+            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-emerald-100">Key Contacts</p>
+            <div class="mt-4 space-y-3 text-sm">
+              <div class="rounded-2xl bg-white/10 px-4 py-3">
+                <p class="text-emerald-100">Management Company</p>
+                <p class="mt-1 text-lg font-semibold">{siteConfig.contact.managementPhone}</p>
+              </div>
+              <div class="rounded-2xl bg-white/10 px-4 py-3">
+                <p class="text-emerald-100">Community Pool</p>
+                <p class="mt-1 text-lg font-semibold">{siteConfig.contact.poolPhone}</p>
+                <p class="mt-1 text-emerald-50/90">{siteConfig.contact.poolAddress}</p>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="space-y-6">
+      <div class="text-center">
+        <span class="inline-flex items-center rounded-full bg-slate-900 px-4 py-1.5 text-sm font-semibold text-white">
+          New Resident Checklist
+        </span>
+        <h2 class="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Five steps to get comfortable fast</h2>
+        <p class="mx-auto mt-3 max-w-2xl text-lg text-slate-600">
+          A colorful first-week guide for the most common setup tasks new residents need.
+        </p>
+      </div>
+
+      <div class="grid gap-6 lg:grid-cols-2">
+        {onboardingSteps.map((step) => (
+          <article class={`relative overflow-hidden rounded-[1.75rem] bg-white p-6 shadow-lg ring-1 ${step.ring}`}>
+            <div class={`absolute inset-x-0 top-0 h-2 bg-gradient-to-r ${step.accent}`}></div>
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <span class={`inline-flex rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] ${step.badge}`}>
+                  {step.eyebrow}
+                </span>
+                <h3 class="mt-4 text-2xl font-bold tracking-tight text-slate-900">{step.title}</h3>
+              </div>
+              <div class={`rounded-3xl bg-gradient-to-br p-[1px] ${step.accent}`}>
+                <div class="rounded-[1.35rem] bg-white px-4 py-3 text-right shadow-sm">
+                  <div class="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-400">Step</div>
+                  <div class="text-2xl font-extrabold text-slate-900">{step.number}</div>
+                </div>
+              </div>
+            </div>
+
+            <p class="mt-4 text-base leading-relaxed text-slate-600">{step.body}</p>
+
+            <a
+              href={step.actionHref}
+              target={step.actionHref.startsWith('http') ? '_blank' : undefined}
+              rel={step.actionHref.startsWith('http') ? 'noopener noreferrer' : undefined}
+              class={`mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 ${step.accent}`}
+            >
+              {step.actionLabel}
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+          </article>
+        ))}
+      </div>
+    </section>
+  </div>
+</PageLayout>
