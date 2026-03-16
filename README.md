@@ -85,6 +85,7 @@ The site automatically deploys to GitHub Pages when changes are pushed to the `m
 Before publishing, the deploy workflow rebuilds the site and reruns the Playwright regression suite so production deploys are gated on passing tests.
 In practice, that means a single maintainer can push routine changes straight to `main` and still keep the build/test safety net.
 The workflows cache npm dependencies so repeat runs spend less time reinstalling the Node toolchain.
+The Playwright jobs now run inside the official Playwright container image, which already includes the browser binaries and Linux system dependencies needed for the test suite.
 The deploy and regression workflows also opt GitHub JavaScript actions into the Node 24 runtime now. To avoid the lingering Node 20 warnings in GitHub's current Pages wrappers, the deploy workflow packages the Pages artifact directly with `actions/upload-artifact@v6` and completes the Pages deployment through `actions/github-script@v8`.
 
 ## Testing
