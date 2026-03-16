@@ -35,14 +35,6 @@ jobs:
       - name: Set up site dependencies
         uses: ./.github/actions/setup-site
 
-      - name: Cache Playwright browsers
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/ms-playwright
-          key: ${{ runner.os }}-playwright-${{ hashFiles('site/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-playwright-
-
       - name: Install Playwright browsers
         run: npm run test:install
 
@@ -56,7 +48,7 @@ jobs:
         run: npm test
 
       - name: Upload test results
-        if: always()
+        if: failure()
         uses: actions/upload-artifact@v6
         with:
           name: playwright-report-deploy
