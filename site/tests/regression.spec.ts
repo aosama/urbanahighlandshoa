@@ -5,8 +5,9 @@ const BASE = '/urbanahighlandshoa';
 
 const pages = [
   { path: `${BASE}/`, title: 'Urbana Highlands' },
-  { path: `${BASE}/announcements/`, title: 'Announcements' },
+  { path: `${BASE}/announcements/`, title: 'News & Events' },
   { path: `${BASE}/events/`, title: 'Events' },
+  { path: `${BASE}/onboard/`, title: 'Onboard' },
   { path: `${BASE}/documents/`, title: 'Documents' },
   { path: `${BASE}/resources/`, title: 'Community Resources' },
   { path: `${BASE}/contact/`, title: 'Contact' },
