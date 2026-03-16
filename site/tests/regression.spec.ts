@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, type Page } from '@playwright/test';
 
 // Base path for GitHub Pages project site
 const BASE = '/urbanahighlandshoa';
@@ -12,6 +12,100 @@ const pages = [
   { path: `${BASE}/resources/`, title: 'Community Resources' },
   { path: `${BASE}/contact/`, title: 'Contact' },
 ];
+
+async function findBrokenInternalLinks(page: Page) {
+  const internalLinks = page.locator('a[href^="/"]');
+  const count = await internalLinks.count();
+
+  const checkedUrls = new Set<string>();
+  const brokenLinks: string[] = [];
+
+  for (let i = 0; i < count; i++) {
+    const href = await internalLinks.nth(i).getAttribute('href');
+    if (!href || checkedUrls.has(href)) continue;
+    checkedUrls.add(href);
+
+    if (href === '#' || href.startsWith('#')) continue;
+
+    try {
+      const response = await page.request.get(href, { timeout: 10000 });
+      if (response.status() >= 400) {
+        brokenLinks.push(`${href} (status: ${response.status()})`);
+      }
+    } catch {
+      brokenLinks.push(`${href} (failed to fetch)`);
+    }
+  }
+
+  return brokenLinks;
+}
+
+async function findInvalidExternalLinks(page: Page) {
+  const externalLinks = page.locator('a[href^="http"]');
+  const count = await externalLinks.count();
+
+  const invalidLinks: string[] = [];
+  const checkedUrls = new Set<string>();
+
+  for (let i = 0; i < count; i++) {
+    const href = await externalLinks.nth(i).getAttribute('href');
+    if (!href || checkedUrls.has(href)) continue;
+    checkedUrls.add(href);
+
+    try {
+      new URL(href);
+    } catch {
+      invalidLinks.push(`${href} (malformed URL)`);
+    }
+  }
+
+  return invalidLinks;
+}
+
+async function findBrokenImages(page: Page) {
+  const images = page.locator('img[src]');
+  const count = await images.count();
+
+  const brokenImages: string[] = [];
+  const checkedSrcs = new Set<string>();
+
+  for (let i = 0; i < count; i++) {
+    const src = await images.nth(i).getAttribute('src');
+    if (!src || checkedSrcs.has(src)) continue;
+    checkedSrcs.add(src);
+
+    if (src.startsWith('data:') || src.startsWith('http://') || src.startsWith('https://')) continue;
+
+    try {
+      const response = await page.request.get(src, { timeout: 10000 });
+      if (response.status() >= 400) {
+        brokenImages.push(`${src} (status: ${response.status()})`);
+      }
+    } catch {
+      brokenImages.push(`${src} (failed to fetch)`);
+    }
+  }
+
+  return brokenImages;
+}
+
+async function findImagesMissingAlt(page: Page) {
+  const images = page.locator('img');
+  const count = await images.count();
+
+  const missingAlt: string[] = [];
+
+  for (let i = 0; i < count; i++) {
+    const alt = await images.nth(i).getAttribute('alt');
+    const src = (await images.nth(i).getAttribute('src')) || 'unknown';
+
+    if (alt === null) {
+      missingAlt.push(src);
+    }
+  }
+
+  return missingAlt;
+}
 
 test.describe('Page Loading', () => {
   for (const page of pages) {
@@ -37,113 +131,19 @@ test.describe('Page Loading', () => {
   }
 });
 
-test.describe('All Links Verification', () => {
+test.describe('Link and Image Verification', () => {
   for (const pageInfo of pages) {
-    test(`${pageInfo.path} - all internal hyperlinks are valid`, async ({ page }) => {
+    test(`${pageInfo.path} - links and images are valid`, async ({ page }) => {
       await page.goto(pageInfo.path);
-      
-      // Get all internal anchor links (starting with / or the base path)
-      const internalLinks = page.locator('a[href^="/"]');
-      const count = await internalLinks.count();
-      
-      const checkedUrls = new Set<string>();
-      const brokenLinks: string[] = [];
-      
-      for (let i = 0; i < count; i++) {
-        const href = await internalLinks.nth(i).getAttribute('href');
-        if (!href || checkedUrls.has(href)) continue;
-        checkedUrls.add(href);
-        
-        // Skip anchor-only links
-        if (href === '#' || href.startsWith('#')) continue;
-        
-        try {
-          const response = await page.request.get(href, { timeout: 10000 });
-          if (response.status() >= 400) {
-            brokenLinks.push(`${href} (status: ${response.status()})`);
-          }
-        } catch (error) {
-          brokenLinks.push(`${href} (failed to fetch)`);
-        }
-      }
-      
+
+      const brokenLinks = await findBrokenInternalLinks(page);
+      const invalidLinks = await findInvalidExternalLinks(page);
+      const brokenImages = await findBrokenImages(page);
+      const missingAlt = await findImagesMissingAlt(page);
+
       expect(brokenLinks, `Broken internal links on ${pageInfo.path}:\n${brokenLinks.join('\n')}`).toHaveLength(0);
-    });
-
-    test(`${pageInfo.path} - external links have valid format`, async ({ page }) => {
-      await page.goto(pageInfo.path);
-      
-      // Get all external links
-      const externalLinks = page.locator('a[href^="http"]');
-      const count = await externalLinks.count();
-      
-      const invalidLinks: string[] = [];
-      const checkedUrls = new Set<string>();
-      
-      for (let i = 0; i < count; i++) {
-        const href = await externalLinks.nth(i).getAttribute('href');
-        if (!href || checkedUrls.has(href)) continue;
-        checkedUrls.add(href);
-        
-        // Verify URL is well-formed
-        try {
-          new URL(href);
-        } catch {
-          invalidLinks.push(`${href} (malformed URL)`);
-        }
-      }
-      
       expect(invalidLinks, `Invalid external URLs on ${pageInfo.path}:\n${invalidLinks.join('\n')}`).toHaveLength(0);
-    });
-
-    test(`${pageInfo.path} - all images load successfully`, async ({ page }) => {
-      await page.goto(pageInfo.path);
-      
-      // Get all images
-      const images = page.locator('img[src]');
-      const count = await images.count();
-      
-      const brokenImages: string[] = [];
-      const checkedSrcs = new Set<string>();
-      
-      for (let i = 0; i < count; i++) {
-        const src = await images.nth(i).getAttribute('src');
-        if (!src || checkedSrcs.has(src)) continue;
-        checkedSrcs.add(src);
-        
-        // Skip data URIs and external images
-        if (src.startsWith('data:') || src.startsWith('http://') || src.startsWith('https://')) continue;
-        
-        try {
-          const response = await page.request.get(src, { timeout: 10000 });
-          if (response.status() >= 400) {
-            brokenImages.push(`${src} (status: ${response.status()})`);
-          }
-        } catch (error) {
-          brokenImages.push(`${src} (failed to fetch)`);
-        }
-      }
-      
       expect(brokenImages, `Broken images on ${pageInfo.path}:\n${brokenImages.join('\n')}`).toHaveLength(0);
-    });
-
-    test(`${pageInfo.path} - all images have alt attributes`, async ({ page }) => {
-      await page.goto(pageInfo.path);
-      
-      const images = page.locator('img');
-      const count = await images.count();
-      
-      const missingAlt: string[] = [];
-      
-      for (let i = 0; i < count; i++) {
-        const alt = await images.nth(i).getAttribute('alt');
-        const src = await images.nth(i).getAttribute('src') || 'unknown';
-        
-        if (alt === null) {
-          missingAlt.push(src);
-        }
-      }
-      
       expect(missingAlt, `Images missing alt on ${pageInfo.path}:\n${missingAlt.join('\n')}`).toHaveLength(0);
     });
   }
