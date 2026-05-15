@@ -25,6 +25,9 @@ check-links.js
 # Copilot / Codespaces (do not commit cloned skills)
 .copilot/
 
+# Playwright MCP browser automation (local tool state from MCP server)
+.playwright-mcp/
+
 # Local verification screenshots
 # (Keep screenshots out of the repo; allow local, uncommitted captures.)
 docs/screenshots/
